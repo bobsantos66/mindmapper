@@ -30,7 +30,7 @@ export default async function PaginaUsuarios() {
         {convidados.length === 0 ? (
           <Vazio titulo="Nenhum convidado ainda." />
         ) : (
-          <ul className="flex flex-col divide-y divide-linha border border-linha">
+          <ul className="flex flex-col divide-y divide-linha overflow-hidden rounded-cartao border border-linha bg-cartao">
             {convidados.map((c) => (
               <li key={c.id} className="flex flex-col gap-3 p-4 sm:flex-row sm:items-start">
                 <div className="flex min-w-0 flex-1 flex-col">

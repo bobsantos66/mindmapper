@@ -15,7 +15,7 @@ export default async function PaginaClaude({ searchParams }: { searchParams: Pro
       aviso={
         <p className="max-w-[72ch] border-l-4 border-destaque pl-4 text-sm">
           No Claude Code, recursos com pacote de instalação aprovado são instalados e removidos pelo MindMapper Local,
-          direto do terminal: <code className="bg-painel px-1">mm instalar &lt;nome&gt;</code>.
+          direto do terminal: <code className="rounded bg-painel px-1.5">mm instalar &lt;nome&gt;</code>.
         </p>
       }
     />

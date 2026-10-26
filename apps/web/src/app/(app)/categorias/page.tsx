@@ -21,7 +21,7 @@ export default async function PaginaCategorias() {
         Categorias
       </Titulo>
 
-      <ol className="flex flex-col divide-y divide-linha border border-linha">
+      <ol className="flex flex-col divide-y divide-linha overflow-hidden rounded-cartao border border-linha bg-cartao">
         {categorias.map((c) => (
           <li key={c.id} className="flex flex-col gap-3 p-4">
             <div className="flex flex-wrap items-center gap-3">
@@ -93,8 +93,8 @@ function AcoesCategoria({ id, nome, raiz }: { id: string; nome: string; raiz?: b
       <details>
         <summary className="cursor-pointer text-suave">Renomear</summary>
         <form action={renomearCategoria.bind(null, id)} className="mt-2 flex gap-2">
-          <input name="nome" defaultValue={nome} aria-label={`Novo nome de ${nome}`} className="border border-linha bg-fundo px-2 py-1" />
-          <button className="border border-texto px-2">OK</button>
+          <input name="nome" defaultValue={nome} aria-label={`Novo nome de ${nome}`} className="min-h-9 rounded-lg border border-linha-forte bg-fundo px-2.5" />
+          <button className="min-h-9 rounded-lg border border-texto px-3 text-sm font-semibold">OK</button>
         </form>
       </details>
       <form action={moverCategoria.bind(null, id, "subir")}>

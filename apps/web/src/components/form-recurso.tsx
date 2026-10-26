@@ -175,7 +175,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
             @Nome só aparece no ChatGPT e /comando só no Claude. Comando marcado como verificado exige link da fonte.
           </p>
           {d.comandos.map((c, i) => (
-            <div key={i} className="grid gap-2 border border-linha p-3 sm:grid-cols-[1fr_1fr_1fr_auto]">
+            <div key={i} className="grid gap-2 rounded-xl border border-linha p-3 sm:grid-cols-[1fr_1fr_1fr_auto]">
               <select
                 aria-label="Ambiente"
                 className={classeCampo}
@@ -294,7 +294,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
         </div>
 
         <fieldset className="flex flex-col gap-2">
-          <legend className="mb-2 font-mono text-[11px] uppercase tracking-wider text-suave">Categorias secundárias e subcategorias</legend>
+          <legend className="mb-2 text-xs font-semibold tracking-[0.06em] text-suave uppercase">Categorias secundárias e subcategorias</legend>
           <div className="grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
             {opcoes.categorias.map((c) => (
               <div key={c.id} className="flex flex-col gap-1">
@@ -315,7 +315,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
         </fieldset>
 
         <fieldset className="flex flex-col gap-2">
-          <legend className="mb-2 font-mono text-[11px] uppercase tracking-wider text-suave">Tags</legend>
+          <legend className="mb-2 text-xs font-semibold tracking-[0.06em] text-suave uppercase">Tags</legend>
           <div className="flex flex-wrap gap-1.5">
             {opcoes.tags.map((t) => {
               const on = d.tags.includes(t.id);
@@ -336,7 +336,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
                 key={t}
                 type="button"
                 onClick={() => set("novasTags", d.novasTags.filter((x) => x !== t))}
-                className="border border-dashed border-texto px-2 py-0.5 text-xs"
+                className="rounded-full border border-dashed border-texto px-2.5 py-0.5 text-xs"
                 title="Nova tag, clique para remover"
               >
                 + {t} ×
@@ -375,7 +375,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {facetasVisiveis.map((f) => (
               <fieldset key={f.id} className="flex flex-col gap-1">
-                <legend className="mb-1 font-mono text-[11px] uppercase tracking-wider text-suave">{f.nome}</legend>
+                <legend className="mb-1 text-xs font-semibold tracking-[0.06em] text-suave uppercase">{f.nome}</legend>
                 {f.valores.map((v) => (
                   <Marcar
                     key={v.id}
@@ -396,7 +396,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
           {opcoes.ambientes.map((a) => {
             const c = d.compat.find((x) => x.environment_id === a.id);
             return (
-              <div key={a.id} className="grid items-center gap-2 border border-linha p-3 sm:grid-cols-[10rem_1fr_1fr]">
+              <div key={a.id} className="grid items-center gap-2 rounded-xl border border-linha p-3 sm:grid-cols-[10rem_1fr_1fr]">
                 <span className="text-sm font-medium">{a.nome}</span>
                 <select
                   aria-label={`Compatibilidade com ${a.nome}`}
@@ -463,7 +463,7 @@ export function FormRecurso({ opcoes, inicial, cancelarHref }: { opcoes: OpcoesF
       </Grupo>
 
       {estado.erro && (
-        <p role="alert" className="border border-perigo px-4 py-3 text-sm text-perigo">
+        <p role="alert" className="rounded-xl border border-perigo px-4 py-3 text-sm text-perigo">
           {estado.erro}
         </p>
       )}
@@ -498,7 +498,7 @@ function CamposGrupo({
 }) {
   const defs = CAMPOS_FICHA.filter((c) => c.grupo === grupo && aplicaveis.has(c.chave));
   return (
-    <details className="border border-linha" open>
+    <details className="rounded-cartao border border-linha bg-cartao" open>
       <summary className="cursor-pointer px-3 py-2 text-sm font-medium">Campos de {ROTULO_GRUPO[grupo].toLowerCase()}</summary>
       <div className="grid gap-5 border-t border-linha p-4 md:grid-cols-2">
         {defs.map((def) => {

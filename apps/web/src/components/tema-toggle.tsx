@@ -3,12 +3,13 @@
 import { useState, useTransition } from "react";
 import { definirTema } from "@/server/tema";
 import type { Tema } from "@/lib/tema";
+import { IconeLua, IconeSistema, IconeSol } from "./icones";
 
-const OPCOES: { valor: Tema; rotulo: string; icone: string }[] = [
-  { valor: "claro", rotulo: "Modo diurno", icone: "☀" },
-  { valor: "escuro", rotulo: "Modo noturno", icone: "☾" },
-  { valor: "sistema", rotulo: "Seguir o sistema", icone: "◐" },
-];
+const OPCOES = [
+  { valor: "claro", rotulo: "Modo diurno", Icone: IconeSol },
+  { valor: "escuro", rotulo: "Modo noturno", Icone: IconeLua },
+  { valor: "sistema", rotulo: "Seguir o sistema", Icone: IconeSistema },
+] as const satisfies readonly { valor: Tema; rotulo: string; Icone: unknown }[];
 
 export function TemaToggle({ inicial }: { inicial: Tema }) {
   const [tema, setTema] = useState<Tema>(inicial);
@@ -22,7 +23,7 @@ export function TemaToggle({ inicial }: { inicial: Tema }) {
   }
 
   return (
-    <div role="radiogroup" aria-label="Tema" className="inline-flex border border-linha">
+    <div role="radiogroup" aria-label="Tema" className="inline-flex gap-1 rounded-xl bg-painel p-1">
       {OPCOES.map((o) => (
         <button
           key={o.valor}
@@ -32,9 +33,11 @@ export function TemaToggle({ inicial }: { inicial: Tema }) {
           title={o.rotulo}
           aria-label={o.rotulo}
           onClick={() => escolher(o.valor)}
-          className={`h-8 w-8 text-sm ${tema === o.valor ? "bg-destaque text-sobre-destaque" : "text-texto hover:bg-painel"}`}
+          className={`flex h-9 w-10 items-center justify-center rounded-lg transition-colors ${
+            tema === o.valor ? "bg-fundo text-texto shadow-sm" : "text-suave hover:text-texto"
+          }`}
         >
-          {o.icone}
+          <o.Icone width={16} height={16} />
         </button>
       ))}
     </div>

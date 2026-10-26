@@ -17,7 +17,7 @@ export function ComandoPronto({ texto }: { texto: string }) {
         <div className="grid gap-3 sm:grid-cols-2">
           {nomes.map((n) => (
             <label key={n} className="flex flex-col gap-1 text-sm">
-              <span className="font-mono text-[11px] uppercase tracking-wider text-suave">{n}</span>
+              <span className="text-xs font-semibold tracking-[0.06em] text-suave uppercase">{n}</span>
               <input
                 className={classeCampo}
                 value={valores[n] ?? ""}
@@ -27,12 +27,12 @@ export function ComandoPronto({ texto }: { texto: string }) {
           ))}
         </div>
       )}
-      <pre className="max-h-96 overflow-auto border border-linha bg-painel p-4 font-mono text-[13px] leading-relaxed whitespace-pre-wrap">
+      <pre className="max-h-96 overflow-auto rounded-xl border border-linha bg-painel p-4 font-mono text-[13px] leading-relaxed whitespace-pre-wrap">
         {final}
       </pre>
       <div className="flex flex-wrap gap-2">
         <BotaoCopiar texto={final} rotulo="Copiar" variante="primario" />
-        <button type="button" disabled title="Disponível na Fase 2" className="cursor-not-allowed border border-linha px-3.5 py-2 text-sm text-suave">
+        <button type="button" disabled title="Disponível na Fase 2" className="inline-flex min-h-11 cursor-not-allowed items-center rounded-xl border border-linha px-4 text-sm text-suave">
           Adicionar à tarefa (Fase 2)
         </button>
       </div>

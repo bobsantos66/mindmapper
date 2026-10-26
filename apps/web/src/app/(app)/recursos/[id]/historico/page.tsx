@@ -22,7 +22,7 @@ export default async function PaginaHistorico({ params }: { params: Promise<{ id
       <section className="flex flex-col gap-3">
         <h2 className="text-xl font-bold">Versões da ficha funcional</h2>
         <p className="text-sm text-suave">Toda alteração ou nova geração cria uma versão. Nenhuma é apagada.</p>
-        <ul className="flex flex-col divide-y divide-linha border border-linha">
+        <ul className="flex flex-col divide-y divide-linha overflow-hidden rounded-cartao border border-linha bg-cartao">
           {descricoes.map((d) => (
             <li key={d.id} className="flex flex-wrap items-center gap-3 p-3 text-sm">
               <span className="font-mono">v{d.versao}</span>
@@ -47,7 +47,7 @@ export default async function PaginaHistorico({ params }: { params: Promise<{ id
         {versoes.length === 0 ? (
           <p className="text-sm text-suave">Ainda não houve alterações depois da criação.</p>
         ) : (
-          <ul className="flex flex-col divide-y divide-linha border border-linha">
+          <ul className="flex flex-col divide-y divide-linha overflow-hidden rounded-cartao border border-linha bg-cartao">
             {versoes.map((v) => {
               const s = v.snapshot as { titulo?: string; aprovacao?: string };
               return (

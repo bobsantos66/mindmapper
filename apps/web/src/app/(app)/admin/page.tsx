@@ -30,7 +30,7 @@ export default async function PaginaAdmin() {
     <>
       <Titulo sub="Totais excluem os dados de exemplo, que aparecem separados.">Administração</Titulo>
 
-      <section className="grid grid-cols-2 gap-px border border-linha bg-linha lg:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <Numero rotulo="Recursos" valor={e.total - e.exemplos} nota={`+ ${e.exemplos} de exemplo`} />
         <Numero rotulo="Rascunhos e revisão" valor={e.rascunhos} href="/recursos?ordem=atualizacao" />
         <Numero rotulo="Compatibilidade a verificar" valor={e.sem_fonte} />
@@ -79,16 +79,16 @@ export default async function PaginaAdmin() {
 function Numero({ rotulo, valor, nota, href }: { rotulo: string; valor: number; nota?: string; href?: string }) {
   const corpo = (
     <>
-      <span className="font-mono text-[11px] uppercase tracking-wider text-suave">{rotulo}</span>
+      <span className="text-xs font-semibold tracking-[0.06em] text-suave uppercase">{rotulo}</span>
       <span className="text-3xl font-bold tabular-nums">{valor}</span>
       {nota && <span className="text-xs text-suave">{nota}</span>}
     </>
   );
   return href ? (
-    <Link href={href} className="flex flex-col gap-1 bg-fundo p-4 hover:bg-painel">
+    <Link href={href} className="flex flex-col gap-1 rounded-cartao border border-linha bg-cartao p-5 transition-colors hover:border-texto">
       {corpo}
     </Link>
   ) : (
-    <div className="flex flex-col gap-1 bg-fundo p-4">{corpo}</div>
+    <div className="flex flex-col gap-1 rounded-cartao border border-linha bg-cartao p-5">{corpo}</div>
   );
 }

@@ -25,7 +25,7 @@ export default async function PaginaLixeira() {
       {!data?.length ? (
         <Vazio titulo="A lixeira está vazia." />
       ) : (
-        <ul className="flex flex-col divide-y divide-linha border border-linha">
+        <ul className="flex flex-col divide-y divide-linha overflow-hidden rounded-cartao border border-linha bg-cartao">
           {data.map((r) => (
             <li key={r.id} className="flex flex-wrap items-center gap-3 p-3 text-sm">
               <Link href={`/recursos/${r.id}`} className="min-w-0 flex-1 font-medium hover:underline">

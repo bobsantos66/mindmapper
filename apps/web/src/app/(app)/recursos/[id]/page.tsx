@@ -89,12 +89,12 @@ export default async function PaginaRecurso({
   return (
     <article className="flex flex-col gap-10">
       {salvo && (
-        <p role="status" className="bg-destaque px-4 py-2 text-sm text-sobre-destaque">
+        <p role="status" className="rounded-xl bg-destaque px-4 py-3 text-sm font-semibold text-sobre-destaque">
           Recurso salvo.
         </p>
       )}
       {r.deleted_at && (
-        <p role="status" className="border border-perigo px-4 py-2 text-sm text-perigo">
+        <p role="status" className="rounded-xl border border-perigo px-4 py-3 text-sm text-perigo">
           Este recurso está na lixeira desde {dataCurta(r.deleted_at)}.
         </p>
       )}
@@ -117,8 +117,8 @@ export default async function PaginaRecurso({
             </Selo>
           ))}
         </div>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">{r.titulo}</h1>
-        <p className="max-w-[68ch] text-lg text-suave">{desc?.resumo ?? "Sem resumo funcional ainda."}</p>
+        <h1 className="text-4xl leading-none font-bold tracking-[-0.04em] break-words sm:text-5xl">{r.titulo}</h1>
+        <p className="max-w-[68ch] text-lg leading-relaxed text-suave">{desc?.resumo ?? "Sem resumo funcional ainda."}</p>
         <div className="flex flex-wrap gap-2">
           <BotaoFavorito id={r.id} inicial={r.favorito} />
           {r.link_oficial && (
@@ -143,13 +143,19 @@ export default async function PaginaRecurso({
             </>
           )}
         </div>
-        <p className="font-mono text-[11px] text-suave">
-          {preenchidos} de {total} campos da ficha preenchidos
-        </p>
+        <div className="flex max-w-sm flex-col gap-2">
+          <p className="text-sm">
+            <span className="text-2xl font-bold tracking-[-0.03em]">{preenchidos}</span>
+            <span className="text-suave"> de {total} campos da ficha preenchidos</span>
+          </p>
+          <div className="h-1.5 rounded-full bg-painel" aria-hidden="true">
+            <div className="h-1.5 rounded-full bg-destaque" style={{ width: `${total ? Math.round((preenchidos / total) * 100) : 0}%` }} />
+          </div>
+        </div>
       </header>
 
       {/* O essencial */}
-      <section className="grid gap-6 md:grid-cols-2">
+      <section className="grid gap-4 md:grid-cols-2">
         <Bloco titulo="O que faz?">{desc?.o_que_faz ?? <Ausente />}</Bloco>
         <Bloco titulo="Para que serve?">{desc?.para_que_serve ?? <Ausente />}</Bloco>
       </section>
@@ -158,14 +164,14 @@ export default async function PaginaRecurso({
       {(comandos.length > 0 || manifesto?.ok || temChatGPT || r.instalacao_md) && (
         <Secao titulo="Como usar">
           {manifesto?.ok && (
-            <div className="flex flex-col gap-3 border-2 border-texto p-4">
+            <div className="flex flex-col gap-3 rounded-cartao border border-texto p-5">
               <h3 className="font-semibold">Instalar no Claude Code</h3>
               <p className="text-sm text-suave">
                 Rode no terminal do computador onde você usa o Claude Code. O MindMapper Local mostra o que vai mudar e pede
                 confirmação antes de instalar.
               </p>
               <div className="flex flex-wrap items-center gap-2">
-                <code className="bg-painel px-3 py-2 font-mono text-sm">mm instalar {nomeInstalacao}</code>
+                <code className="rounded-lg bg-painel px-3 py-2.5 font-mono text-sm">mm instalar {nomeInstalacao}</code>
                 <BotaoCopiar texto={`mm instalar ${nomeInstalacao}`} rotulo="Copiar comando" variante="primario" />
               </div>
               <ul className="list-disc pl-5 font-mono text-xs text-suave">
@@ -178,7 +184,7 @@ export default async function PaginaRecurso({
 
           {comandos.map((c) =>
             c.regra.mostrar ? (
-              <div key={c.id} className="flex flex-col gap-2 border border-linha p-4">
+              <div key={c.id} className="flex flex-col gap-2 rounded-cartao border border-linha p-5">
                 <div className="flex flex-wrap items-center gap-1.5">
                   <Selo>{c.platform_environments?.nome}</Selo>
                   <Selo tom="suave">{ROTULO_ACIONAMENTO[c.acionamento]}</Selo>
@@ -190,11 +196,11 @@ export default async function PaginaRecurso({
                   )}
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <code className="bg-painel px-3 py-2 font-mono text-sm">{c.comando}</code>
+                  <code className="rounded-lg bg-painel px-3 py-2.5 font-mono text-sm">{c.comando}</code>
                   <BotaoCopiar texto={c.comando} />
                 </div>
                 {c.exemplo_completo && (
-                  <pre className="overflow-auto bg-painel p-3 font-mono text-xs whitespace-pre-wrap">{c.exemplo_completo}</pre>
+                  <pre className="overflow-auto rounded-lg bg-painel p-3 font-mono text-xs whitespace-pre-wrap">{c.exemplo_completo}</pre>
                 )}
               </div>
             ) : admin ? (
@@ -205,7 +211,7 @@ export default async function PaginaRecurso({
           )}
 
           {temChatGPT && (
-            <div className="flex flex-col gap-2 border border-linha p-4 text-sm">
+            <div className="flex flex-col gap-2 rounded-cartao border border-linha p-5 text-sm">
               <h3 className="font-semibold">No ChatGPT</h3>
               <p className="text-suave">
                 O ChatGPT não permite instalação de fora. Copie o prompt abaixo, ou abra a documentação oficial e siga o passo a
@@ -251,7 +257,7 @@ export default async function PaginaRecurso({
                       </dt>
                       <dd className="text-sm whitespace-pre-wrap">{v.valor}</dd>
                       {v.fontes.length > 0 && (
-                        <dd className="font-mono text-[11px] text-suave">
+                        <dd className="text-xs text-suave">
                           Fonte:{" "}
                           {v.fontes.map((f, i) =>
                             f.url ? (
@@ -270,8 +276,8 @@ export default async function PaginaRecurso({
               </dl>
             )}
             {ausentes.length > 0 && (
-              <p className="font-mono text-[11px] text-suave">
-                Informação ausente: {ausentes.map((a) => a.rotulo.toLowerCase()).join(", ")}
+              <p className="text-xs text-suave italic">
+                Informação ausente na fonte: {ausentes.map((a) => a.rotulo.toLowerCase()).join(", ")}
               </p>
             )}
           </Secao>
@@ -326,7 +332,7 @@ export default async function PaginaRecurso({
             )}
           </Item>
           <Item rotulo="Ficha gerada por">{desc ? `${desc.gerado_por} · versão ${desc.versao}` : "—"}</Item>
-          <Item rotulo="Arquivo de origem">— (importação na Fase 3)</Item>
+          <Item rotulo="Arquivo de origem">{r.lote_importacao ?? "—"}</Item>
         </dl>
       </Secao>
     </article>
@@ -335,8 +341,8 @@ export default async function PaginaRecurso({
 
 function Secao({ titulo, children }: { titulo: string; children: ReactNode }) {
   return (
-    <section className="flex flex-col gap-4 border-t border-linha pt-6">
-      <h2 className="text-xl font-bold">{titulo}</h2>
+    <section className="flex flex-col gap-4 rounded-cartao border border-linha bg-cartao p-5 sm:p-6">
+      <h2 className="text-xs font-semibold tracking-[0.08em] text-suave uppercase">{titulo}</h2>
       {children}
     </section>
   );
@@ -344,9 +350,9 @@ function Secao({ titulo, children }: { titulo: string; children: ReactNode }) {
 
 function Bloco({ titulo, children }: { titulo: string; children: ReactNode }) {
   return (
-    <div className="flex min-w-0 flex-col gap-2">
-      <h2 className="font-mono text-[11px] uppercase tracking-wider text-suave">{titulo}</h2>
-      <div className="max-w-[68ch] whitespace-pre-wrap">{children}</div>
+    <div className="flex min-w-0 flex-col gap-2 rounded-cartao border border-linha bg-cartao p-5 sm:p-6">
+      <h2 className="text-xs font-semibold tracking-[0.08em] text-suave uppercase">{titulo}</h2>
+      <div className="max-w-[68ch] leading-relaxed whitespace-pre-wrap">{children}</div>
     </div>
   );
 }
@@ -354,12 +360,12 @@ function Bloco({ titulo, children }: { titulo: string; children: ReactNode }) {
 function Item({ rotulo, children }: { rotulo: string; children: ReactNode }) {
   return (
     <div className="flex min-w-0 flex-col gap-0.5">
-      <dt className="font-mono text-[11px] uppercase tracking-wider text-suave">{rotulo}</dt>
+      <dt className="text-xs text-suave">{rotulo}</dt>
       <dd>{children}</dd>
     </div>
   );
 }
 
 function Ausente() {
-  return <span className="text-sm text-suave">Informação ausente</span>;
+  return <span className="text-sm text-suave italic">Informação ausente na fonte</span>;
 }
