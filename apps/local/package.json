@@ -1,0 +1,27 @@
+{
+  "name": "@mindmapper/local",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MindMapper Local: instala e remove itens aprovados da biblioteca no Claude Code deste computador.",
+  "type": "module",
+  "bin": {
+    "mm": "./dist/mm.mjs"
+  },
+  "scripts": {
+    "build": "esbuild src/cli.ts --bundle --platform=node --target=node20 --format=esm --outfile=dist/mm.mjs --banner:js=\"#!/usr/bin/env node\nimport { createRequire } from 'node:module'; const require = createRequire(import.meta.url);\"",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@mindmapper/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@supabase/supabase-js": "2.118.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}

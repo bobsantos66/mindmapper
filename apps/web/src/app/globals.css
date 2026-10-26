@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/*
+ * Identidade MindMapper: preto #000000, branco #FFFFFF, amarelo #F0FF00.
+ * O amarelo é usado só como fundo com texto preto: amarelo sobre branco tem contraste ~1,1:1.
+ * Tema: data-tema="claro" | "escuro" no <html>; sem atributo, segue o sistema.
+ */
+:root {
+  --fundo: #ffffff;
+  --texto: #000000;
+  --suave: #55574a;
+  --linha: #d9dbcc;
+  --painel: #f6f7ee;
+  --destaque: #f0ff00;
+  --sobre-destaque: #000000;
+  --perigo: #b42318;
+  --ok: #1f7a3a;
+  --foco: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    --fundo: #000000;
+    --texto: #ffffff;
+    --suave: #a9ab9c;
+    --linha: #2c2d24;
+    --painel: #0f100b;
+    --perigo: #ff8a7a;
+    --ok: #6fd28f;
+    --foco: #f0ff00;
+    color-scheme: dark;
+  }
+}
+
+:root[data-tema="escuro"] {
+  --fundo: #000000;
+  --texto: #ffffff;
+  --suave: #a9ab9c;
+  --linha: #2c2d24;
+  --painel: #0f100b;
+  --perigo: #ff8a7a;
+  --ok: #6fd28f;
+  --foco: #f0ff00;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-fundo: var(--fundo);
+  --color-texto: var(--texto);
+  --color-suave: var(--suave);
+  --color-linha: var(--linha);
+  --color-painel: var(--painel);
+  --color-destaque: var(--destaque);
+  --color-sobre-destaque: var(--sobre-destaque);
+  --color-perigo: var(--perigo);
+  --color-ok: var(--ok);
+  --font-sans: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--foco);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
