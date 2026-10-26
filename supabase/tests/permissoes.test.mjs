@@ -3,15 +3,26 @@
 // Cria um convidado e um rascunho temporários e apaga os dois no fim.
 import { after, before, test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { createClient } from "@supabase/supabase-js";
 
-const env = Object.fromEntries(
-  readFileSync(new URL("../../apps/web/.env.local", import.meta.url), "utf8")
-    .split("\n")
-    .filter((l) => l.includes("="))
-    .map((l) => [l.slice(0, l.indexOf("=")), l.slice(l.indexOf("=") + 1).trim()]),
-);
+// Variáveis de ambiente têm prioridade: assim o mesmo teste roda contra o modo local (mm abrir).
+const arquivoEnv = new URL("../../apps/web/.env.local", import.meta.url);
+const env = {
+  ...(existsSync(arquivoEnv)
+    ? Object.fromEntries(
+        readFileSync(arquivoEnv, "utf8")
+          .split("\n")
+          .filter((l) => l.includes("="))
+          .map((l) => [l.slice(0, l.indexOf("=")), l.slice(l.indexOf("=") + 1).trim()]),
+      )
+    : {}),
+  ...Object.fromEntries(
+    ["NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_ANON_KEY", "SUPABASE_SERVICE_ROLE_KEY"]
+      .filter((k) => process.env[k])
+      .map((k) => [k, process.env[k]]),
+  ),
+};
 const URL_SB = env.NEXT_PUBLIC_SUPABASE_URL;
 if (!URL_SB.includes("127.0.0.1") && !URL_SB.includes("localhost")) {
   throw new Error("Estes testes só rodam no Supabase local.");

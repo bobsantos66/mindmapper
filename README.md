@@ -22,7 +22,20 @@ Biblioteca para buscar, organizar e usar prompts, skills, plugins, conectores, M
 - Convidados veem só o que está **aprovado** e fora da lixeira. Isso vale também para fichas, comandos e pacotes: a regra está no banco, não só na tela.
 - O cadastro aberto está desligado.
 
-## Rodar no seu computador
+## Rodar no seu computador (modo local, sem Docker)
+
+Guia passo a passo para Windows e iPhone: [docs/windows.md](docs/windows.md).
+
+```bash
+pnpm install && pnpm build
+node apps/local/dist/mm.mjs abrir --celular   # no Windows: dois cliques em MindMapper.cmd
+```
+
+O banco é o mesmo PostgreSQL das migrações, rodando dentro do Node (PGlite), e fica em `~/.mindmapper/local/dados`.
+Um servidor em `127.0.0.1` atende no formato do Supabase (REST e login), então o site e o `mm` não mudam.
+Ele escuta só neste computador; o celular fala com o site, nunca direto com o banco.
+
+## Desenvolvimento com Supabase (Docker)
 
 Requisitos: Node 20+, pnpm 10 e Docker.
 

@@ -3,12 +3,13 @@ import { createServerClient } from "@supabase/ssr";
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import type { Database } from "@mindmapper/core";
+import { configSupabase } from "./config";
 
 export async function createClient() {
   const cookieStore = await cookies();
   return createServerClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    configSupabase().url,
+    configSupabase().anon,
     {
       cookies: {
         getAll() {
@@ -33,7 +34,7 @@ export async function createClient() {
 export function createAdminClient() {
   const chave = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!chave) throw new Error("SUPABASE_SERVICE_ROLE_KEY não configurada.");
-  return createSupabaseClient<Database>(process.env.NEXT_PUBLIC_SUPABASE_URL!, chave, {
+  return createSupabaseClient<Database>(configSupabase().url, chave, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }

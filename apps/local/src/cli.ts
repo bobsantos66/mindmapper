@@ -3,12 +3,21 @@ import { stdin, stdout } from "node:process";
 import { parseArgs } from "node:util";
 import { buscar, conectar, espelharInstalacao, exigirLogin, ficha, lerConfig, salvarConfig } from "./biblioteca";
 import { iniciarServidorMcp } from "./mcp";
+import { abrir, backupAgora, importar, definirPastaBackup, lerAjustes, restaurarBackup } from "./modo-local";
 import { incluir, instalar, previaInclusao, previaInstalacao, previaRemocao, remover } from "./operacoes";
 import { garantirPasta, listarInstalados, listarLixeira, registrarInstalado, restaurarDaLixeira, type Escopo } from "./registro";
 
 const AJUDA = `MindMapper Local: instala no Claude Code os itens aprovados da sua biblioteca.
 
-Uso:
+Modo local (a plataforma inteira neste computador):
+  mm abrir [--celular] [--porta 3000]        abre o MindMapper no navegador
+                                             --celular libera o acesso pelo iPhone na mesma rede Wi-Fi
+  mm importar <biblioteca.json>              importa prompts de um arquivo (entram "em revisão")
+  mm backup-pasta <pasta>                    onde guardar os backups (ex.: uma pasta do Google Drive)
+  mm backup                                  faz um backup agora (com o MindMapper fechado)
+  mm restaurar-backup <arquivo.tar.gz>       volta a um backup (o banco atual é guardado, não apagado)
+
+Biblioteca em outro endereço:
   mm configurar <endereço> <chave pública>   liga este computador à sua biblioteca
   mm entrar [e-mail]                         entra com o seu login (senha pedida aqui)
   mm sair
@@ -30,21 +39,36 @@ Opções:
 Para usar dentro do Claude Code:
   claude mcp add --scope user mindmapper -- mm mcp`;
 
+// Um único leitor para a sessão inteira: com entrada redirecionada, um leitor novo por
+// pergunta perderia as linhas que o anterior já leu.
+let leitor: ReturnType<typeof createInterface> | undefined;
+let linhas: AsyncIterator<string> | undefined;
+
 async function perguntar(pergunta: string, oculta = false): Promise<string> {
-  const rl = createInterface({ input: stdin, output: stdout, terminal: !!stdin.isTTY });
+  leitor ??= createInterface({ input: stdin, output: stdout, terminal: !!stdin.isTTY });
+  if (!stdin.isTTY) {
+    // Entrada redirecionada: lê da fila de linhas, que não perde as que chegaram antes.
+    linhas ??= leitor[Symbol.asyncIterator]();
+    stdout.write(pergunta);
+    const r = await linhas.next();
+    stdout.write("\n");
+    if (r.done) throw new Error("A entrada terminou antes da resposta.");
+    return String(r.value).trim();
+  }
+  const rl = leitor as unknown as { _writeToOutput: (s: string) => void };
+  const escrever = rl._writeToOutput;
   if (oculta) {
     // Não ecoa a senha: escreve só o rótulo e descarta o resto da saída enquanto se digita.
-    const escrever = (rl as unknown as { _writeToOutput: (s: string) => void })._writeToOutput;
-    (rl as unknown as { _writeToOutput: (s: string) => void })._writeToOutput = (s: string) => {
+    rl._writeToOutput = (s: string) => {
       if (s.startsWith(pergunta)) escrever.call(rl, pergunta);
     };
   }
   try {
-    const r = await rl.question(pergunta);
+    const r = await leitor.question(pergunta);
     if (oculta) stdout.write("\n");
     return r.trim();
   } finally {
-    rl.close();
+    rl._writeToOutput = escrever;
   }
 }
 
@@ -68,6 +92,9 @@ async function principal() {
       simular: { type: "boolean", default: false },
       sim: { type: "boolean", default: false },
       ajuda: { type: "boolean", short: "h", default: false },
+      celular: { type: "boolean", default: false },
+      porta: { type: "string", default: "3000" },
+      "sem-navegador": { type: "boolean", default: false },
     },
   });
   const [comando, ...resto] = positionals;
@@ -81,6 +108,44 @@ async function principal() {
   if (comando !== "mcp") await garantirPasta();
 
   switch (comando) {
+    case "abrir": {
+      const porta = Number(values.porta);
+      if (!Number.isInteger(porta) || porta < 1024 || porta > 65535) throw new Error("Porta inválida.");
+      await abrir({ porta, celular: values.celular, navegador: !values["sem-navegador"], perguntar });
+      return;
+    }
+    case "backup-pasta": {
+      const pasta = resto.join(" ");
+      if (!pasta) {
+        const { pastaBackup } = await lerAjustes();
+        console.log(pastaBackup ? `Backups em: ${pastaBackup}` : "Nenhuma pasta escolhida. Uso: mm backup-pasta <pasta>");
+        return;
+      }
+      await definirPastaBackup(pasta);
+      console.log(`Backups serão gravados em: ${pasta}`);
+      return;
+    }
+    case "importar": {
+      const arquivo = resto.join(" ");
+      if (!arquivo) throw new Error("Uso: mm importar <biblioteca.json> [--simular]");
+      await importar(arquivo, values.simular);
+      return;
+    }
+    case "backup": {
+      console.log(`Backup gravado: ${await backupAgora()}`);
+      return;
+    }
+    case "restaurar-backup": {
+      const arquivo = resto.join(" ");
+      if (!arquivo) throw new Error("Uso: mm restaurar-backup <arquivo.tar.gz>");
+      if (!(await confirmar(`Restaurar ${arquivo}? O banco atual será guardado numa pasta ao lado.`, values))) {
+        console.log("Cancelado. Nada foi alterado.");
+        return;
+      }
+      const r = await restaurarBackup(arquivo);
+      console.log(`Restaurado: ${r.itens} itens.${r.guardado ? ` O banco anterior ficou em ${r.guardado}` : ""}`);
+      return;
+    }
     case "configurar": {
       const [url, chave] = resto;
       if (!url || !chave) throw new Error("Uso: mm configurar <endereço> <chave pública>");
@@ -232,7 +297,9 @@ async function principal() {
   }
 }
 
-principal().catch((e: unknown) => {
-  console.error(e instanceof Error ? e.message : String(e));
-  process.exitCode = 1;
-});
+principal()
+  .catch((e: unknown) => {
+    console.error(e instanceof Error ? e.message : String(e));
+    process.exitCode = 1;
+  })
+  .finally(() => leitor?.close());

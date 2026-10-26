@@ -8,11 +8,12 @@
     "mm": "./dist/mm.mjs"
   },
   "scripts": {
-    "build": "esbuild src/cli.ts --bundle --platform=node --target=node20 --format=esm --outfile=dist/mm.mjs --banner:js=\"#!/usr/bin/env node\nimport { createRequire } from 'node:module'; const require = createRequire(import.meta.url);\"",
+    "build": "node build.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
   "dependencies": {
+    "@electric-sql/pglite": "0.3.16",
     "@mindmapper/core": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.32.2",
     "@supabase/supabase-js": "2.118.0",
