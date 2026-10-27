@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { buscarRecursos, listarCategorias, listarFacetas, listarTipos } from "@/lib/dados";
 import { contarFiltrosAtivos, lerFiltros, type ParamsBusca } from "@/lib/parametros";
 import { CartaoRecurso } from "./cartao-recurso";
-import { IconeBusca } from "./icones";
+import { IconeBusca, IconeSeta } from "./icones";
 import { Botao, Titulo, Vazio, classeCampo } from "./ui";
 
 interface Props {
@@ -125,22 +125,38 @@ export async function PaginaBusca({ params, base, titulo, sub, plataformaFixa, s
             </Grupo>
 
             <Grupo titulo="Categoria">
-              {categorias.map((c) => (
-                <div key={c.id} className="flex flex-col gap-1">
-                  <Opcao nome="cat" valor={c.id} marcado={catSel.has(c.id)}>
-                    {c.nome}
-                  </Opcao>
-                  {c.filhas.length > 0 && catSel.has(c.id) && (
-                    <div className="ml-5 flex flex-col gap-1">
+              {categorias.map((c) => {
+                const marcadas = [c, ...c.filhas].filter((x) => catSel.has(x.id)).length;
+                if (c.filhas.length === 0) {
+                  return (
+                    <Opcao key={c.id} nome="cat" valor={c.id} marcado={catSel.has(c.id)}>
+                      {c.nome}
+                    </Opcao>
+                  );
+                }
+                // Cada categoria abre e fecha com um clique; começa aberta se algo dela está marcado.
+                return (
+                  <details key={c.id} className="group" open={marcadas > 0}>
+                    <summary className="flex min-h-7 cursor-pointer list-none items-center gap-2 text-sm [&::-webkit-details-marker]:hidden">
+                      <IconeSeta className="h-4 w-4 shrink-0 text-suave transition-transform group-open:rotate-90" />
+                      <span>{c.nome}</span>
+                      {marcadas > 0 && (
+                        <span className="rounded-full bg-destaque px-1.5 text-[11px] font-bold text-sobre-destaque">{marcadas}</span>
+                      )}
+                    </summary>
+                    <div className="mt-1 mb-2 ml-6 flex flex-col gap-1">
+                      <Opcao nome="cat" valor={c.id} marcado={catSel.has(c.id)}>
+                        Toda a categoria
+                      </Opcao>
                       {c.filhas.map((s) => (
                         <Opcao key={s.id} nome="cat" valor={s.id} marcado={catSel.has(s.id)}>
                           {s.nome}
                         </Opcao>
                       ))}
                     </div>
-                  )}
-                </div>
-              ))}
+                  </details>
+                );
+              })}
             </Grupo>
 
             <div className="flex flex-col gap-5">
