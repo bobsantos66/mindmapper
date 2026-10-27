@@ -79,3 +79,9 @@ export const IconeVoltar = (p: SVGProps<SVGSVGElement>) => (
     <path d="M19 12H5M11 18l-6-6 6-6" />
   </Icone>
 );
+
+export const IconeSeta = (p: SVGProps<SVGSVGElement>) => (
+  <Icone {...p}>
+    <path d="m9 6 6 6-6 6" />
+  </Icone>
+);
