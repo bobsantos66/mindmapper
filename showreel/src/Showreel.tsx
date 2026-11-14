@@ -1,11 +1,14 @@
-// SG PROPAG showreel: 6 s, 1920x1080 @ 60 fps. Ends exactly on public/mot-final.webp.
-// Every layer is one of the supplied full-frame transparent assets; motion is a pure function of frame.
+// SG PROPAG showreel: 6 s @ 60 fps, authored in 1920x1080 layer coordinates and rendered at any scale
+// (Showreel = 1080p, Showreel4K = 2160p). Type and logo are vectors (sharp at every zoom); the 3-D sail is
+// the supplied render upscaled 2x. It ends on the MOT FINAL layout. Motion is a pure function of frame.
 import React from "react";
 import {
   AbsoluteFill,
   Easing,
   Img,
   Sequence,
+  continueRender,
+  delayRender,
   interpolate,
   spring,
   staticFile,
@@ -14,6 +17,18 @@ import {
 } from "remotion";
 import { Audio } from "@remotion/media";
 import { CameraMotionBlur } from "@remotion/motion-blur";
+import { LOGO_D, LOGO_FILL } from "./logoPath";
+
+// Roboto, the cover's face, from public/ (no font library needed)
+const FONT = "Roboto";
+const fontsReady = delayRender("Loading Roboto");
+Promise.all(
+  [["400", "roboto-400.woff2"], ["700", "roboto-700.woff2"]].map(async ([weight, file]) => {
+    const face = new FontFace(FONT, `url(${staticFile(file)}) format("woff2")`, { weight });
+    await face.load();
+    document.fonts.add(face);
+  }),
+).then(() => continueRender(fontsReady));
 
 const W = 1920;
 const H = 1080;
@@ -49,20 +64,21 @@ const sp = (frame: number, fps: number, start: number, config = {}) =>
 
 // A full-frame layer, optionally clipped to a polygon of the artwork, with a transform.
 const Layer: React.FC<{
-  src: string;
+  src?: string;
+  children?: React.ReactNode;
   clip?: string;
   transform?: string;
   innerTransform?: string;
   opacity?: number;
   origin?: string;
-}> = ({ src, clip, transform, innerTransform, opacity = 1, origin = "0 0" }) => (
+}> = ({ src, children, clip, transform, innerTransform, opacity = 1, origin = "0 0" }) => (
   <AbsoluteFill style={{ transform, transformOrigin: origin, opacity }}>
     {/* fixed window */}
     <AbsoluteFill style={{ clipPath: clip }}>
       {/* the moving piece is pre-clipped to its own region, so nothing else slides into the window */}
       <AbsoluteFill style={{ transform: innerTransform, transformOrigin: "0 0" }}>
         <AbsoluteFill style={{ clipPath: clip }}>
-          <Img src={staticFile(src)} style={{ width: W, height: H, position: "absolute" }} />
+          {children ?? <Img src={staticFile(src!)} style={{ width: W, height: H, position: "absolute" }} />}
         </AbsoluteFill>
       </AbsoluteFill>
     </AbsoluteFill>
@@ -73,6 +89,18 @@ const rect = (x0: number, y0: number, x1: number, y1: number) =>
   `polygon(${x0}px ${y0}px, ${x1}px ${y0}px, ${x1}px ${y1}px, ${x0}px ${y1}px)`;
 const poly = (pts: number[][]) => `polygon(${pts.map(([x, y]) => `${x}px ${y}px`).join(",")})`;
 const fit = ([s, tx, ty]: readonly number[]) => `translate(${tx}px, ${ty}px) scale(${s})`;
+
+// full-frame inline SVG in layer coordinates: vector, so it stays sharp under any camera zoom
+const Svg: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ position: "absolute", overflow: "visible" }}>
+    {children}
+  </svg>
+);
+const LogoArt = () => (
+  <Svg>
+    <path d={LOGO_D} fill={LOGO_FILL} fillRule="evenodd" />
+  </Svg>
+);
 
 // ---------------------------------------------------------------- LOGO: SG monogram slams, letters rise
 const LETTERS = [
@@ -92,20 +120,18 @@ const Logo: React.FC<{ start: number; base?: string; big?: number }> = ({ start,
   return (
     <AbsoluteFill style={{ transform: base, transformOrigin: "0 0" }}>
       <Layer
-        src="logo.png"
         clip={rect(350, 410, 650, 632)}
         origin="500px 520px"
         transform={`scale(${s}) rotate(${(1 - k) * -14}deg)`}
-      />
+      >
+        <LogoArt />
+      </Layer>
       {LETTERS.map((c, i) => {
         const kk = sp(frame, fps, start + 8 + i * 3.5, { damping: 14, stiffness: 210 });
         return (
-          <Layer
-            key={i}
-            src="logo.png"
-            clip={c}
-            innerTransform={`translateY(${(1 - kk) * 240}px)`}
-          />
+          <Layer key={i} clip={c} innerTransform={`translateY(${(1 - kk) * 240}px)`}>
+            <LogoArt />
+          </Layer>
         );
       })}
     </AbsoluteFill>
@@ -164,13 +190,19 @@ const BallLogo: React.FC = () => {
     <AbsoluteFill>
       {frame >= T.ballLand + 2 && (
         <AbsoluteFill style={{ clipPath: `circle(${open}px at 500px 520px)` }}>
-          <Layer src="logo.png" clip={rect(350, 410, 650, 632)} />
+          <Layer clip={rect(350, 410, 650, 632)}>
+            <LogoArt />
+          </Layer>
         </AbsoluteFill>
       )}
       {LETTERS.map((c, i) => {
         const kk = sp(frame, fps, T.ballLand + 4 + i * 2.6, { damping: 14, stiffness: 210 });
         if (kk <= 0) return null;
-        return <Layer key={i} src="logo.png" clip={c} innerTransform={`translateY(${(1 - kk) * 240}px)`} />;
+        return (
+          <Layer key={i} clip={c} innerTransform={`translateY(${(1 - kk) * 240}px)`}>
+            <LogoArt />
+          </Layer>
+        );
       })}
       {ballGone > 0 && (
         <div
@@ -192,15 +224,33 @@ const BallLogo: React.FC = () => {
 };
 
 // ---------------------------------------------------------------- HEADLINE: words rise out of line masks
+const HEAD = { size: 210.91, track1: -8.39, track2: -7.98, base1: 481.96, base2: 698 };
+const LINE1 = rect(0, 300, W, 530);
+const LINE2 = rect(0, 530, W, 770);
 const WORDS = [
-  { clip: rect(220, 318, 770, 528), d: 0 },
-  { clip: rect(790, 318, 1660, 528), d: 8 },
-  { clip: rect(220, 528, 352, 752), d: 20 },
-  { clip: rect(380, 528, 918, 752), d: 26 },
-  { clip: rect(940, 528, 1066, 752), d: 34 },
-  { clip: rect(1084, 528, 1500, 752), d: 40 },
-  { clip: rect(1500, 528, 1600, 752), d: 46, q: true }, // the question mark
+  { text: "Quem", x: 226.6, line: 1, d: 0 },
+  { text: "convence", x: 797.4, line: 1, d: 8 },
+  { text: "o", x: 226.7, line: 2, d: 20 },
+  { text: "lojista", x: 382.5, line: 2, d: 26 },
+  { text: "a", x: 949.8, line: 2, d: 34 },
+  { text: "ficar", x: 1099.5, line: 2, d: 40 },
+  { text: "?", x: 1487.9, line: 2, d: 46, q: true },
 ];
+const Word: React.FC<{ w: (typeof WORDS)[number] }> = ({ w }) => (
+  <Svg>
+    <text
+      x={w.x}
+      y={w.line === 1 ? HEAD.base1 : HEAD.base2}
+      fontFamily={FONT}
+      fontWeight={700}
+      fontSize={HEAD.size}
+      letterSpacing={w.line === 1 ? HEAD.track1 : HEAD.track2}
+      fill="#000"
+    >
+      {w.text}
+    </text>
+  </Svg>
+);
 const Headline: React.FC<{ start: number; base?: string; stagger?: number }> = ({ start, base = "", stagger = 1 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -213,14 +263,15 @@ const Headline: React.FC<{ start: number; base?: string; stagger?: number }> = (
         return (
           <Layer
             key={i}
-            src="headline.png"
-            clip={w.clip}
+            clip={w.line === 1 ? LINE1 : LINE2}
             innerTransform={
               w.q
-                ? `translateY(${(1 - k) * 230}px) translate(1545px, 640px) scale(${0.4 + 0.6 * punch}) translate(-1545px, -640px)`
+                ? `translateY(${(1 - k) * 230}px) translate(1532px, 620px) scale(${0.4 + 0.6 * punch}) translate(-1532px, -620px)`
                 : `translateY(${(1 - k) * 230}px)`
             }
-          />
+          >
+            <Word w={w} />
+          </Layer>
         );
       })}
     </AbsoluteFill>
@@ -255,6 +306,7 @@ const SliceOut: React.FC<{ start: number; children: React.ReactNode }> = ({ star
 
 // ---------------------------------------------------------------- the film
 const DOT = [1539, 676];
+const DOT_R = 18;
 const PILL_SRC = { x: 270, y: 488, w: 1402, h: 105, r: 22 };
 
 const Film: React.FC = () => {
@@ -270,7 +322,11 @@ const Film: React.FC = () => {
     interpolate(pull, [0, 1], [470, W / 2]) * (1 - Math.min(1, dive * 3)) + DOT[0] * Math.min(1, dive * 3),
     interpolate(pull, [0, 1], [420, H / 2]) * (1 - Math.min(1, dive * 3)) + DOT[1] * Math.min(1, dive * 3),
   ];
-  const cam = `translate(${W / 2}px, ${H / 2}px) scale(${zOut * zIn}) translate(${-focus[0]}px, ${-focus[1]}px)`;
+  const zoom = zOut * zIn;
+  const cam = `translate(${W / 2}px, ${H / 2}px) scale(${zoom}) translate(${-focus[0]}px, ${-focus[1]}px)`;
+  // during the dive the dot of "?" is drawn as a screen-space disc: exact at any zoom, no tiling
+  const dotScreen = [W / 2 + (DOT[0] - focus[0]) * zoom, H / 2 + (DOT[1] - focus[1]) * zoom];
+  const dotR = DOT_R * zoom;
 
   // Act 3 pill: the black of the dot becomes the pill
   const m = sp(frame, fps, T.pillMorph, { damping: 18, stiffness: 160 });
@@ -290,9 +346,26 @@ const Film: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: "white" }}>
       {/* Act 2: headline under a moving camera */}
       {frame >= T.headIn - 8 && frame < T.dive + 2 && (
-        <AbsoluteFill style={{ transform: cam, transformOrigin: "0 0" }}>
-          <Headline start={T.headIn} stagger={0.8} />
-        </AbsoluteFill>
+        <>
+          {zIn < 12 && (
+            <AbsoluteFill style={{ transform: cam, transformOrigin: "0 0" }}>
+              <Headline start={T.headIn} stagger={0.8} />
+            </AbsoluteFill>
+          )}
+          {zIn > 1.5 && (
+            <div
+              style={{
+                position: "absolute",
+                left: dotScreen[0] - dotR,
+                top: dotScreen[1] - dotR,
+                width: dotR * 2,
+                height: dotR * 2,
+                borderRadius: "50%",
+                backgroundColor: "#000",
+              }}
+            />
+          )}
+        </>
       )}
 
       {/* Act 1: logo */}
@@ -305,10 +378,10 @@ const Film: React.FC = () => {
       )}
 
       {/* Act 4: sail (behind the pill) */}
-      {frame >= T.sail && frame < T.finalFade + 20 && (
+      {frame >= T.sail && (
         <AbsoluteFill style={{ perspective: 1800, perspectiveOrigin: "1400px 520px" }}>
           <Layer
-            src="sail.webp"
+            src="sail-2x.webp"
             origin="1400px 560px"
             opacity={Math.min(1, sk * 4)}
             transform={`translateY(${(1 - sk) * 140}px) rotateY(${(1 - sk) * 78}deg) rotateZ(${(1 - sk) * -8}deg)`}
@@ -317,7 +390,7 @@ const Film: React.FC = () => {
       )}
 
       {/* Act 3: pill */}
-      {frame >= T.dive && frame < T.finalFade + 20 && (
+      {frame >= T.dive && (
         <AbsoluteFill style={{ transform: pillGroup, transformOrigin: "0 0" }}>
           <div
             style={{
@@ -326,46 +399,50 @@ const Film: React.FC = () => {
               top: by,
               width: bw,
               height: bh,
-              borderRadius: interpolate(m, [0, 1], [0, PILL_SRC.r]),
+              borderRadius: interpolate(m, [0, 1], [0, PILL_SRC.r]) + home * (PILL_SRC.h / 2 - PILL_SRC.r), // fully round once it lands, like the cover
               backgroundColor: "black",
             }}
           />
-          {frame >= T.pillText && <Layer src="pill.png" clip={`inset(0 ${textWipe}% 0 0)`} />}
+          {frame >= T.pillText && (
+            <Layer clip={`inset(0 ${textWipe}% 0 0)`}>
+              <Svg>
+                <text x={330.14} y={563.18} fontFamily={FONT} fontWeight={400} fontSize={85.57} letterSpacing={-3.52} fill="#fff">
+                  Análise competitiva de comunicação
+                </text>
+              </Svg>
+            </Layer>
+          )}
         </AbsoluteFill>
       )}
 
       {/* Act 5: assembly on the final layout */}
-      {frame < T.finalFade + 20 && (
+      {(
         <>
           <Logo start={T.logoHome} base={fit(FINAL.logo)} big={2.2} />
           <Headline start={T.headHome} base={fit(FINAL.head)} stagger={0.55} />
         </>
       )}
 
-      {/* the delivered frame: MOT FINAL */}
-      <Img
-        src={staticFile("mot-final.webp")}
-        style={{
-          position: "absolute",
-          width: W,
-          height: H,
-          opacity: interpolate(frame, [T.finalFade, T.finalFade + 16], [0, 1], clamp),
-        }}
-      />
     </AbsoluteFill>
   );
 };
 
-export const Showreel: React.FC = () => (
+// Everything is authored on a 1920x1080 stage and scaled up as vectors at render time.
+export const Showreel: React.FC<{ scale: number }> = ({ scale }) => (
   <AbsoluteFill style={{ backgroundColor: "white" }}>
-    <Sequence durationInFrames={T.finalFade + 20} layout="absolute-fill">
-      <CameraMotionBlur shutterAngle={200} samples={8}>
-        <Film />
-      </CameraMotionBlur>
-    </Sequence>
-    <Sequence from={T.finalFade + 20} layout="absolute-fill">
-      <Img src={staticFile("mot-final.webp")} style={{ width: W, height: H }} />
-    </Sequence>
+    <AbsoluteFill style={{ width: W, height: H, transform: `scale(${scale})`, transformOrigin: "0 0" }}>
+      <Sequence durationInFrames={T.finalFade} layout="absolute-fill">
+        <CameraMotionBlur shutterAngle={200} samples={8}>
+          <Film />
+        </CameraMotionBlur>
+      </Sequence>
+      {/* the settled MOT FINAL layout: no motion left, so no blur samples needed */}
+      <Sequence from={T.finalFade} layout="absolute-fill">
+        <Sequence from={-T.finalFade} layout="absolute-fill">
+          <Film />
+        </Sequence>
+      </Sequence>
+    </AbsoluteFill>
     <Audio src={staticFile("mix.wav")} />
   </AbsoluteFill>
 );
