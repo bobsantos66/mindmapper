@@ -29,18 +29,18 @@ const FINAL = {
 
 // timeline (frames @ 60 fps)
 export const T = {
-  logoIn: -6,
-  sliceOut: 46,
-  headIn: 54,
-  diveStart: 116,
-  dive: 146,
-  pillMorph: 150,
-  pillText: 160,
-  pillHome: 188,
-  sail: 192,
-  logoHome: 212,
-  headHome: 224,
-  finalFade: 274,
+  ballLand: 52,
+  sliceOut: 86,
+  headIn: 94,
+  diveStart: 146,
+  dive: 170,
+  pillMorph: 174,
+  pillText: 182,
+  pillHome: 204,
+  sail: 206,
+  logoHome: 220,
+  headHome: 230,
+  finalFade: 280,
   end: 360,
 };
 
@@ -60,7 +60,7 @@ const Layer: React.FC<{
     {/* fixed window */}
     <AbsoluteFill style={{ clipPath: clip }}>
       {/* the moving piece is pre-clipped to its own region, so nothing else slides into the window */}
-      <AbsoluteFill style={{ transform: innerTransform }}>
+      <AbsoluteFill style={{ transform: innerTransform, transformOrigin: "0 0" }}>
         <AbsoluteFill style={{ clipPath: clip }}>
           <Img src={staticFile(src)} style={{ width: W, height: H, position: "absolute" }} />
         </AbsoluteFill>
@@ -112,6 +112,85 @@ const Logo: React.FC<{ start: number; base?: string; big?: number }> = ({ start,
   );
 };
 
+// ---------------------------------------------------------------- LOGO INTRO: a black ball ricochets off the
+// frame edges on a fixed (non-random) path, lands on the monogram and bursts open into the logo.
+const BALL_R = 58;
+// waypoints: entry, bottom edge, top edge, right edge, landing on the SG monogram
+const BALL_PATH = [
+  [-40, 230],
+  [700, H - BALL_R],
+  [1300, BALL_R],
+  [W - BALL_R, 470],
+  [500, 520],
+];
+const BOUNCE_AXIS = ["y", "y", "x"]; // which axis each bounce squashes along
+const SPEED = 79; // px per frame on the ricochet legs
+const legLen = BALL_PATH.slice(1).map((p, i) => Math.hypot(p[0] - BALL_PATH[i][0], p[1] - BALL_PATH[i][1]));
+const legStart = [0];
+for (let i = 0; i < 3; i++) legStart.push(legStart[i] + legLen[i] / SPEED);
+// legStart = [0, f(bottom), f(top), f(right)]; the last leg decelerates into the landing
+export const BOUNCES = legStart.slice(1);
+
+const ballAt = (f: number): [number, number] => {
+  for (let i = 0; i < 3; i++) {
+    if (f < legStart[i + 1]) {
+      const p = (f - legStart[i]) / (legStart[i + 1] - legStart[i]);
+      const a = BALL_PATH[i], b = BALL_PATH[i + 1];
+      return [a[0] + (b[0] - a[0]) * p, a[1] + (b[1] - a[1]) * p];
+    }
+  }
+  const p = interpolate(f, [legStart[3], T.ballLand], [0, 1], { ...clamp, easing: Easing.bezier(0.3, 0.75, 0.4, 1) });
+  const a = BALL_PATH[3], b = BALL_PATH[4];
+  return [a[0] + (b[0] - a[0]) * p, a[1] + (b[1] - a[1]) * p];
+};
+
+const BallLogo: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const [x, y] = ballAt(frame);
+  // squash on each wall hit, along the hit axis (pure function of distance to the hit frame)
+  let sx = 1, sy = 1;
+  BOUNCES.forEach((b, i) => {
+    const q = 0.42 * Math.max(0, 1 - Math.abs(frame - b) / 3.5);
+    if (BOUNCE_AXIS[i] === "y") { sy -= q; sx += q * 0.5; } else { sx -= q; sy += q * 0.5; }
+  });
+  const land = frame - T.ballLand;
+  const squash = land >= 0 ? 0.3 * Math.max(0, 1 - land / 4) : 0;
+  sx -= squash; sy += squash * 0.6;
+  // the burst: a circle opens from the ball and uncovers the monogram
+  const open = interpolate(frame, [T.ballLand + 2, T.ballLand + 16], [BALL_R, 260], { ...clamp, easing: Easing.out(Easing.exp) });
+  const ballGone = interpolate(frame, [T.ballLand + 2, T.ballLand + 9], [1, 0], clamp);
+  return (
+    <AbsoluteFill>
+      {frame >= T.ballLand + 2 && (
+        <AbsoluteFill style={{ clipPath: `circle(${open}px at 500px 520px)` }}>
+          <Layer src="logo.png" clip={rect(350, 410, 650, 632)} />
+        </AbsoluteFill>
+      )}
+      {LETTERS.map((c, i) => {
+        const kk = sp(frame, fps, T.ballLand + 4 + i * 2.6, { damping: 14, stiffness: 210 });
+        if (kk <= 0) return null;
+        return <Layer key={i} src="logo.png" clip={c} innerTransform={`translateY(${(1 - kk) * 240}px)`} />;
+      })}
+      {ballGone > 0 && (
+        <div
+          style={{
+            position: "absolute",
+            left: x - BALL_R,
+            top: y - BALL_R,
+            width: BALL_R * 2,
+            height: BALL_R * 2,
+            borderRadius: "50%",
+            backgroundColor: "#111",
+            opacity: ballGone,
+            scale: `${sx * (1 + (open - BALL_R) / BALL_R * 0.25)} ${sy * (1 + (open - BALL_R) / BALL_R * 0.25)}`,
+          }}
+        />
+      )}
+    </AbsoluteFill>
+  );
+};
+
 // ---------------------------------------------------------------- HEADLINE: words rise out of line masks
 const WORDS = [
   { clip: rect(220, 318, 770, 528), d: 0 },
@@ -138,7 +217,7 @@ const Headline: React.FC<{ start: number; base?: string; stagger?: number }> = (
             clip={w.clip}
             innerTransform={
               w.q
-                ? `translateY(${(1 - k) * 230}px) scale(${0.4 + 0.6 * punch})`
+                ? `translateY(${(1 - k) * 230}px) translate(1545px, 640px) scale(${0.4 + 0.6 * punch}) translate(-1545px, -640px)`
                 : `translateY(${(1 - k) * 230}px)`
             }
           />
@@ -183,7 +262,7 @@ const Film: React.FC = () => {
   const { fps } = useVideoConfig();
 
   // Act 2 camera: start tight on "Quem", dolly out (log space), then dive into the dot of "?"
-  const pull = interpolate(frame, [T.headIn, T.headIn + 56], [0, 1], { ...clamp, easing: Easing.bezier(0.2, 0.7, 0.2, 1) });
+  const pull = interpolate(frame, [T.headIn, T.headIn + 44], [0, 1], { ...clamp, easing: Easing.bezier(0.2, 0.7, 0.2, 1) });
   const zOut = Math.exp(Math.log(2.4) * (1 - pull));
   const dive = interpolate(frame, [T.diveStart, T.dive], [0, 1], { ...clamp, easing: Easing.bezier(0.6, 0, 0.9, 0.4) });
   const zIn = Math.exp(Math.log(300) * dive);
@@ -212,7 +291,7 @@ const Film: React.FC = () => {
       {/* Act 2: headline under a moving camera */}
       {frame >= T.headIn - 8 && frame < T.dive + 2 && (
         <AbsoluteFill style={{ transform: cam, transformOrigin: "0 0" }}>
-          <Headline start={T.headIn} />
+          <Headline start={T.headIn} stagger={0.8} />
         </AbsoluteFill>
       )}
 
@@ -220,7 +299,7 @@ const Film: React.FC = () => {
       {frame < T.sliceOut + 16 && (
         <SliceOut start={T.sliceOut}>
           <AbsoluteFill style={{ backgroundColor: "white" }}>
-            <Logo start={T.logoIn} />
+            <BallLogo />
           </AbsoluteFill>
         </SliceOut>
       )}
