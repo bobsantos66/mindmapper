@@ -35,7 +35,8 @@
     "Redação e Conteúdo>Persuasão e Narrativa": { "cat": "texto-e-conteudo", "sub": "redacao-e-copywriting" },
     "Redação e Conteúdo>Síntese e Clareza": { "cat": "texto-e-conteudo", "sub": "resumo-e-sintese" },
     "Vídeo e Animação>Conteúdo e Plataformas": { "cat": "video-e-animacao", "sub": "formatos-e-aplicacoes", "sec": ["marketing-e-negocios/redes-sociais"] },
-    "Vídeo e Animação>Roteiros Audiovisuais": { "cat": "video-e-animacao", "sub": "roteiro-e-storyboard" }
+    "Vídeo e Animação>Roteiros Audiovisuais": { "cat": "video-e-animacao", "sub": "roteiro-e-storyboard" },
+    "Outboxers Society>Agentes GPT": { "cat": "agentes-e-automacao", "sub": "agentes-autonomos" }
   },
   "porItem": {
     "prompt-070": { "cat": "marketing-e-negocios", "sub": "financas-e-precificacao" },
@@ -47,6 +48,11 @@
     "prompt-083": { "cat": "pesquisa-e-educacao", "sub": "checagem-de-fatos" },
     "prompt-002": { "cat": "pesquisa-e-educacao", "sub": null },
     "prompt-051": { "cat": "texto-e-conteudo", "sub": "roteiro-e-narrativa" },
-    "prompt-097": { "cat": "pesquisa-e-educacao", "sub": "estudo-e-aprendizagem" }
+    "prompt-097": { "cat": "pesquisa-e-educacao", "sub": "estudo-e-aprendizagem" },
+    "outboxers-hackr": { "cat": "agentes-e-automacao", "sub": "agentes-autonomos", "sec": ["marketing-e-negocios/pesquisa-de-mercado"] },
+    "outboxers-prism": { "cat": "agentes-e-automacao", "sub": "agentes-autonomos", "sec": ["imagem-e-design/identidade-visual-e-design-grafico"] },
+    "outboxers-echo": { "cat": "agentes-e-automacao", "sub": "agentes-autonomos", "sec": ["texto-e-conteudo/redacao-e-copywriting"] },
+    "outboxers-nova": { "cat": "agentes-e-automacao", "sub": "agentes-autonomos", "sec": ["marketing-e-negocios/estrategia-e-planejamento"] },
+    "outboxers-pulse": { "cat": "agentes-e-automacao", "sub": "agentes-autonomos", "sec": ["marketing-e-negocios/pesquisa-de-mercado"] }
   }
 }

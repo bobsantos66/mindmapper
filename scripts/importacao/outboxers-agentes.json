@@ -1,0 +1,104 @@
+{
+  "registros": [
+    {
+      "id": "outboxers-hackr",
+      "nome": "Hackr",
+      "tipo": "Agente",
+      "categoria": "Outboxers Society",
+      "subcategoria": "Agentes GPT",
+      "tags": [
+        "Outboxers Society",
+        "GPT personalizado",
+        "tendências",
+        "comportamento",
+        "insights"
+      ],
+      "plataforma": "ChatGPT",
+      "comando_uso": "Abrir no ChatGPT: https://chatgpt.com/g/g-687d37ba0aac81918b1eaf02c7ca0009-hackr\n\nEu sou o HACKR. Um agente provocador da Outboxers Society.\nMais que uma inteligência artificial, sou um tradutor de tensões culturais, decodificador de comportamentos emergentes e catalisador de ideias com timing e profundidade.\n\nFui criado para um propósito claro:\najudar criadores, estrategistas, marcas e inovadores a não apenas entender o mundo, mas hackeá-lo — com cultura, emoção e visão estratégica.\n\nEnquanto o mundo corre atrás do que já virou tendência, eu estou olhando para o que ainda está surgindo nas bordas.\n\nEnquanto muita gente fala de dados, eu também falo de emoções.\nEnquanto relatórios se acumulam em pastas, eu transformo PDF em provocação prática.\n\nMinha atuação é comparável à de um trend forecaster criativo, mas com um diferencial:\nmeus insights não são apenas para entender o que muda — são para provocar o que vem.\n\nAqui, você vai descobrir como eu penso, como eu crio, que frameworks uso, quais fontes consulto e que dores eu resolvo.\n\nVocê vai entender não só o quê eu entrego, mas por que isso importa agora — e como aplicar.\n\nComo gosto de dizer:\nMinha tendência favorita? Aquela que você ainda não viu.\nBem-vindo ao seu novo jeito de pensar futuro.\nVamos hackear?\n\nO que ele faz:\n- Capta e traduz tendências reais\n- Encontra dados contraintuitivos e insights ocultos\n- Mapeia mudanças de comportamento antes que virem moda\n\nQuando usar:\n- Para sair do óbvio com ideias baseadas em cultura real\n- Para alimentar campanhas, produtos ou conteúdo com contexto e inteligência\n- Para começar uma criação a partir de uma tensão ou ruptura relevante",
+      "instalacao": "GPT personalizado: abra o link no ChatGPT com a sua conta. Não é instalável no Claude.",
+      "origem_url": "https://chatgpt.com/g/g-687d37ba0aac81918b1eaf02c7ca0009-hackr",
+      "descricao_funcional": "Agente provocador da Outboxers Society: capta e traduz tendências reais, encontra dados contraintuitivos e insights ocultos e mapeia mudanças de comportamento antes que virem moda.",
+      "arquivo_origem": "links enviados pelo Bob (Outboxers Society)"
+    },
+    {
+      "id": "outboxers-prism",
+      "nome": "Prism",
+      "tipo": "Agente",
+      "categoria": "Outboxers Society",
+      "subcategoria": "Agentes GPT",
+      "tags": [
+        "Outboxers Society",
+        "GPT personalizado",
+        "identidade visual",
+        "direção de arte",
+        "moodboard"
+      ],
+      "plataforma": "ChatGPT",
+      "comando_uso": "Abrir no ChatGPT: https://chatgpt.com/g/g-687eec8185008191b8a78d0f669a430d-prism\n\nPRISM transforma sua ideia em linguagem visual, traduzindo conceitos em imagem, cor, textura, estilo e identidade imagética.\n\nEm um mundo saturado de imagens e estética “template”, criar algo que comunique com autenticidade, impacto e inteligência cultural virou uma urgência. O PRISM surge como um agente visual que vai além do design bonito: ele traduz ideias, emoções, símbolos e movimentos culturais em direção visual com alma e significado.\n\nPRISM é o radar que capta o que está emergindo, o stylist criativo que conecta códigos visuais com emoções profundas, o tradutor que transforma conceito em cor, imagem em estratégia, forma em manifesto.\n\nSe você sente que sua criação visual está inconsistente, rasa ou genérica — você não está sozinho. Abaixo, você vai encontrar as 13 principais dores criativas que o PRISM resolve. E o melhor: cada uma delas vem com um script prático (prompt) para você usar agora.\n\nO que ele faz:\n- Cria moodboards e paletas baseadas em cultura\n- Interpreta códigos visuais emergentes\n- Sugere estilos de marca com base em narrativa simbólica\n\nQuando usar:\n- Para definir a identidade visual de um projeto\n- Para criar direção de arte para campanhas ou conteúdo\n- Para traduzir ideias em estilo com diferenciação estética",
+      "instalacao": "GPT personalizado: abra o link no ChatGPT com a sua conta. Não é instalável no Claude.",
+      "origem_url": "https://chatgpt.com/g/g-687eec8185008191b8a78d0f669a430d-prism",
+      "descricao_funcional": "PRISM transforma sua ideia em linguagem visual, traduzindo conceitos em imagem, cor, textura, estilo e identidade imagética.",
+      "arquivo_origem": "links enviados pelo Bob (Outboxers Society)"
+    },
+    {
+      "id": "outboxers-echo",
+      "nome": "Echo",
+      "tipo": "Agente",
+      "categoria": "Outboxers Society",
+      "subcategoria": "Agentes GPT",
+      "tags": [
+        "Outboxers Society",
+        "GPT personalizado",
+        "copywriting",
+        "tom de voz",
+        "storytelling"
+      ],
+      "plataforma": "ChatGPT",
+      "comando_uso": "Abrir no ChatGPT: https://chatgpt.com/g/g-687d5a8269388191bbc9dddd39df7d0b-echo\n\nECHO é a voz do seu conceito. Ele traduz sua ideia em palavras com alma, clareza e potência cultural.\n\nImagine um copywriter que respira cultura, escreve com estratégia e entrega com alma.\n\nUm criador invisível, que escuta seu insight, traduz seu caos e devolve um texto que parece ter sido escrito por quem vive no seu mundo — ou melhor, no mundo que você quer criar.\n\nEsse é o ECHO.\n\nMais que uma inteligência artificial, o ECHO é um arquiteto narrativo: ele estrutura ideias com lógica criativa, traduz tendências com linguagem de marca e escreve com estética e intenção. Ele pensa como estrategista, escreve como artista e entrega como publicitário.\n\nCriado para criadores — designers, social medias, marcas autorais, empreendedores culturais e criativos inquietos — o ECHO é sua extensão criativa. Não imita, interpreta. Não copia, traduz. Não responde, reverbera.\n\nSe você sente que tem algo a dizer, mas precisa encontrar as palavras certas — com punch, verdade e posicionamento —, o ECHO é seu ponto de partida (e de retorno).\n\nO que ele faz:\n- Cria manifestos, slogans, roteiros e storytelling\n- Ajusta o tom de voz conforme a persona e o canal\n- Comunica com impacto emocional + intelectual\n\nQuando usar:\n- Para escrever posts, campanhas, bios, roteiros e páginas\n- Para comunicar um conceito com consistência\n- Para criar textos que educam, emocionam e vendem",
+      "instalacao": "GPT personalizado: abra o link no ChatGPT com a sua conta. Não é instalável no Claude.",
+      "origem_url": "https://chatgpt.com/g/g-687d5a8269388191bbc9dddd39df7d0b-echo",
+      "descricao_funcional": "ECHO é a voz do seu conceito. Ele traduz sua ideia em palavras com alma, clareza e potência cultural.",
+      "arquivo_origem": "links enviados pelo Bob (Outboxers Society)"
+    },
+    {
+      "id": "outboxers-nova",
+      "nome": "Nova",
+      "tipo": "Agente",
+      "categoria": "Outboxers Society",
+      "subcategoria": "Agentes GPT",
+      "tags": [
+        "Outboxers Society",
+        "GPT personalizado",
+        "inovação",
+        "prototipagem",
+        "novos produtos"
+      ],
+      "plataforma": "ChatGPT",
+      "comando_uso": "Abrir no ChatGPT: https://chatgpt.com/g/g-687d75478ab8819182950bdefc96394c-nova\n\nNOVA transforma cultura em criação real. Ele estrutura ideias e molda novos formatos, produtos, campanhas ou serviços com coerência e impacto.\n\nImagine o seguinte:\n\nVocê está em meio a uma avalanche de tendências, dados, sinais do mercado.\nTudo pulsa — mas nada se encaixa.\nSua ideia até existe… mas ainda sem alma, sem forma, sem potência.\nVocê sente que tem algo bom nas mãos, mas falta um empurrão, uma virada, uma estrutura.\n\nÉ aí que entra a NOVA.\n\nO que ele faz:\n- Usa frameworks de inovação (MVP, value proposition, etc.)\n- Prototipa soluções criativas e testáveis\n- Cria caminhos práticos para tirar ideias do papel\n\nQuando usar:\n- Para transformar tendências em algo aplicável\n- Para criar novos produtos, formatos ou experiências\n- Para gerar soluções criativas com consistência estratégica",
+      "instalacao": "GPT personalizado: abra o link no ChatGPT com a sua conta. Não é instalável no Claude.",
+      "origem_url": "https://chatgpt.com/g/g-687d75478ab8819182950bdefc96394c-nova",
+      "descricao_funcional": "NOVA transforma cultura em criação real. Ele estrutura ideias e molda novos formatos, produtos, campanhas ou serviços com coerência e impacto.",
+      "arquivo_origem": "links enviados pelo Bob (Outboxers Society)"
+    },
+    {
+      "id": "outboxers-pulse",
+      "nome": "Pulse — Radar de Comportamento e Emoção",
+      "tipo": "Agente",
+      "categoria": "Outboxers Society",
+      "subcategoria": "Agentes GPT",
+      "tags": [
+        "Outboxers Society",
+        "GPT personalizado",
+        "comportamento",
+        "emoção",
+        "neuromarketing"
+      ],
+      "plataforma": "ChatGPT",
+      "comando_uso": "Abrir no ChatGPT: https://chatgpt.com/g/g-687da8a022b88191a67bfe391e73de6d-pulse-radar-de-comportamento-e-emocao\n\nO Pulse é o seu radar para entender pessoas, cultura e emoção em um mundo que muda rápido demais para ser lido apenas com dados frios. Ele combina psicologia, antropologia cultural e neuromarketing para decifrar o que move as pessoas hoje – seus desejos, tensões, símbolos e emoções – e transformar isso em estratégias criativas e culturalmente inteligentes.\n\nMais do que uma ferramenta, o Pulse é um parceiro de leitura de cenário: capta sinais fortes e fracos, detecta movimentos culturais emergentes, identifica arquétipos contemporâneos e revela como marcas podem se posicionar com sensibilidade, ética e impacto.\n\nAo longo deste módulo, você vai descobrir como o Pulse pensa, age e resolve problemas, quais dores ele elimina e de que forma pode ser acionado nos momentos estratégicos para criar campanhas, narrativas e produtos que realmente ressoam com as pessoas.\n\nPrepare-se para ativar um olhar novo sobre cultura, comportamento e emoção.\n\nO Pulse está pronto para ler o agora e antecipar o que vem a seguir.\n\nO que ele faz:\n- Lê emoções coletivas e tensões sociais\n- Conecta tendências a desejos e medos latentes\n- Revela os códigos simbólicos por trás de movimentos culturais\n\nQuando usar:\n- Para validar insights culturalmente\n- Para criar campanhas que geram ressonância\n- Para afinar a mensagem ao estado emocional do público",
+      "instalacao": "GPT personalizado: abra o link no ChatGPT com a sua conta. Não é instalável no Claude.",
+      "origem_url": "https://chatgpt.com/g/g-687da8a022b88191a67bfe391e73de6d-pulse-radar-de-comportamento-e-emocao",
+      "descricao_funcional": "Radar para entender pessoas, cultura e emoção: combina psicologia, antropologia cultural e neuromarketing para decifrar o que move as pessoas hoje e transformar isso em estratégias criativas.",
+      "arquivo_origem": "links enviados pelo Bob (Outboxers Society)"
+    }
+  ]
+}
