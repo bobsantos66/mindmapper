@@ -29,6 +29,13 @@
       "skillPath": "skills/verification-before-completion/SKILL.md",
       "computedHash": "09b0e3a4689c1c38a3b8fc6ef57a1d4165aa33c0013d546dbde9dd348941a319"
     },
+    "video_toolkit": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "commit": "a89a32078bf1bad0107a43c228de38ced2baee89",
+      "sourceType": "github",
+      "skillPath": "skills/video-toolkit/SKILL.md",
+      "computedHash": "b9598eb2572b50cdc5881dd1182bf11b62f1cf94da22791599aaad0787874b71"
+    },
     "writing-plans": {
       "source": "obra/superpowers",
       "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
