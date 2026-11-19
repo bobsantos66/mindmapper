@@ -29,6 +29,13 @@
       "skillPath": "skills/brand-guidelines/SKILL.md",
       "computedHash": "10067cdd9be9cd5d97c741fc6e25830135afa0e11cc71e567b75763e26d08799"
     },
+    "brandkit": {
+      "source": "plugin87/ux-ui-agent-skills",
+      "commit": "d0ee2fa38edea5eba0b3d3a4a43f6b7e9ab923a6",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/brandkit/SKILL.md",
+      "computedHash": "1b32dbacd3d332602de9fba0dc1d3515943db5b3d6be613d4aa8031f2e52a7cb"
+    },
     "color-expert": {
       "source": "meodai/skill.color-expert",
       "commit": "5bf7c7704d56bccc6aeea38c36bcf449abe56a6c",
