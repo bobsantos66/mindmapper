@@ -57,6 +57,13 @@
       "skillPath": "skills/voicestudio/SKILL.md",
       "computedHash": "6be5d454355930839c1b2636f64199ce4087dc8e0243da74bd1fc5b90918932a"
     },
+    "vox-explainer": {
+      "source": "imMamdouhaboammar/motion-graphics-skills",
+      "commit": "76da7e7ec45a891d6df64da89e91d4c9bf8ff048",
+      "sourceType": "github",
+      "skillPath": "skills/vox-explainer/SKILL.md",
+      "computedHash": "9f7033b698ad90313818325583b9bdf6db824fe1f385210d4a1b73db7c704676"
+    },
     "web-artifacts-builder": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
