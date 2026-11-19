@@ -22,6 +22,13 @@
       "skillPath": "skills/brand-guidelines/SKILL.md",
       "computedHash": "10067cdd9be9cd5d97c741fc6e25830135afa0e11cc71e567b75763e26d08799"
     },
+    "openfilm": {
+      "source": "openfilm/openfilm",
+      "commit": "715c3a6e46b11a0b3ee038e8f7b3e3b4e19c5c36",
+      "sourceType": "github",
+      "skillPath": "skills/openfilm/SKILL.md",
+      "computedHash": "11849765a5732cb67fa73f1ae58380102d96b84a265c1d4f65a411d5d45a84ff"
+    },
     "theme-factory": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
