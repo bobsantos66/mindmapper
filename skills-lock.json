@@ -57,6 +57,13 @@
       "skillPath": "skills/verification-before-completion/SKILL.md",
       "computedHash": "09b0e3a4689c1c38a3b8fc6ef57a1d4165aa33c0013d546dbde9dd348941a319"
     },
+    "video-ad-generator": {
+      "source": "creatify-ai/video-ad-generator",
+      "commit": "d35e249fd956d600731cb6b23499ebe2adfbe7c5",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "4d7af8c7d96102e67eaf7582bd74c94ffb22a3a896a06d4892f9a88ce53120e9"
+    },
     "video_toolkit": {
       "source": "digitalsamba/claude-code-video-toolkit",
       "commit": "a89a32078bf1bad0107a43c228de38ced2baee89",
