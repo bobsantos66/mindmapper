@@ -29,6 +29,13 @@
       "skillPath": "skills/brand-guidelines/SKILL.md",
       "computedHash": "10067cdd9be9cd5d97c741fc6e25830135afa0e11cc71e567b75763e26d08799"
     },
+    "impeccable": {
+      "source": "cafe3310/public-agent-skills",
+      "commit": "cfb0d62797d030848cb58e644602b98b09865868",
+      "sourceType": "github",
+      "skillPath": "skills/impeccable/SKILL.md",
+      "computedHash": "560649b1cee3de91eb405b06b45ea351f4bd512bcc51c48f8beb3bf5b45f37e7"
+    },
     "openfilm": {
       "source": "openfilm/openfilm",
       "commit": "715c3a6e46b11a0b3ee038e8f7b3e3b4e19c5c36",
