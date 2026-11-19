@@ -36,6 +36,20 @@
       "skillPath": "skills/impeccable/SKILL.md",
       "computedHash": "560649b1cee3de91eb405b06b45ea351f4bd512bcc51c48f8beb3bf5b45f37e7"
     },
+    "make-interfaces-better": {
+      "source": "podo/design-agent-skills",
+      "commit": "509f37f0cce3d8e20ae3addb8a4873f1726dadf1",
+      "sourceType": "github",
+      "skillPath": "skills/make-interfaces-better/SKILL.md",
+      "computedHash": "b24a82bed74101c7a982cf01ee80e2768705ec8ac36bcaca7a255d80ab50a4dc"
+    },
+    "make-interfaces-feel-better": {
+      "source": "jakubkrehel/make-interfaces-feel-better",
+      "commit": "6d9f2f1df10e8ce2ae1708598a73b0506fb98794",
+      "sourceType": "github",
+      "skillPath": "skills/make-interfaces-feel-better/SKILL.md",
+      "computedHash": "076aa566b86b44e1691a4167ea88a85d6853c5f2eb00c39cc719ce5fa21d0731"
+    },
     "openfilm": {
       "source": "openfilm/openfilm",
       "commit": "715c3a6e46b11a0b3ee038e8f7b3e3b4e19c5c36",
