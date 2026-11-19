@@ -1,6 +1,13 @@
 {
   "version": 2,
   "skills": {
+    "ad-director": {
+      "source": "vidmoat/skills",
+      "commit": "ec2c2a944a2d4524d4b3affc6af315511946d6b5",
+      "sourceType": "github",
+      "skillPath": "skills/vidmoat/ad-director/SKILL.md",
+      "computedHash": "5c6df2d865e08515055c9585ac60409772e61d54f07dc225d6c661fe07fe4e8f"
+    },
     "algorithmic-art": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
