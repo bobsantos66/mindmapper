@@ -15,6 +15,13 @@
       "skillPath": "skills/brand-guidelines/SKILL.md",
       "computedHash": "10067cdd9be9cd5d97c741fc6e25830135afa0e11cc71e567b75763e26d08799"
     },
+    "theme-factory": {
+      "source": "anthropics/skills",
+      "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "sourceType": "github",
+      "skillPath": "skills/theme-factory/SKILL.md",
+      "computedHash": "f426a07c06316201360be19324f2689c5bd3ab2d1669848c9383c321efa4386f"
+    },
     "verification-before-completion": {
       "source": "obra/superpowers",
       "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
