@@ -29,6 +29,13 @@
       "skillPath": "skills/brand-guidelines/SKILL.md",
       "computedHash": "10067cdd9be9cd5d97c741fc6e25830135afa0e11cc71e567b75763e26d08799"
     },
+    "color-expert": {
+      "source": "meodai/skill.color-expert",
+      "commit": "5bf7c7704d56bccc6aeea38c36bcf449abe56a6c",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "3a9c503277b6e29765655879003748019e10a7da1264963813f5268ac0d1f283"
+    },
     "impeccable": {
       "source": "cafe3310/public-agent-skills",
       "commit": "cfb0d62797d030848cb58e644602b98b09865868",
