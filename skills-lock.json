@@ -43,6 +43,13 @@
       "skillPath": "skills/video-toolkit/SKILL.md",
       "computedHash": "b9598eb2572b50cdc5881dd1182bf11b62f1cf94da22791599aaad0787874b71"
     },
+    "voicestudio": {
+      "source": "debpalash/VoiceStudio",
+      "commit": "8f6c113433faa1c39d0584534d7d20f469a2a419",
+      "sourceType": "github",
+      "skillPath": "skills/voicestudio/SKILL.md",
+      "computedHash": "6be5d454355930839c1b2636f64199ce4087dc8e0243da74bd1fc5b90918932a"
+    },
     "web-artifacts-builder": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
