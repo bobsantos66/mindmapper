@@ -15,6 +15,13 @@
       "skillPath": "skills/algorithmic-art/SKILL.md",
       "computedHash": "4a85abfeaa09f2dd2c4b76c85d57b65f61dc10d55c3cca245989cee8897c2be5"
     },
+    "animate": {
+      "source": "delphi-ai/animate-skill",
+      "commit": "71bc617e7000e69b679549f13ea132e696420d6c",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "0c7b6b236797e43a0b185dc4913484612efa4f8d22ce05812f7467761120837d"
+    },
     "brainstorming": {
       "source": "obra/superpowers",
       "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
