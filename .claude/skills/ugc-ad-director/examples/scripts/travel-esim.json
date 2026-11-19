@@ -1,0 +1,145 @@
+{
+  "title": "Roamly eSIM: landed, connected, before the bags",
+  "vertical": "travel",
+  "product": {
+    "name": "Roamly",
+    "one_liner": "travel eSIM app: pick a country, install, data works when you land"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "people 22-40 who fly a few times a year and still buy airport SIM cards",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional man, late twenties, backpack, airport; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "pattern-interrupt",
+    "text": "Don't buy the airport SIM.",
+    "why": "Direct instruction against the viewer's default habit, said where the habit happens."
+  },
+  "style": "airport phone footage, mixed fluorescent and window light, handheld, slightly rushed",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Presenter walks past an airport SIM kiosk with a queue and shakes his head at the camera",
+      "camera": "handheld selfie, walking",
+      "caption": "don't buy the airport SIM\nAI-generated ad",
+      "voiceover": "Don't buy the airport SIM.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional man in his late twenties with a backpack walking through an airport arrivals hall past a generic phone kiosk with a short queue",
+        "action": "he glances at the kiosk, shakes his head at the lens and keeps walking",
+        "setting": "airport arrivals hall",
+        "camera": "handheld selfie, walking pace",
+        "lighting": "mixed fluorescent and window light",
+        "negative": "readable brand names, flags, text, logos"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 8,
+      "visual": "Presenter stopped by a pillar, holding up a passport and a tiny SIM tray tool, fumbling",
+      "camera": "handheld selfie",
+      "caption": "passport, queue, tiny tray, lost SIM",
+      "voiceover": "Queue, passport, the tiny tray tool, and your home SIM ends up in a jacket pocket forever.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the same fictional man leaning on an airport pillar, holding a passport and a SIM ejector pin, fumbling with a phone",
+        "action": "he juggles the passport and the pin, nearly drops the pin, looks at the lens",
+        "setting": "airport arrivals hall",
+        "camera": "handheld selfie, eye level",
+        "lighting": "fluorescent",
+        "audio": "airport announcements in the distance"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 8,
+      "end_s": 16,
+      "visual": "Screen recording: open app, tap the destination country, tap install, the eSIM profile appears in phone settings",
+      "camera": "screen capture",
+      "caption": "tap the country. tap install. done.",
+      "voiceover": "Before you fly: open the app, tap the country, tap install. The eSIM sits in your settings next to your normal SIM.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 16,
+      "end_s": 22,
+      "visual": "Presenter at the gate on arrival, phone shows signal bars and a maps route to the hotel loading",
+      "camera": "handheld selfie",
+      "caption": "landed. maps loads at the gate.",
+      "voiceover": "Then you land, airplane mode off, and the map loads at the gate while everyone else is in the queue.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional man walking off a jet bridge holding up a phone with a map route on screen",
+        "action": "he walks toward the lens, turns the phone to show the screen and grins",
+        "setting": "airport gate area, arrival",
+        "camera": "handheld selfie, walking",
+        "lighting": "window light from the gate",
+        "negative": "readable map labels, logos, text"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 22,
+      "end_s": 26,
+      "visual": "Screen recording: the plan page with the data amount, validity days and price shown, then the country list",
+      "camera": "screen capture",
+      "caption": "price and days shown before you pay",
+      "voiceover": "Data, days and price are on the plan page before you pay. No contract.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Presenter walks toward the exit doors, points at the camera then down",
+      "camera": "handheld selfie, walking",
+      "caption": "install it before your next flight. link below.",
+      "voiceover": "Install it before your next flight. Link below.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional man walking toward airport exit doors with his backpack, pointing at the lens then downward",
+        "action": "he points at the camera, then down, and walks through the doors",
+        "setting": "airport exit",
+        "camera": "handheld selfie, walking",
+        "lighting": "bright daylight through the doors",
+        "audio": "sliding doors, outdoor traffic"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "no contract",
+      "evidence": "terms of service: prepaid plans only; checked on the filming date"
+    }
+  ],
+  "cta": {
+    "text": "Install it before your next flight. Link below.",
+    "on_screen": "install it before your next flight. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No coverage, speed or 'works in every country' claims; coverage differs per plan and the plan page is the source.",
+      "No real airline, airport or carrier branding in generated shots (negative prompt covers logos and flags).",
+      "Prices are never spoken or captioned; they change per country and would go stale."
+    ]
+  }
+}

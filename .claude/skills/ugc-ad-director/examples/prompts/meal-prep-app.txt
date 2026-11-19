@@ -1,0 +1,37 @@
+## shot 1 · hook · 0s-2s · image
+a hand sliding a phone across a wooden counter next to a cutting board with half an onion, home kitchen counter, overhead, warm afternoon window light from the right, overhead kitchen phone footage, warm afternoon light, hands only, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+a hand sliding a phone across a wooden counter next to a cutting board with half an onion, the phone slides to a stop, the screen is lit and shows a weekly grid.
+Camera: overhead, locked off, phone on a shelf mount.
+Lighting: warm afternoon window light from the right.
+Style: overhead kitchen phone footage, warm afternoon light, hands only.
+Negative: readable fake UI text, logos, extra hands.
+
+## shot 1 · hook · 0s-2s · veo3
+a hand sliding a phone across a wooden counter next to a cutting board with half an onion, home kitchen counter, overhead.
+Action: the phone slides to a stop, the screen is lit and shows a weekly grid.
+Camera: overhead, locked off, phone on a shelf mount.
+Lighting: warm afternoon window light from the right.
+Style: overhead kitchen phone footage, warm afternoon light, hands only.
+No subtitles, no captions, no logos in frame.
+
+## shot 4 · proof · 13s-17s · image
+overhead of a kitchen counter with a phone showing a checked list beside neatly laid out groceries: a head of garlic, lemons, a bunch of parsley, rice, chicken thighs in paper, home kitchen counter, warm afternoon window light, overhead kitchen phone footage, warm afternoon light, hands only, vertical 9:16, sharp focus, no text or logos.
+
+## shot 4 · proof · 13s-17s · kling
+[5s clip, 9:16, image-to-video from the still above]
+overhead of a kitchen counter with a phone showing a checked list beside neatly laid out groceries: a head of garlic, lemons, a bunch of parsley, rice, chicken thighs in paper, very slow push in toward the phone, nothing else moves.
+Camera: overhead, slow push in.
+Lighting: warm afternoon window light.
+Style: overhead kitchen phone footage, warm afternoon light, hands only.
+Negative: readable UI text, brand logos, extra items appearing.
+
+## shot 4 · proof · 13s-17s · veo3
+overhead of a kitchen counter with a phone showing a checked list beside neatly laid out groceries: a head of garlic, lemons, a bunch of parsley, rice, chicken thighs in paper, home kitchen counter.
+Action: very slow push in toward the phone, nothing else moves.
+Camera: overhead, slow push in.
+Lighting: warm afternoon window light.
+Style: overhead kitchen phone footage, warm afternoon light, hands only.
+No subtitles, no captions, no logos in frame.

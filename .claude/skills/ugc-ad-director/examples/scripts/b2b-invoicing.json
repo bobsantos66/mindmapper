@@ -1,0 +1,148 @@
+{
+  "title": "Ledgerly: the invoice that chases itself",
+  "vertical": "B2B SaaS",
+  "product": {
+    "name": "Ledgerly",
+    "one_liner": "invoicing for freelancers with automatic, polite payment reminders"
+  },
+  "platforms": [
+    "reels",
+    "shorts",
+    "tiktok"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "freelancers and small agencies who hate sending 'just following up' emails",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional woman, late thirties, home office, cardigan; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "objection",
+    "text": "You don't need to chase that invoice.",
+    "why": "Removes the dreaded task in the first line; the viewer wants to know how."
+  },
+  "style": "home-office phone footage, laptop glow plus window light, unpolished",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Presenter closes a half-written 'just following up' email on her laptop",
+      "camera": "handheld selfie, laptop in background",
+      "caption": "you don't need to chase that invoice\nAI-generated ad",
+      "voiceover": "You don't need to chase that invoice.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional woman in her late thirties in a cardigan at a desk, closing a laptop lid halfway while looking at the lens",
+        "action": "she pushes the laptop lid down and turns to the camera",
+        "setting": "home office, bookshelf behind",
+        "camera": "handheld selfie, eye level",
+        "lighting": "window light from the left, laptop glow on her face",
+        "negative": "readable email text, logos"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 8,
+      "visual": "Presenter to camera, counting on fingers the three reminder emails she would normally write",
+      "camera": "handheld selfie",
+      "caption": "three awkward emails per late invoice",
+      "voiceover": "Every late invoice means three awkward emails, and you still sound like you're begging for your own money.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the same fictional woman talking to the camera, counting on three fingers",
+        "action": "she raises one, two, three fingers and grimaces on the third",
+        "setting": "home office",
+        "camera": "handheld selfie",
+        "lighting": "window light",
+        "audio": "quiet room, a keyboard click"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 8,
+      "end_s": 16,
+      "visual": "Screen recording: create an invoice, toggle 'reminders', pick a tone (friendly / firm), send",
+      "camera": "screen capture",
+      "caption": "toggle reminders. pick a tone. send.",
+      "voiceover": "Send the invoice, switch reminders on, pick friendly or firm. It emails the client on day seven, fourteen and twenty-one.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 16,
+      "end_s": 21,
+      "visual": "Screen recording: the reminder email preview, written in plain language with the invoice attached",
+      "camera": "screen capture",
+      "caption": "this is what the client gets",
+      "voiceover": "This is what the client gets. Plain, polite, invoice attached, pay button on top.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 21,
+      "end_s": 26,
+      "visual": "Presenter holds the phone up: a 'paid' notification, then puts the phone face down and goes back to work",
+      "camera": "handheld selfie",
+      "caption": "you find out when it's paid. that's it.",
+      "voiceover": "You find out when it's paid. You never write the email.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional woman holding a phone toward the lens, a green notification banner on the screen, then placing it face down",
+        "action": "she shows the phone, places it face down on the desk and turns back to her laptop",
+        "setting": "home office",
+        "camera": "handheld selfie, eye level",
+        "lighting": "window light",
+        "negative": "readable notification text, logos"
+      }
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Presenter to camera, laptop open again",
+      "camera": "handheld selfie",
+      "caption": "free for your first five invoices. link below.",
+      "voiceover": "Free for your first five invoices. Link below.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional woman at her desk, laptop open, speaking to the camera",
+        "action": "she nods toward the bottom of the frame",
+        "setting": "home office",
+        "camera": "handheld selfie",
+        "lighting": "window light",
+        "audio": "room tone"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "day seven, fourteen and twenty-one",
+      "evidence": "default reminder schedule in the product settings; screenshot in the campaign folder with the date"
+    },
+    {
+      "text": "free for your first five invoices",
+      "evidence": "pricing page, free tier limit; checked on the filming date"
+    }
+  ],
+  "cta": {
+    "text": "Free for your first five invoices. Link below.",
+    "on_screen": "free for your first five invoices. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No 'get paid faster' or days-sales-outstanding claim: there is no study on file.",
+      "The 'paid' notification in shot 5 is generated; the demo of the actual reminder flow is a real screen recording."
+    ]
+  }
+}

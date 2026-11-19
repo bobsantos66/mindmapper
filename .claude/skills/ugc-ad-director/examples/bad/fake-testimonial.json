@@ -1,0 +1,103 @@
+{
+  "title": "BAD EXAMPLE: fabricated testimonial with an AI presenter (lint must fail)",
+  "vertical": "supplements",
+  "product": {
+    "name": "Nightwell Gummies",
+    "one_liner": "melatonin gummies"
+  },
+  "platforms": [
+    "tiktok"
+  ],
+  "aspect": "9:16",
+  "duration_s": 20,
+  "audience": "adults who sleep badly",
+  "presenter": {
+    "type": "ai_generated",
+    "description": ""
+  },
+  "hook": {
+    "type": "testimonial",
+    "text": "I've been using these for 3 years and they changed my life, honestly the best sleep gummy ever",
+    "why": ""
+  },
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 3,
+      "visual": "Presenter in bed",
+      "camera": "selfie",
+      "caption": "I've been using these for 3 years, changed my life, best sleep gummy, not sponsored",
+      "voiceover": "I've been using these for three years and they changed my life.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "woman in bed",
+        "action": "talks"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 3,
+      "end_s": 8,
+      "visual": "Tossing and turning",
+      "camera": "selfie",
+      "caption": "couldn't sleep",
+      "voiceover": "I used to lie awake for hours every single night, and I tried everything.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "woman in bed",
+        "action": "tosses",
+        "camera": "static"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 8,
+      "end_s": 14,
+      "visual": "Takes a gummy",
+      "camera": "selfie",
+      "caption": "clinically proven, doctor recommended, as seen on TikTok",
+      "voiceover": "Clinically proven and doctor recommended. You fall asleep in 10 minutes guaranteed.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "woman takes gummy",
+        "action": "chews",
+        "camera": "static"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "cta",
+      "start_s": 14,
+      "end_s": 20,
+      "visual": "Points down",
+      "camera": "selfie",
+      "caption": "50% off today only",
+      "voiceover": "Fifty percent off today only, link below.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "woman points",
+        "action": "points",
+        "camera": "static"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "clinically proven",
+      "evidence": ""
+    }
+  ],
+  "cta": {
+    "text": "Link below.",
+    "on_screen": "50% off"
+  },
+  "compliance": {
+    "ai_label": "",
+    "platform_toggle": false,
+    "notes": []
+  }
+}

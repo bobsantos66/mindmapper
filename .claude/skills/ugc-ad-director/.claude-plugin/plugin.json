@@ -1,0 +1,11 @@
+{
+  "name": "ugc-ad-director",
+  "version": "0.1.0",
+  "description": "UGC-style short ad scripts for TikTok, Reels and Shorts: 2-second hook, problem → demo → proof → CTA, shot list, captions, voiceover and Kling / Veo 3 prompts, with a compliance lint (AI disclosure, no fake testimonials, claims need evidence).",
+  "author": { "name": "UniqAI", "email": "support@uniqai.app", "url": "https://uniqai.app/?utm_source=github&utm_medium=plugin&utm_campaign=ugc-ad-director" },
+  "homepage": "https://github.com/uniqaiapp/ugc-ad-director",
+  "repository": "https://github.com/uniqaiapp/ugc-ad-director",
+  "license": "MIT",
+  "keywords": ["claude-code", "skill", "ugc-ads", "ad-creative", "tiktok-ads", "image-to-video", "kling", "veo3", "marketing"],
+  "skills": ["./"]
+}

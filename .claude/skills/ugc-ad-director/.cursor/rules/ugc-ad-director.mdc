@@ -1,0 +1,7 @@
+---
+description: Writes and lints UGC-style short ad scripts for TikTok, Reels and Shorts (2-second hook, problem → demo → proof → CTA, shot list, captions, voiceover, Kling / Veo 3 prompts) with compliance checks for AI disclosure, fake testimonials and unbacked claims. Use when the user asks for a UGC ad, TikTok ad script, hooks, shot list or ad prompts.
+globs:
+alwaysApply: false
+---
+
+@SKILL.md

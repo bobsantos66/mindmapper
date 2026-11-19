@@ -1,0 +1,81 @@
+## shot 1 · hook · 0s-2s · image
+fictional man in his late twenties with a backpack walking through an airport arrivals hall past a generic phone kiosk with a short queue, airport arrivals hall, mixed fluorescent and window light, airport phone footage, mixed fluorescent and window light, handheld, slightly rushed, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+fictional man in his late twenties with a backpack walking through an airport arrivals hall past a generic phone kiosk with a short queue, he glances at the kiosk, shakes his head at the lens and keeps walking.
+Camera: handheld selfie, walking pace.
+Lighting: mixed fluorescent and window light.
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+Negative: readable brand names, flags, text, logos.
+
+## shot 1 · hook · 0s-2s · veo3
+fictional man in his late twenties with a backpack walking through an airport arrivals hall past a generic phone kiosk with a short queue, airport arrivals hall.
+Action: he glances at the kiosk, shakes his head at the lens and keeps walking.
+Camera: handheld selfie, walking pace.
+Lighting: mixed fluorescent and window light.
+Dialogue (on camera, natural pace): "Don't buy the airport SIM."
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+No subtitles, no captions, no logos in frame.
+
+## shot 2 · problem · 2s-8s · image
+the same fictional man leaning on an airport pillar, holding a passport and a SIM ejector pin, fumbling with a phone, airport arrivals hall, fluorescent, airport phone footage, mixed fluorescent and window light, handheld, slightly rushed, vertical 9:16, sharp focus, no text or logos.
+
+## shot 2 · problem · 2s-8s · kling
+[10s clip, 9:16, image-to-video from the still above]
+the same fictional man leaning on an airport pillar, holding a passport and a SIM ejector pin, fumbling with a phone, he juggles the passport and the pin, nearly drops the pin, looks at the lens.
+Camera: handheld selfie, eye level.
+Lighting: fluorescent.
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 2 · problem · 2s-8s · veo3
+the same fictional man leaning on an airport pillar, holding a passport and a SIM ejector pin, fumbling with a phone, airport arrivals hall.
+Action: he juggles the passport and the pin, nearly drops the pin, looks at the lens.
+Camera: handheld selfie, eye level.
+Lighting: fluorescent.
+Dialogue (on camera, natural pace): "Queue, passport, the tiny tray tool, and your home SIM ends up in a jacket pocket forever."
+Audio: airport announcements in the distance.
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+No subtitles, no captions, no logos in frame.
+
+## shot 4 · demo · 16s-22s · image
+the fictional man walking off a jet bridge holding up a phone with a map route on screen, airport gate area, arrival, window light from the gate, airport phone footage, mixed fluorescent and window light, handheld, slightly rushed, vertical 9:16, sharp focus, no text or logos.
+
+## shot 4 · demo · 16s-22s · kling
+[10s clip, 9:16, image-to-video from the still above]
+the fictional man walking off a jet bridge holding up a phone with a map route on screen, he walks toward the lens, turns the phone to show the screen and grins.
+Camera: handheld selfie, walking.
+Lighting: window light from the gate.
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+Negative: readable map labels, logos, text.
+
+## shot 4 · demo · 16s-22s · veo3
+the fictional man walking off a jet bridge holding up a phone with a map route on screen, airport gate area, arrival.
+Action: he walks toward the lens, turns the phone to show the screen and grins.
+Camera: handheld selfie, walking.
+Lighting: window light from the gate.
+Dialogue (on camera, natural pace): "Then you land, airplane mode off, and the map loads at the gate while everyone else is in the queue."
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+No subtitles, no captions, no logos in frame.
+
+## shot 6 · cta · 26s-30s · image
+the fictional man walking toward airport exit doors with his backpack, pointing at the lens then downward, airport exit, bright daylight through the doors, airport phone footage, mixed fluorescent and window light, handheld, slightly rushed, vertical 9:16, sharp focus, no text or logos.
+
+## shot 6 · cta · 26s-30s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional man walking toward airport exit doors with his backpack, pointing at the lens then downward, he points at the camera, then down, and walks through the doors.
+Camera: handheld selfie, walking.
+Lighting: bright daylight through the doors.
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 6 · cta · 26s-30s · veo3
+the fictional man walking toward airport exit doors with his backpack, pointing at the lens then downward, airport exit.
+Action: he points at the camera, then down, and walks through the doors.
+Camera: handheld selfie, walking.
+Lighting: bright daylight through the doors.
+Dialogue (on camera, natural pace): "Install it before your next flight. Link below."
+Audio: sliding doors, outdoor traffic.
+Style: airport phone footage, mixed fluorescent and window light, handheld, slightly rushed.
+No subtitles, no captions, no logos in frame.

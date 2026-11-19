@@ -1,0 +1,160 @@
+{
+  "title": "Glass-skin serum: the two-finger test",
+  "vertical": "skincare",
+  "product": {
+    "name": "Dewline Barrier Serum",
+    "one_liner": "a fragrance-free hydrating serum with ceramides and 2% niacinamide"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "women 22-35 with dry, flaky skin under makeup",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional woman, late twenties, no makeup, towel on hair; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "pattern-interrupt",
+    "text": "Your foundation isn't the problem.",
+    "why": "Names the symptom the viewer already blames on the wrong thing."
+  },
+  "style": "candid bathroom phone video, soft window light, visible pores and skin texture",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Close-up of a fingertip dragging foundation across dry, flaky cheek; product in the mirror",
+      "camera": "phone propped on the sink, macro",
+      "caption": "Your foundation isn't the problem.\nAI-generated ad",
+      "voiceover": "Your foundation isn't the problem.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "extreme close-up of a woman's cheek with dry, flaky patches, fingertip smearing beige foundation",
+        "action": "the finger drags slowly, foundation catches on the flakes and pills",
+        "setting": "bathroom mirror, morning",
+        "camera": "macro, static, phone propped on a sink",
+        "lighting": "soft daylight from a window to the left",
+        "negative": "smooth plastic skin, airbrush, glamour lighting"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 7,
+      "visual": "Presenter to camera, towel on hair, holding up a flaky makeup sponge",
+      "camera": "handheld selfie, eye level",
+      "caption": "dry skin + makeup = cake",
+      "voiceover": "Dry skin drinks the water out of your makeup, so it cakes by lunch.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional woman in her late twenties, towel wrapped on her head, no makeup, holding a makeup sponge toward the lens",
+        "action": "she talks to the camera and tilts the sponge to show dried foundation on it",
+        "setting": "small bathroom, white tiles",
+        "camera": "handheld selfie, eye level, slight sway",
+        "lighting": "window daylight, no ring light",
+        "audio": "room tone, faint bathroom echo"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 7,
+      "end_s": 15,
+      "visual": "Two drops of serum pressed into the cheek with two fingers; skin goes from matte-flaky to even",
+      "camera": "macro, side angle",
+      "caption": "two drops, press, don't rub",
+      "voiceover": "Two drops. Press it in with two fingers, don't rub. Ceramides fill the cracks, niacinamide calms the red.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "close-up of two fingertips pressing a clear serum into a dry cheek",
+        "action": "the fingers press and lift, the serum absorbs, flaky texture softens and evens out",
+        "setting": "bathroom, same as before",
+        "camera": "macro, side angle, locked off",
+        "lighting": "soft window light raking across the skin to show texture",
+        "negative": "glowing filter, sparkle effects, text"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 15,
+      "end_s": 20,
+      "visual": "Foundation applied over the treated side; split-screen with the untreated side",
+      "camera": "phone on tripod, straight on",
+      "caption": "same foundation, treated vs not",
+      "voiceover": "Same foundation, same sponge. Left side had the serum, right side didn't.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "woman's face straight to camera, a makeup sponge dabbing foundation on her left cheek",
+        "action": "sponge dabs across the cheek, the foundation lays down smooth on the left, patchy on the right",
+        "setting": "bathroom mirror",
+        "camera": "static, straight on, phone on a tripod",
+        "lighting": "even window daylight",
+        "negative": "retouching, symmetrical perfect skin"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 20,
+      "end_s": 26,
+      "visual": "Ingredient label held to camera, finger tapping the ceramide and niacinamide lines; fragrance line crossed out",
+      "camera": "handheld, macro on label",
+      "caption": "fragrance-free, ceramides, 2% niacinamide",
+      "voiceover": "Fragrance-free, three ceramides, two percent niacinamide. It's all on the label, no mystery blend.",
+      "source": "live-footage"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Presenter sets the bottle on the sink edge, taps the screen toward the shop link",
+      "camera": "handheld selfie",
+      "caption": "link below. try it under your usual base",
+      "voiceover": "Link's below. Try it under your usual base for a week.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the same fictional woman, towel on head, placing a small frosted glass bottle on the sink edge",
+        "action": "she sets the bottle down, looks at the lens and points down toward the bottom of the frame",
+        "setting": "bathroom",
+        "camera": "handheld selfie, eye level",
+        "lighting": "window daylight",
+        "audio": "room tone"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "fragrance-free, three ceramides, 2% niacinamide",
+      "evidence": "product label and INCI list, checked against the supplier spec sheet before filming"
+    },
+    {
+      "text": "two percent niacinamide",
+      "evidence": "same INCI list; percentage printed on the label"
+    }
+  ],
+  "cta": {
+    "text": "Link's below. Try it under your usual base for a week.",
+    "on_screen": "link below. try it under your usual base"
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "Presenter is fictional and generated; the script never describes her as a customer.",
+      "No skin-condition or medical wording (no 'treats eczema', no 'dermatologist-approved') without a documented source.",
+      "Split-screen in shot 4 is a demo of application, not a before/after result claim; caption says so."
+    ]
+  }
+}

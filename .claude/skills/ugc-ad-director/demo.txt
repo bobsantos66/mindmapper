@@ -1,0 +1,10 @@
+$ python3 scripts/ugc_script.py lint examples/bad/fake-testimonial.json
+! error   beats: missing beat(s): proof
+! error   shot 3: implies a platform or third-party endorsement; remove it
+! error   shot 4: '50%' is a claim; list it under 'claims' with evidence or drop it
+> {d:... 9 more errors (fake testimonials, no evidence, no AI label)}
+> examples/bad/fake-testimonial.json: {y:failed}, 12 errors, 8 warnings
+@wait 700
+$ python3 scripts/ugc_script.py lint examples/scripts/skincare-serum.json
++ examples/scripts/skincare-serum.json: ok, 0 errors, 0 warnings
+# render: hook 0-2s · 5 beats · captions · voiceover · Kling / Veo 3 prompts

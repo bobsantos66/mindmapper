@@ -1,0 +1,126 @@
+{
+  "title": "Bitewell chews: the breath test (real owner, signed release)",
+  "vertical": "pet care",
+  "product": {
+    "name": "Bitewell Dental Chews",
+    "one_liner": "daily dental chew for medium dogs, chicken-free"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "dog owners 28-50 whose dog's breath is a running joke at home",
+  "presenter": {
+    "type": "real_person",
+    "description": "actual customer, filmed at home with a signed release and a paid-partnership disclosure; the dog is hers"
+  },
+  "hook": {
+    "type": "pov",
+    "text": "POV: your dog's breath enters first.",
+    "why": "Shared joke every dog owner recognises; the dog does the acting."
+  },
+  "style": "living-room phone footage, handheld, natural light, real dog",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Dog's face fills the frame mid-pant; owner recoils out of frame",
+      "camera": "handheld selfie, dog in lap",
+      "caption": "POV: your dog's breath enters first\nAI-generated ad (b-roll)",
+      "voiceover": "POV: your dog's breath enters first.",
+      "source": "live-footage"
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 8,
+      "visual": "Owner to camera with the dog, holding up a toothbrush the dog clearly refuses",
+      "camera": "handheld selfie",
+      "caption": "she will not let me brush. ever.",
+      "voiceover": "I've tried brushing. She will not let me, so her breath cleared the sofa every night.",
+      "source": "live-footage"
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 8,
+      "end_s": 15,
+      "visual": "Chew handed over; dog works it with the back teeth; close-up of the ridged shape",
+      "camera": "handheld, low angle at dog height",
+      "caption": "one a day. she thinks it's a treat.",
+      "voiceover": "One chew a day. She thinks it's a treat. The ridges scrub the back teeth while she gnaws.",
+      "source": "live-footage"
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 15,
+      "end_s": 19,
+      "visual": "Generated b-roll: a medium brown dog trotting across a park with a chew in its mouth",
+      "camera": "tracking shot, low",
+      "caption": "chicken-free. for dogs 10-25 kg.",
+      "voiceover": "Chicken-free, sized for medium dogs.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "a medium-sized brown mixed-breed dog trotting across short park grass holding a green ridged chew stick in its mouth",
+        "action": "the dog trots left to right, ears bouncing, tail up",
+        "setting": "city park, late afternoon",
+        "camera": "low tracking shot moving with the dog",
+        "lighting": "golden hour backlight",
+        "negative": "extra legs, floating chew, people, text"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 19,
+      "end_s": 26,
+      "visual": "Owner leans into the dog's face, sniffs, shrugs 'fine'; packet label with the ingredient list in shot",
+      "camera": "handheld selfie",
+      "caption": "three weeks in: sofa reclaimed",
+      "voiceover": "Three weeks in, I can sit next to her again. Ingredients are on the back, nothing I can't pronounce.",
+      "source": "live-footage"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Owner holds the packet up, dog nudges it",
+      "camera": "handheld selfie",
+      "caption": "paid partnership. link below.",
+      "voiceover": "Paid partnership, but the sofa thing is true. Link below.",
+      "source": "live-footage"
+    }
+  ],
+  "claims": [
+    {
+      "text": "chicken-free, sized for medium dogs 10-25 kg",
+      "evidence": "ingredient list and feeding guide on the packet; packet shown in shot 5"
+    },
+    {
+      "text": "three weeks in",
+      "evidence": "the presenter's own timeline; order confirmation date kept on file with the release"
+    }
+  ],
+  "cta": {
+    "text": "Paid partnership, but the sofa thing is true. Link below.",
+    "on_screen": "paid partnership. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad (b-roll)",
+    "platform_toggle": true,
+    "notes": [
+      "Real customer: signed release and proof of purchase on file; paid partnership stated in speech and on screen (FTC Endorsement Guides, 16 CFR Part 255, 2023 revision).",
+      "Only shot 4 is generated; the label says b-roll so viewers do not read the presenter as synthetic.",
+      "No 'vet recommended' or plaque-reduction percentage: no study on file, so the script stays with what the owner saw."
+    ]
+  }
+}

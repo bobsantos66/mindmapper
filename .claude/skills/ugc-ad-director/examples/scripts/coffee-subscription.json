@@ -1,0 +1,121 @@
+{
+  "title": "Roastday: the date on the bag",
+  "vertical": "food and beverage",
+  "product": {
+    "name": "Roastday",
+    "one_liner": "coffee subscription that ships within days of roasting, roast date printed on every bag"
+  },
+  "platforms": [
+    "reels",
+    "tiktok",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 20,
+  "audience": "home coffee drinkers 25-45 who buy supermarket beans and wonder why cafe coffee tastes different",
+  "presenter": {
+    "type": "none",
+    "description": null
+  },
+  "hook": {
+    "type": "comparison",
+    "text": "Find the date on your coffee bag.",
+    "why": "A visual comparison the viewer can repeat in their own kitchen tonight."
+  },
+  "style": "kitchen counter phone footage, morning light, hands only",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Two bags side by side on the counter; a finger taps the supermarket bag's 'best before' and then the Roastday bag's 'roasted on'",
+      "camera": "overhead, locked",
+      "caption": "find the date on your coffee bag\nAI-generated ad",
+      "voiceover": "Find the date on your coffee bag.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "overhead of two coffee bags on a wooden counter, a finger tapping a small printed date on each",
+        "action": "the finger taps the left bag, then the right bag",
+        "setting": "kitchen counter, morning",
+        "camera": "overhead, locked off",
+        "lighting": "soft morning window light",
+        "negative": "readable brand names, logos, text other than a date stamp"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 6,
+      "visual": "Supermarket bag opened, beans poured into a hand: dull, oily; a 'best before' two years out",
+      "camera": "overhead, macro",
+      "caption": "best before two years out. roasted when?",
+      "voiceover": "A best-before date says nothing about when it was roasted.",
+      "source": "live-footage"
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 6,
+      "end_s": 12,
+      "visual": "Roastday bag opened; beans into the grinder; the bloom on the pour-over domes and bubbles",
+      "camera": "overhead, then side macro on the bloom",
+      "caption": "fresh beans bloom. stale ones sit flat.",
+      "voiceover": "Fresh beans bloom when the water hits. Stale ones sit flat. That's the whole difference.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "side macro of hot water poured onto fresh coffee grounds in a paper filter cone, the grounds domed and bubbling",
+        "action": "water pours in a thin stream, the bed rises and bubbles, a few grounds crackle",
+        "setting": "kitchen counter",
+        "camera": "side macro, locked off",
+        "lighting": "morning window light, steam catching the light",
+        "negative": "logos, text, cartoon steam"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "proof",
+      "start_s": 12,
+      "end_s": 17,
+      "visual": "The roast date stamp held to camera next to the calendar on the wall; the box's shipping label date beside it",
+      "camera": "handheld, close",
+      "caption": "roast date on the bag. ship date on the box.",
+      "voiceover": "Roast date on the bag, ship date on the box. Do the maths.",
+      "source": "live-footage"
+    },
+    {
+      "id": 5,
+      "beat": "cta",
+      "start_s": 17,
+      "end_s": 20,
+      "visual": "Cup lifted out of frame, bag set down with the date facing the lens",
+      "camera": "overhead",
+      "caption": "first bag, no subscription lock-in. link below.",
+      "voiceover": "First bag without a subscription lock-in. Link below.",
+      "source": "live-footage"
+    }
+  ],
+  "claims": [
+    {
+      "text": "roast date is on the bag and the ship date is on the box",
+      "evidence": "shipping product and packaging; photos of a real order in the campaign folder"
+    },
+    {
+      "text": "first bag without a subscription lock-in",
+      "evidence": "checkout flow: one-off purchase option available; checked on the filming date"
+    }
+  ],
+  "cta": {
+    "text": "First bag without a subscription lock-in. Link below.",
+    "on_screen": "first bag, no subscription lock-in. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No 'ships within 48 hours' or similar promise unless logistics confirms it in writing; the script says 'within days' only in the product one-liner, not on screen.",
+      "No taste or health claims; the bloom demo is observable, not a quality guarantee."
+    ]
+  }
+}

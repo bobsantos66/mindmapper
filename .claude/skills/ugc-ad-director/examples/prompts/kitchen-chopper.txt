@@ -1,0 +1,101 @@
+## shot 1 · hook · 0s-2s · image
+fictional man in his forties wearing a dark apron, dropping half an onion into a clear plastic chopper bowl, home kitchen counter, daylight, overcast window light, candid kitchen phone footage, overhead and eye level, natural light, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+fictional man in his forties wearing a dark apron, dropping half an onion into a clear plastic chopper bowl, he drops the onion in and snaps a white lid shut with a click.
+Camera: handheld, chest height, slight sway.
+Lighting: overcast window light.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+Negative: studio lighting, chef's whites, text.
+
+## shot 1 · hook · 0s-2s · veo3
+fictional man in his forties wearing a dark apron, dropping half an onion into a clear plastic chopper bowl, home kitchen counter, daylight.
+Action: he drops the onion in and snaps a white lid shut with a click.
+Camera: handheld, chest height, slight sway.
+Lighting: overcast window light.
+Dialogue (on camera, natural pace): "If onions make you cry, watch this."
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+No subtitles, no captions, no logos in frame.
+
+## shot 2 · problem · 2s-7s · image
+the same fictional man, eyes slightly watery, gesturing at a cutting board with roughly chopped onion, kitchen counter, window light, candid kitchen phone footage, overhead and eye level, natural light, vertical 9:16, sharp focus, no text or logos.
+
+## shot 2 · problem · 2s-7s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the same fictional man, eyes slightly watery, gesturing at a cutting board with roughly chopped onion, he wipes one eye with his wrist and points at the board.
+Camera: handheld selfie, eye level.
+Lighting: window light.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 2 · problem · 2s-7s · veo3
+the same fictional man, eyes slightly watery, gesturing at a cutting board with roughly chopped onion, kitchen counter.
+Action: he wipes one eye with his wrist and points at the board.
+Camera: handheld selfie, eye level.
+Lighting: window light.
+Dialogue (on camera, natural pace): "The knife way: minutes of stinging eyes and pieces the wrong size."
+Audio: kitchen room tone, a tap dripping.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+No subtitles, no captions, no logos in frame.
+
+## shot 3 · demo · 7s-15s · image
+overhead of a hand pulling a cord on a round chopper with a clear lid, onion inside, kitchen counter, overcast daylight, candid kitchen phone footage, overhead and eye level, natural light, vertical 9:16, sharp focus, no text or logos.
+
+## shot 3 · demo · 7s-15s · kling
+[10s clip, 9:16, image-to-video from the still above]
+overhead of a hand pulling a cord on a round chopper with a clear lid, onion inside, four quick pulls, the blades spin and the onion chunks become small even dice.
+Camera: overhead, locked off.
+Lighting: overcast daylight.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+Negative: blade blur artifacts, onion flying out, extra hands.
+
+## shot 3 · demo · 7s-15s · veo3
+overhead of a hand pulling a cord on a round chopper with a clear lid, onion inside, kitchen counter.
+Action: four quick pulls, the blades spin and the onion chunks become small even dice.
+Camera: overhead, locked off.
+Lighting: overcast daylight.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+No subtitles, no captions, no logos in frame.
+
+## shot 4 · demo · 15s-20s · image
+the fictional man lifting the lid and tipping diced onion into a hot pan on a stove, kitchen stove, window light plus a warm glow from the stove, candid kitchen phone footage, overhead and eye level, natural light, vertical 9:16, sharp focus, no text or logos.
+
+## shot 4 · demo · 15s-20s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional man lifting the lid and tipping diced onion into a hot pan on a stove, he tips the bowl, the dice slides out and sizzles, he glances at the camera.
+Camera: handheld, eye level, slow drift left.
+Lighting: window light plus a warm glow from the stove.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 4 · demo · 15s-20s · veo3
+the fictional man lifting the lid and tipping diced onion into a hot pan on a stove, kitchen stove.
+Action: he tips the bowl, the dice slides out and sizzles, he glances at the camera.
+Camera: handheld, eye level, slow drift left.
+Lighting: window light plus a warm glow from the stove.
+Dialogue (on camera, natural pace): "Lid off, into the pan. Even dice, dry eyes."
+Audio: sizzle as the onion hits the pan.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+No subtitles, no captions, no logos in frame.
+
+## shot 6 · cta · 26s-30s · image
+the fictional man holding the chopper up beside the pan, apron on, kitchen, window light, candid kitchen phone footage, overhead and eye level, natural light, vertical 9:16, sharp focus, no text or logos.
+
+## shot 6 · cta · 26s-30s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional man holding the chopper up beside the pan, apron on, he holds the chopper toward the lens and nods downward.
+Camera: handheld selfie, eye level.
+Lighting: window light.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 6 · cta · 26s-30s · veo3
+the fictional man holding the chopper up beside the pan, apron on, kitchen.
+Action: he holds the chopper toward the lens and nods downward.
+Camera: handheld selfie, eye level.
+Lighting: window light.
+Dialogue (on camera, natural pace): "Link's below. It takes one onion to convince you."
+Audio: room tone, pan sizzling softly.
+Style: candid kitchen phone footage, overhead and eye level, natural light.
+No subtitles, no captions, no logos in frame.

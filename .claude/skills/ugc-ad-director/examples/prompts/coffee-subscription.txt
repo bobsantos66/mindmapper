@@ -1,0 +1,37 @@
+## shot 1 · hook · 0s-2s · image
+overhead of two coffee bags on a wooden counter, a finger tapping a small printed date on each, kitchen counter, morning, soft morning window light, kitchen counter phone footage, morning light, hands only, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+overhead of two coffee bags on a wooden counter, a finger tapping a small printed date on each, the finger taps the left bag, then the right bag.
+Camera: overhead, locked off.
+Lighting: soft morning window light.
+Style: kitchen counter phone footage, morning light, hands only.
+Negative: readable brand names, logos, text other than a date stamp.
+
+## shot 1 · hook · 0s-2s · veo3
+overhead of two coffee bags on a wooden counter, a finger tapping a small printed date on each, kitchen counter, morning.
+Action: the finger taps the left bag, then the right bag.
+Camera: overhead, locked off.
+Lighting: soft morning window light.
+Style: kitchen counter phone footage, morning light, hands only.
+No subtitles, no captions, no logos in frame.
+
+## shot 3 · demo · 6s-12s · image
+side macro of hot water poured onto fresh coffee grounds in a paper filter cone, the grounds domed and bubbling, kitchen counter, morning window light, steam catching the light, kitchen counter phone footage, morning light, hands only, vertical 9:16, sharp focus, no text or logos.
+
+## shot 3 · demo · 6s-12s · kling
+[10s clip, 9:16, image-to-video from the still above]
+side macro of hot water poured onto fresh coffee grounds in a paper filter cone, the grounds domed and bubbling, water pours in a thin stream, the bed rises and bubbles, a few grounds crackle.
+Camera: side macro, locked off.
+Lighting: morning window light, steam catching the light.
+Style: kitchen counter phone footage, morning light, hands only.
+Negative: logos, text, cartoon steam.
+
+## shot 3 · demo · 6s-12s · veo3
+side macro of hot water poured onto fresh coffee grounds in a paper filter cone, the grounds domed and bubbling, kitchen counter.
+Action: water pours in a thin stream, the bed rises and bubbles, a few grounds crackle.
+Camera: side macro, locked off.
+Lighting: morning window light, steam catching the light.
+Style: kitchen counter phone footage, morning light, hands only.
+No subtitles, no captions, no logos in frame.

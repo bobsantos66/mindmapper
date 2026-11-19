@@ -1,0 +1,78 @@
+## shot 1 · hook · 0s-2s · image
+wide fisheye view of a living room sofa from a low shelf, a brown dog's nose and eyes rising over the cushion, living room, daytime, curtains half drawn, flat daylight through curtains, split between office phone footage and living-room camera feed, daylight, candid, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+wide fisheye view of a living room sofa from a low shelf, a brown dog's nose and eyes rising over the cushion, the dog's head rises slowly over the back of the sofa and stares at the lens.
+Camera: fixed wide, slight fisheye, low shelf height.
+Lighting: flat daylight through curtains.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+Negative: timestamp overlay, text, extra dogs.
+
+## shot 1 · hook · 0s-2s · veo3
+wide fisheye view of a living room sofa from a low shelf, a brown dog's nose and eyes rising over the cushion, living room, daytime, curtains half drawn.
+Action: the dog's head rises slowly over the back of the sofa and stares at the lens.
+Camera: fixed wide, slight fisheye, low shelf height.
+Lighting: flat daylight through curtains.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+No subtitles, no captions, no logos in frame.
+
+## shot 2 · problem · 2s-8s · image
+fictional woman in her early forties with an office lanyard at a desk, glancing at her phone with a worried look, open-plan office, office daylight from a window, split between office phone footage and living-room camera feed, daylight, candid, vertical 9:16, sharp focus, no text or logos.
+
+## shot 2 · problem · 2s-8s · kling
+[10s clip, 9:16, image-to-video from the still above]
+fictional woman in her early forties with an office lanyard at a desk, glancing at her phone with a worried look, she checks the phone, frowns, puts it down, picks it up again.
+Camera: handheld selfie, eye level.
+Lighting: office daylight from a window.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 2 · problem · 2s-8s · veo3
+fictional woman in her early forties with an office lanyard at a desk, glancing at her phone with a worried look, open-plan office.
+Action: she checks the phone, frowns, puts it down, picks it up again.
+Camera: handheld selfie, eye level.
+Lighting: office daylight from a window.
+Dialogue (on camera, natural pace): "You leave at nine and spend the day wondering if he's fine, bored, or eating the sofa."
+Audio: office hum, a keyboard.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+No subtitles, no captions, no logos in frame.
+
+## shot 4 · demo · 15s-21s · image
+wide fisheye view of the living room, a small brown treat arcing from the bottom of the frame, the brown dog leaping off the sofa to catch it, living room, flat daylight, split between office phone footage and living-room camera feed, daylight, candid, vertical 9:16, sharp focus, no text or logos.
+
+## shot 4 · demo · 15s-21s · kling
+[10s clip, 9:16, image-to-video from the still above]
+wide fisheye view of the living room, a small brown treat arcing from the bottom of the frame, the brown dog leaping off the sofa to catch it, the treat arcs out, the dog jumps and catches it mid-air, tail wagging.
+Camera: fixed wide, slight fisheye.
+Lighting: flat daylight.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+Negative: extra treats, extra dogs, text, timestamp.
+
+## shot 4 · demo · 15s-21s · veo3
+wide fisheye view of the living room, a small brown treat arcing from the bottom of the frame, the brown dog leaping off the sofa to catch it, living room.
+Action: the treat arcs out, the dog jumps and catches it mid-air, tail wagging.
+Camera: fixed wide, slight fisheye.
+Lighting: flat daylight.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+No subtitles, no captions, no logos in frame.
+
+## shot 6 · cta · 26s-30s · image
+the fictional woman at her office desk turning her phone to the lens, a dog asleep on a sofa visible on the screen, open-plan office, office daylight, split between office phone footage and living-room camera feed, daylight, candid, vertical 9:16, sharp focus, no text or logos.
+
+## shot 6 · cta · 26s-30s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional woman at her office desk turning her phone to the lens, a dog asleep on a sofa visible on the screen, she turns the phone, smiles and points down.
+Camera: handheld selfie.
+Lighting: office daylight.
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+Negative: readable UI text, logos.
+
+## shot 6 · cta · 26s-30s · veo3
+the fictional woman at her office desk turning her phone to the lens, a dog asleep on a sofa visible on the screen, open-plan office.
+Action: she turns the phone, smiles and points down.
+Camera: handheld selfie.
+Lighting: office daylight.
+Dialogue (on camera, natural pace): "See what yours does at two. Link below."
+Style: split between office phone footage and living-room camera feed, daylight, candid.
+No subtitles, no captions, no logos in frame.

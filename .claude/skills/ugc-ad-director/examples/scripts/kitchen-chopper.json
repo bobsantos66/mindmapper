@@ -1,0 +1,152 @@
+{
+  "title": "Dicewell chopper: one onion, no tears, four seconds",
+  "vertical": "kitchen gadget",
+  "product": {
+    "name": "Dicewell Pull Chopper",
+    "one_liner": "a pull-cord chopper that dices an onion in a closed bowl"
+  },
+  "platforms": [
+    "tiktok",
+    "reels"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "home cooks who dread prep, 30-55",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional man in his forties, apron, kitchen; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "callout",
+    "text": "If onions make you cry, watch this.",
+    "why": "Calls out a specific annoyance and promises a visual payoff."
+  },
+  "style": "candid kitchen phone footage, overhead and eye level, natural light",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Presenter drops a halved onion into the chopper bowl and snaps the lid shut",
+      "camera": "handheld, chest height",
+      "caption": "if onions make you cry, watch this\nAI-generated ad",
+      "voiceover": "If onions make you cry, watch this.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional man in his forties wearing a dark apron, dropping half an onion into a clear plastic chopper bowl",
+        "action": "he drops the onion in and snaps a white lid shut with a click",
+        "setting": "home kitchen counter, daylight",
+        "camera": "handheld, chest height, slight sway",
+        "lighting": "overcast window light",
+        "negative": "studio lighting, chef's whites, text"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 7,
+      "visual": "Presenter to camera, eyes watering, knife and a sad pile of uneven onion on the board",
+      "camera": "handheld selfie",
+      "caption": "the knife way: tears, uneven, board to wash",
+      "voiceover": "The knife way: minutes of stinging eyes and pieces the wrong size.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the same fictional man, eyes slightly watery, gesturing at a cutting board with roughly chopped onion",
+        "action": "he wipes one eye with his wrist and points at the board",
+        "setting": "kitchen counter",
+        "camera": "handheld selfie, eye level",
+        "lighting": "window light",
+        "audio": "kitchen room tone, a tap dripping"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 7,
+      "end_s": 15,
+      "visual": "Overhead: hand pulls the cord four times, the onion inside turns to even dice",
+      "camera": "overhead, locked",
+      "caption": "pull. pull. pull. pull.",
+      "voiceover": "Pull the cord. Pull. Pull. Pull. Lid stays on, so the onion gas stays in.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "overhead of a hand pulling a cord on a round chopper with a clear lid, onion inside",
+        "action": "four quick pulls, the blades spin and the onion chunks become small even dice",
+        "setting": "kitchen counter",
+        "camera": "overhead, locked off",
+        "lighting": "overcast daylight",
+        "negative": "blade blur artifacts, onion flying out, extra hands"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 15,
+      "end_s": 20,
+      "visual": "Lid comes off, dice tipped into a hot pan; presenter blinks at camera, dry-eyed",
+      "camera": "handheld, eye level",
+      "caption": "dry eyes. even dice.",
+      "voiceover": "Lid off, into the pan. Even dice, dry eyes.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional man lifting the lid and tipping diced onion into a hot pan on a stove",
+        "action": "he tips the bowl, the dice slides out and sizzles, he glances at the camera",
+        "setting": "kitchen stove",
+        "camera": "handheld, eye level, slow drift left",
+        "lighting": "window light plus a warm glow from the stove",
+        "audio": "sizzle as the onion hits the pan"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 20,
+      "end_s": 26,
+      "visual": "Bowl, lid and blade go into the dishwasher top rack; a hand holds the blade cartridge up to show it's one piece",
+      "camera": "handheld",
+      "caption": "three parts. top rack.",
+      "voiceover": "Three parts, all top-rack safe. The blade cartridge comes out as one piece, so nothing to pick at.",
+      "source": "live-footage"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Presenter holds the chopper up next to the pan, nods toward the link",
+      "camera": "handheld selfie",
+      "caption": "link below. one onion to convince you.",
+      "voiceover": "Link's below. It takes one onion to convince you.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional man holding the chopper up beside the pan, apron on",
+        "action": "he holds the chopper toward the lens and nods downward",
+        "setting": "kitchen",
+        "camera": "handheld selfie, eye level",
+        "lighting": "window light",
+        "audio": "room tone, pan sizzling softly"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "three parts, all top-rack safe",
+      "evidence": "manufacturer care instructions on the product page, saved as a PDF in the campaign folder with the date"
+    }
+  ],
+  "cta": {
+    "text": "Link's below. It takes one onion to convince you.",
+    "on_screen": "link below. one onion to convince you."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "The 'four seconds' in the title is a line in the title only; the script itself shows four pulls and makes no timed claim.",
+      "Shot 5 is real footage of the actual product in a dishwasher so the parts shown match what ships."
+    ]
+  }
+}

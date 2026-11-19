@@ -1,0 +1,81 @@
+## shot 1 · hook · 0s-2s · image
+fictional woman in her late thirties in a cardigan at a desk, closing a laptop lid halfway while looking at the lens, home office, bookshelf behind, window light from the left, laptop glow on her face, home-office phone footage, laptop glow plus window light, unpolished, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+fictional woman in her late thirties in a cardigan at a desk, closing a laptop lid halfway while looking at the lens, she pushes the laptop lid down and turns to the camera.
+Camera: handheld selfie, eye level.
+Lighting: window light from the left, laptop glow on her face.
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+Negative: readable email text, logos.
+
+## shot 1 · hook · 0s-2s · veo3
+fictional woman in her late thirties in a cardigan at a desk, closing a laptop lid halfway while looking at the lens, home office, bookshelf behind.
+Action: she pushes the laptop lid down and turns to the camera.
+Camera: handheld selfie, eye level.
+Lighting: window light from the left, laptop glow on her face.
+Dialogue (on camera, natural pace): "You don't need to chase that invoice."
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+No subtitles, no captions, no logos in frame.
+
+## shot 2 · problem · 2s-8s · image
+the same fictional woman talking to the camera, counting on three fingers, home office, window light, home-office phone footage, laptop glow plus window light, unpolished, vertical 9:16, sharp focus, no text or logos.
+
+## shot 2 · problem · 2s-8s · kling
+[10s clip, 9:16, image-to-video from the still above]
+the same fictional woman talking to the camera, counting on three fingers, she raises one, two, three fingers and grimaces on the third.
+Camera: handheld selfie.
+Lighting: window light.
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 2 · problem · 2s-8s · veo3
+the same fictional woman talking to the camera, counting on three fingers, home office.
+Action: she raises one, two, three fingers and grimaces on the third.
+Camera: handheld selfie.
+Lighting: window light.
+Dialogue (on camera, natural pace): "Every late invoice means three awkward emails, and you still sound like you're begging for your own money."
+Audio: quiet room, a keyboard click.
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+No subtitles, no captions, no logos in frame.
+
+## shot 5 · proof · 21s-26s · image
+the fictional woman holding a phone toward the lens, a green notification banner on the screen, then placing it face down, home office, window light, home-office phone footage, laptop glow plus window light, unpolished, vertical 9:16, sharp focus, no text or logos.
+
+## shot 5 · proof · 21s-26s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional woman holding a phone toward the lens, a green notification banner on the screen, then placing it face down, she shows the phone, places it face down on the desk and turns back to her laptop.
+Camera: handheld selfie, eye level.
+Lighting: window light.
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+Negative: readable notification text, logos.
+
+## shot 5 · proof · 21s-26s · veo3
+the fictional woman holding a phone toward the lens, a green notification banner on the screen, then placing it face down, home office.
+Action: she shows the phone, places it face down on the desk and turns back to her laptop.
+Camera: handheld selfie, eye level.
+Lighting: window light.
+Dialogue (on camera, natural pace): "You find out when it's paid. You never write the email."
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+No subtitles, no captions, no logos in frame.
+
+## shot 6 · cta · 26s-30s · image
+the fictional woman at her desk, laptop open, speaking to the camera, home office, window light, home-office phone footage, laptop glow plus window light, unpolished, vertical 9:16, sharp focus, no text or logos.
+
+## shot 6 · cta · 26s-30s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional woman at her desk, laptop open, speaking to the camera, she nods toward the bottom of the frame.
+Camera: handheld selfie.
+Lighting: window light.
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 6 · cta · 26s-30s · veo3
+the fictional woman at her desk, laptop open, speaking to the camera, home office.
+Action: she nods toward the bottom of the frame.
+Camera: handheld selfie.
+Lighting: window light.
+Dialogue (on camera, natural pace): "Free for your first five invoices. Link below."
+Audio: room tone.
+Style: home-office phone footage, laptop glow plus window light, unpolished.
+No subtitles, no captions, no logos in frame.
