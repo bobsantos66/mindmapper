@@ -43,6 +43,13 @@
       "skillPath": "skills/paper-cut-motion/SKILL.md",
       "computedHash": "f4322fb851c0c03610d5332002065b8bb15aeda6812313888cb8ff9dee4972b0"
     },
+    "short-form-trend-research": {
+      "source": "Virlo-AI/Virlo-Agent-Plugin",
+      "commit": "35ec2729debd178fccb3b1b26410520d0b372d9d",
+      "sourceType": "github",
+      "skillPath": "skills/short-form-trend-research/SKILL.md",
+      "computedHash": "46e0a869428919318f0f9b2670dcbc223ae71eaeb1e47f34a8d920e146473379"
+    },
     "theme-factory": {
       "source": "anthropics/skills",
       "commit": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
