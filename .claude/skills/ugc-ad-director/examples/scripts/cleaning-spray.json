@@ -1,0 +1,113 @@
+{
+  "title": "Clearstone: the hob in fifteen seconds",
+  "vertical": "home cleaning",
+  "product": {
+    "name": "Clearstone Hob Spray",
+    "one_liner": "degreaser for glass and induction hobs, wipe-off, no scrubbing pad"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 15,
+  "audience": "renters and new homeowners who cook most nights",
+  "presenter": {
+    "type": "none",
+    "description": null
+  },
+  "hook": {
+    "type": "result-first",
+    "text": "Burnt-on hob. Watch the wipe.",
+    "why": "Satisfying-clean format: the viewer stays for the reveal, no talking needed."
+  },
+  "style": "overhead kitchen phone footage, hard daylight, hands only, no voiceover",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Overhead: a black glass hob with a burnt sauce ring; a hand enters with the spray bottle",
+      "camera": "overhead, locked",
+      "caption": "burnt-on hob. watch the wipe.\nAI-generated ad",
+      "voiceover": "",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "overhead of a black glass induction hob with a burnt brown sauce ring around one zone, a hand holding a white spray bottle entering from the right",
+        "action": "the hand lowers the bottle toward the ring",
+        "setting": "home kitchen, daylight",
+        "camera": "overhead, locked off",
+        "lighting": "hard daylight from a window, sharp reflections on the glass",
+        "negative": "text, logos, extra hands, cartoon sparkle"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 4,
+      "visual": "Overhead: a scouring pad scrapes the ring and leaves fine scratches on the glass",
+      "camera": "overhead, macro",
+      "caption": "the pad scratches the glass",
+      "voiceover": "",
+      "source": "live-footage"
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 4,
+      "end_s": 10,
+      "visual": "Overhead: three sprays, the foam sits on the ring, a cloth wipes once and the ring lifts in a single pass",
+      "camera": "overhead, locked",
+      "caption": "spray. wait. one wipe.",
+      "voiceover": "",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "overhead of the same hob, a hand spraying white foam onto the burnt ring, then a grey microfibre cloth wiping across it",
+        "action": "three short sprays, a brief pause, one slow wipe left to right that lifts the brown ring and leaves clear black glass",
+        "setting": "home kitchen",
+        "camera": "overhead, locked off",
+        "lighting": "hard daylight, reflections on the glass",
+        "negative": "foam disappearing instantly, cartoon shine, text"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "proof",
+      "start_s": 10,
+      "end_s": 13,
+      "visual": "Overhead: the clean zone reflects the window; cloth held up with the brown residue on it",
+      "camera": "overhead, slight tilt",
+      "caption": "no pad. no scratches.",
+      "voiceover": "",
+      "source": "live-footage"
+    },
+    {
+      "id": 5,
+      "beat": "cta",
+      "start_s": 13,
+      "end_s": 15,
+      "visual": "Bottle set down on the clean hob, label to camera",
+      "camera": "overhead",
+      "caption": "link below",
+      "voiceover": "",
+      "source": "live-footage"
+    }
+  ],
+  "claims": [],
+  "cta": {
+    "text": "Link below.",
+    "on_screen": "link below"
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No voiceover; the captions carry the ad, so every caption is short enough to read at a glance.",
+      "The generated demo shows the product's intended use; the proof shot is real footage so the result shown is a real result.",
+      "No 'safe on all surfaces' claim: the label lists glass and induction only."
+    ]
+  }
+}

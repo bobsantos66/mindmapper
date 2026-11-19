@@ -1,0 +1,82 @@
+## shot 1 · hook · 0s-2s · image
+fictional man in his early thirties in a grey hoodie at a kitchen table, putting in wired earbuds, small kitchen, morning, soft morning window light, candid kitchen-table phone footage, morning light, headphones in, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+fictional man in his early thirties in a grey hoodie at a kitchen table, putting in wired earbuds, he flips his phone face down and pushes an earbud in, looking at the lens.
+Camera: handheld selfie, eye level.
+Lighting: soft morning window light.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 1 · hook · 0s-2s · veo3
+fictional man in his early thirties in a grey hoodie at a kitchen table, putting in wired earbuds, small kitchen, morning.
+Action: he flips his phone face down and pushes an earbud in, looking at the lens.
+Camera: handheld selfie, eye level.
+Lighting: soft morning window light.
+Dialogue (on camera, natural pace): "Stop learning Spanish. Start saying it."
+Audio: quiet kitchen, a kettle ticking.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+No subtitles, no captions, no logos in frame.
+
+## shot 2 · problem · 2s-10s · image
+over the shoulder of the same fictional man looking at a phone screen with a bright streak badge, then turning to the lens with a shrug, kitchen table, morning window light, candid kitchen-table phone footage, morning light, headphones in, vertical 9:16, sharp focus, no text or logos.
+
+## shot 2 · problem · 2s-10s · kling
+[10s clip, 9:16, image-to-video from the still above]
+over the shoulder of the same fictional man looking at a phone screen with a bright streak badge, then turning to the lens with a shrug, he scrolls once, sighs, turns toward the camera and shrugs.
+Camera: handheld, drifts from over the shoulder to a selfie angle.
+Lighting: morning window light.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+Negative: readable app UI, logos, text.
+
+## shot 2 · problem · 2s-10s · veo3
+over the shoulder of the same fictional man looking at a phone screen with a bright streak badge, then turning to the lens with a shrug, kitchen table.
+Action: he scrolls once, sighs, turns toward the camera and shrugs.
+Camera: handheld, drifts from over the shoulder to a selfie angle.
+Lighting: morning window light.
+Dialogue (on camera, natural pace): "You can hold a long streak and still freeze when a waiter asks a question. A streak is not a conversation."
+Style: candid kitchen-table phone footage, morning light, headphones in.
+No subtitles, no captions, no logos in frame.
+
+## shot 4 · demo · 20s-28s · image
+the fictional man at the kitchen table with earbuds in, speaking to his phone propped against a mug, kitchen table, morning, morning window light, candid kitchen-table phone footage, morning light, headphones in, vertical 9:16, sharp focus, no text or logos.
+
+## shot 4 · demo · 20s-28s · kling
+[10s clip, 9:16, image-to-video from the still above]
+the fictional man at the kitchen table with earbuds in, speaking to his phone propped against a mug, he speaks, pauses, winces, then repeats the line with a small nod.
+Camera: handheld selfie, eye level, slight sway.
+Lighting: morning window light.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 4 · demo · 20s-28s · veo3
+the fictional man at the kitchen table with earbuds in, speaking to his phone propped against a mug, kitchen table, morning.
+Action: he speaks, pauses, winces, then repeats the line with a small nod.
+Camera: handheld selfie, eye level, slight sway.
+Lighting: morning window light.
+Dialogue (on camera, natural pace): "Day one is ordering a coffee. You do it badly, it nudges you, you do it again. That's the whole method."
+Audio: his voice, a soft chime from the phone.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+No subtitles, no captions, no logos in frame.
+
+## shot 6 · cta · 38s-45s · image
+the fictional man pulling one earbud out, half smiling, pointing toward the bottom of the frame, kitchen table, morning window light, candid kitchen-table phone footage, morning light, headphones in, vertical 9:16, sharp focus, no text or logos.
+
+## shot 6 · cta · 38s-45s · kling
+[10s clip, 9:16, image-to-video from the still above]
+the fictional man pulling one earbud out, half smiling, pointing toward the bottom of the frame, he removes an earbud and points down twice.
+Camera: handheld selfie.
+Lighting: morning window light.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 6 · cta · 38s-45s · veo3
+the fictional man pulling one earbud out, half smiling, pointing toward the bottom of the frame, kitchen table.
+Action: he removes an earbud and points down twice.
+Camera: handheld selfie.
+Lighting: morning window light.
+Dialogue (on camera, natural pace): "The first three conversations are free, no card. Link below. Say something today."
+Audio: room tone.
+Style: candid kitchen-table phone footage, morning light, headphones in.
+No subtitles, no captions, no logos in frame.

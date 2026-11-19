@@ -1,0 +1,98 @@
+## shot 1 · hook · 0s-2s · image
+a bare foot standing on a thin grey shoe insole on a wooden hallway floor, toes overhanging the edge, hallway, wooden floor, overcast daylight from a doorway, hallway and pavement phone footage, overcast daylight, handheld, vertical 9:16, sharp focus, no text or logos.
+
+## shot 1 · hook · 0s-2s · kling
+[5s clip, 9:16, image-to-video from the still above]
+a bare foot standing on a thin grey shoe insole on a wooden hallway floor, toes overhanging the edge, the foot settles onto the insole and the little toe spills over the side.
+Camera: handheld, high angle pointed at the floor.
+Lighting: overcast daylight from a doorway.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+Negative: extra toes, warped foot, text.
+
+## shot 1 · hook · 0s-2s · veo3
+a bare foot standing on a thin grey shoe insole on a wooden hallway floor, toes overhanging the edge, hallway, wooden floor.
+Action: the foot settles onto the insole and the little toe spills over the side.
+Camera: handheld, high angle pointed at the floor.
+Lighting: overcast daylight from a doorway.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+No subtitles, no captions, no logos in frame.
+
+## shot 2 · problem · 2s-8s · image
+fictional woman in her mid thirties in running kit holding up a worn running shoe, pointing at a frayed spot on the side, hallway by the front door, overcast daylight, hallway and pavement phone footage, overcast daylight, handheld, vertical 9:16, sharp focus, no text or logos.
+
+## shot 2 · problem · 2s-8s · kling
+[10s clip, 9:16, image-to-video from the still above]
+fictional woman in her mid thirties in running kit holding up a worn running shoe, pointing at a frayed spot on the side, she turns the shoe to the lens and taps the worn spot.
+Camera: handheld selfie, eye level.
+Lighting: overcast daylight.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 2 · problem · 2s-8s · veo3
+fictional woman in her mid thirties in running kit holding up a worn running shoe, pointing at a frayed spot on the side, hallway by the front door.
+Action: she turns the shoe to the lens and taps the worn spot.
+Camera: handheld selfie, eye level.
+Lighting: overcast daylight.
+Dialogue (on camera, natural pace): "Toes hanging over the insole means the shoe is too narrow. That hole? Width, not mileage."
+Audio: quiet hallway.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+No subtitles, no captions, no logos in frame.
+
+## shot 3 · demo · 8s-16s · image
+the same bare foot standing on a new white insole, toes fully inside the edge, then two thumbs stretching a grey knit shoe upper, hallway floor, overcast daylight, hallway and pavement phone footage, overcast daylight, handheld, vertical 9:16, sharp focus, no text or logos.
+
+## shot 3 · demo · 8s-16s · kling
+[10s clip, 9:16, image-to-video from the still above]
+the same bare foot standing on a new white insole, toes fully inside the edge, then two thumbs stretching a grey knit shoe upper, the foot settles on the insole, cut to thumbs pulling the knit upper outward and letting it spring back.
+Camera: handheld, high angle then close-up.
+Lighting: overcast daylight.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+Negative: extra toes, logos, text.
+
+## shot 3 · demo · 8s-16s · veo3
+the same bare foot standing on a new white insole, toes fully inside the edge, then two thumbs stretching a grey knit shoe upper, hallway floor.
+Action: the foot settles on the insole, cut to thumbs pulling the knit upper outward and letting it spring back.
+Camera: handheld, high angle then close-up.
+Lighting: overcast daylight.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+No subtitles, no captions, no logos in frame.
+
+## shot 4 · demo · 16s-22s · image
+low angle of a woman's feet in grey knit running shoes jogging toward the camera on a wet pavement, suburban pavement, overcast, flat overcast daylight, hallway and pavement phone footage, overcast daylight, handheld, vertical 9:16, sharp focus, no text or logos.
+
+## shot 4 · demo · 16s-22s · kling
+[10s clip, 9:16, image-to-video from the still above]
+low angle of a woman's feet in grey knit running shoes jogging toward the camera on a wet pavement, she runs toward the lens, each foot lands and the forefoot flattens and widens slightly.
+Camera: low static shot, subject approaches.
+Lighting: flat overcast daylight.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+Negative: slow motion, extra legs, text.
+
+## shot 4 · demo · 16s-22s · veo3
+low angle of a woman's feet in grey knit running shoes jogging toward the camera on a wet pavement, suburban pavement, overcast.
+Action: she runs toward the lens, each foot lands and the forefoot flattens and widens slightly.
+Camera: low static shot, subject approaches.
+Lighting: flat overcast daylight.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+No subtitles, no captions, no logos in frame.
+
+## shot 6 · cta · 26s-30s · image
+the fictional woman crouched at a front door lacing a grey knit running shoe, looking up at the lens, hallway by the front door, overcast daylight, hallway and pavement phone footage, overcast daylight, handheld, vertical 9:16, sharp focus, no text or logos.
+
+## shot 6 · cta · 26s-30s · kling
+[5s clip, 9:16, image-to-video from the still above]
+the fictional woman crouched at a front door lacing a grey knit running shoe, looking up at the lens, she pulls the laces tight, stands and nods toward the bottom of the frame.
+Camera: handheld selfie, eye level.
+Lighting: overcast daylight.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+Negative: text, watermark, extra fingers, warped product, plastic skin, slow motion.
+
+## shot 6 · cta · 26s-30s · veo3
+the fictional woman crouched at a front door lacing a grey knit running shoe, looking up at the lens, hallway by the front door.
+Action: she pulls the laces tight, stands and nods toward the bottom of the frame.
+Camera: handheld selfie, eye level.
+Lighting: overcast daylight.
+Dialogue (on camera, natural pace): "Do the insole test tonight. Link below."
+Audio: laces, a door latch.
+Style: hallway and pavement phone footage, overcast daylight, handheld.
+No subtitles, no captions, no logos in frame.

@@ -1,0 +1,155 @@
+{
+  "title": "Stride Two: the sock test",
+  "vertical": "apparel / footwear",
+  "product": {
+    "name": "Stride Two",
+    "one_liner": "neutral daily running shoe with a knit upper and a wide toe box"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "casual runners 25-45 whose shoes rub at the little toe",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional woman, mid thirties, running kit, hallway; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "curiosity",
+    "text": "Your shoe's too narrow. Here's the test.",
+    "why": "Offers a quick self-diagnosis; the viewer wants the test more than the shoe."
+  },
+  "style": "hallway and pavement phone footage, overcast daylight, handheld",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Presenter pulls the insole out of an old shoe and stands on it; her toes spill over the edge",
+      "camera": "handheld, pointed at the floor",
+      "caption": "your shoe's too narrow. here's the test\nAI-generated ad",
+      "voiceover": "Your shoe's too narrow. Here's the test.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "a bare foot standing on a thin grey shoe insole on a wooden hallway floor, toes overhanging the edge",
+        "action": "the foot settles onto the insole and the little toe spills over the side",
+        "setting": "hallway, wooden floor",
+        "camera": "handheld, high angle pointed at the floor",
+        "lighting": "overcast daylight from a doorway",
+        "negative": "extra toes, warped foot, text"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 8,
+      "visual": "Presenter to camera holding the old shoe, pointing at the worn-through spot by the little toe",
+      "camera": "handheld selfie",
+      "caption": "that hole by the little toe? width, not mileage",
+      "voiceover": "Toes hanging over the insole means the shoe is too narrow. That hole? Width, not mileage.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional woman in her mid thirties in running kit holding up a worn running shoe, pointing at a frayed spot on the side",
+        "action": "she turns the shoe to the lens and taps the worn spot",
+        "setting": "hallway by the front door",
+        "camera": "handheld selfie, eye level",
+        "lighting": "overcast daylight",
+        "audio": "quiet hallway"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 8,
+      "end_s": 16,
+      "visual": "New shoe's insole on the floor, same foot, toes inside the edge; then the knit upper stretched with two thumbs",
+      "camera": "handheld, floor then close-up",
+      "caption": "wide toe box. knit gives, doesn't rub.",
+      "voiceover": "Same foot on the Stride Two insole: toes inside the line. The knit upper stretches, so nothing rubs.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "the same bare foot standing on a new white insole, toes fully inside the edge, then two thumbs stretching a grey knit shoe upper",
+        "action": "the foot settles on the insole, cut to thumbs pulling the knit upper outward and letting it spring back",
+        "setting": "hallway floor",
+        "camera": "handheld, high angle then close-up",
+        "lighting": "overcast daylight",
+        "negative": "extra toes, logos, text"
+      }
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 16,
+      "end_s": 22,
+      "visual": "Pavement: presenter jogs toward camera, close on the forefoot splaying on landing",
+      "camera": "low, static, presenter runs toward lens",
+      "caption": "toes spread on landing",
+      "voiceover": "On the road your toes spread when you land. This shoe leaves room for that.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "low angle of a woman's feet in grey knit running shoes jogging toward the camera on a wet pavement",
+        "action": "she runs toward the lens, each foot lands and the forefoot flattens and widens slightly",
+        "setting": "suburban pavement, overcast",
+        "camera": "low static shot, subject approaches",
+        "lighting": "flat overcast daylight",
+        "negative": "slow motion, extra legs, text"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 22,
+      "end_s": 26,
+      "visual": "Shoe on a kitchen scale, box label showing the width fitting; size chart held to camera",
+      "camera": "handheld, close",
+      "caption": "the width is on the box. check yours.",
+      "voiceover": "The fitting is printed on the box. Check before you run.",
+      "source": "live-footage"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Presenter laces up at the door and nods at the camera",
+      "camera": "handheld selfie",
+      "caption": "do the insole test tonight. link below.",
+      "voiceover": "Do the insole test tonight. Link below.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional woman crouched at a front door lacing a grey knit running shoe, looking up at the lens",
+        "action": "she pulls the laces tight, stands and nods toward the bottom of the frame",
+        "setting": "hallway by the front door",
+        "camera": "handheld selfie, eye level",
+        "lighting": "overcast daylight",
+        "audio": "laces, a door latch"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "the fitting is printed on the box",
+      "evidence": "box label of the shipping product; photo in the campaign folder"
+    }
+  ],
+  "cta": {
+    "text": "Do the insole test tonight. Link below.",
+    "on_screen": "do the insole test tonight. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No injury-prevention or 'podiatrist-approved' wording; the insole test is a fit check, not medical advice.",
+      "Running shots are generated: the shoe silhouette must match the real product, so attach product photos as reference frames."
+    ]
+  }
+}

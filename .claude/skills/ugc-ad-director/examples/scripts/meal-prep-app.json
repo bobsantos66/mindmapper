@@ -1,0 +1,117 @@
+{
+  "title": "Platefull: Sunday meal prep in one screen",
+  "vertical": "mobile app",
+  "product": {
+    "name": "Platefull",
+    "one_liner": "meal-planning app that turns a week of dinners into one grocery list"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 20,
+  "audience": "people 25-40 who cook at home and hate the Sunday grocery run",
+  "presenter": {
+    "type": "none",
+    "description": null
+  },
+  "hook": {
+    "type": "result-first",
+    "text": "Seven dinners, one grocery list, zero scrolling.",
+    "why": "Leads with the outcome in the viewer's own words; the app is the explanation."
+  },
+  "style": "overhead kitchen phone footage, warm afternoon light, hands only",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Overhead: a phone slides into frame next to a cutting board, screen shows a 7-day grid filled with dinners",
+      "camera": "overhead, locked",
+      "caption": "7 dinners, 1 list, 0 scrolling\nAI-generated ad",
+      "voiceover": "Seven dinners, one grocery list, zero scrolling.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "a hand sliding a phone across a wooden counter next to a cutting board with half an onion",
+        "action": "the phone slides to a stop, the screen is lit and shows a weekly grid",
+        "setting": "home kitchen counter, overhead",
+        "camera": "overhead, locked off, phone on a shelf mount",
+        "lighting": "warm afternoon window light from the right",
+        "negative": "readable fake UI text, logos, extra hands"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 6,
+      "visual": "Hands scrolling a chaotic notes-app list, crossing things out, a receipt with duplicate items",
+      "camera": "overhead",
+      "caption": "the usual: three apps and a receipt",
+      "voiceover": "Three apps, a notes list, and a receipt that says you bought garlic twice.",
+      "source": "live-footage"
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 6,
+      "end_s": 13,
+      "visual": "Screen recording: drag three recipes onto the week, tap Build list, the list groups by aisle",
+      "camera": "screen capture",
+      "caption": "drag the week. tap build.",
+      "voiceover": "Drag your dinners onto the week. Tap build. Everything merges into one list, sorted by aisle.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 4,
+      "beat": "proof",
+      "start_s": 13,
+      "end_s": 17,
+      "visual": "Overhead: the list on the phone next to the matching groceries laid out on the counter, every line ticked",
+      "camera": "overhead, slow push in",
+      "caption": "one trip. every line ticked.",
+      "voiceover": "One trip, every line ticked, and the garlic only once.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "overhead of a kitchen counter with a phone showing a checked list beside neatly laid out groceries: a head of garlic, lemons, a bunch of parsley, rice, chicken thighs in paper",
+        "action": "very slow push in toward the phone, nothing else moves",
+        "setting": "home kitchen counter",
+        "camera": "overhead, slow push in",
+        "lighting": "warm afternoon window light",
+        "negative": "readable UI text, brand logos, extra items appearing"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "cta",
+      "start_s": 17,
+      "end_s": 20,
+      "visual": "Finger taps the app icon on a home screen; store badge comes up",
+      "camera": "overhead",
+      "caption": "free to start. link below.",
+      "voiceover": "Free to start. Link below.",
+      "source": "screen-recording"
+    }
+  ],
+  "claims": [
+    {
+      "text": "free to start",
+      "evidence": "app has a free tier; pricing page checked on the day of filming, keep the date in the campaign notes"
+    }
+  ],
+  "cta": {
+    "text": "Free to start. Link below.",
+    "on_screen": "free to start. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No presenter, so there is no persona to disclose; the AI label covers the generated kitchen shots.",
+      "Screen recordings are real app footage; do not replace them with generated UI, which would show features that may not exist."
+    ]
+  }
+}

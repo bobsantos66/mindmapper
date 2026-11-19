@@ -1,0 +1,157 @@
+{
+  "title": "Tongue: ten minutes of Spanish you actually say",
+  "vertical": "online course",
+  "product": {
+    "name": "Tongue",
+    "one_liner": "speaking-first Spanish course built around ten-minute daily conversations"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 45,
+  "audience": "adults 25-45 who have restarted a language app three times",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional man, early thirties, hoodie, at a kitchen table with headphones; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "contrarian",
+    "text": "Stop learning Spanish. Start saying it.",
+    "why": "Flips the thing the viewer thinks they are doing wrong (not enough study) into the real gap (no speaking)."
+  },
+  "style": "candid kitchen-table phone footage, morning light, headphones in",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Presenter snaps a flashcard app shut and puts headphones in",
+      "camera": "handheld selfie",
+      "caption": "stop learning Spanish. start saying it.\nAI-generated ad",
+      "voiceover": "Stop learning Spanish. Start saying it.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional man in his early thirties in a grey hoodie at a kitchen table, putting in wired earbuds",
+        "action": "he flips his phone face down and pushes an earbud in, looking at the lens",
+        "setting": "small kitchen, morning",
+        "camera": "handheld selfie, eye level",
+        "lighting": "soft morning window light",
+        "audio": "quiet kitchen, a kettle ticking"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 10,
+      "visual": "Phone screen with a long streak counter; presenter mouths 'the cat drinks milk' with a shrug",
+      "camera": "handheld, over the shoulder then selfie",
+      "caption": "a streak is not a conversation",
+      "voiceover": "You can hold a long streak and still freeze when a waiter asks a question. A streak is not a conversation.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "over the shoulder of the same fictional man looking at a phone screen with a bright streak badge, then turning to the lens with a shrug",
+        "action": "he scrolls once, sighs, turns toward the camera and shrugs",
+        "setting": "kitchen table",
+        "camera": "handheld, drifts from over the shoulder to a selfie angle",
+        "lighting": "morning window light",
+        "negative": "readable app UI, logos, text"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 10,
+      "end_s": 20,
+      "visual": "Screen recording: a ten-minute lesson opens with a voice prompt; the presenter answers aloud; the app replies and corrects one word",
+      "camera": "screen capture, picture-in-picture presenter",
+      "caption": "it asks. you answer out loud. it corrects.",
+      "voiceover": "Every lesson is a ten-minute conversation. It asks, you answer out loud, it corrects the one word you got wrong and keeps going.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 20,
+      "end_s": 28,
+      "visual": "Presenter at the table answering a prompt about ordering coffee, stumbling, then getting it",
+      "camera": "handheld selfie",
+      "caption": "day one: order a coffee. badly. then better.",
+      "voiceover": "Day one is ordering a coffee. You do it badly, it nudges you, you do it again. That's the whole method.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional man at the kitchen table with earbuds in, speaking to his phone propped against a mug",
+        "action": "he speaks, pauses, winces, then repeats the line with a small nod",
+        "setting": "kitchen table, morning",
+        "camera": "handheld selfie, eye level, slight sway",
+        "lighting": "morning window light",
+        "audio": "his voice, a soft chime from the phone"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 28,
+      "end_s": 38,
+      "visual": "Course outline on screen: thirty conversation topics, each with a 'said it' tick; presenter scrolls to the cafe, pharmacy and taxi lessons",
+      "camera": "screen capture",
+      "caption": "30 real situations. cafe, pharmacy, taxi.",
+      "voiceover": "Thirty situations you'll actually hit: cafe, pharmacy, taxi, the landlord. Each one is a conversation, not a word list.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 38,
+      "end_s": 45,
+      "visual": "Presenter takes one earbud out and points down",
+      "camera": "handheld selfie",
+      "caption": "first three conversations are free. link below.",
+      "voiceover": "The first three conversations are free, no card. Link below. Say something today.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional man pulling one earbud out, half smiling, pointing toward the bottom of the frame",
+        "action": "he removes an earbud and points down twice",
+        "setting": "kitchen table",
+        "camera": "handheld selfie",
+        "lighting": "morning window light",
+        "audio": "room tone"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "thirty situations",
+      "evidence": "course outline in the product; count checked against the live syllabus on the filming date"
+    },
+    {
+      "text": "30 real situations",
+      "evidence": "same syllabus count"
+    },
+    {
+      "text": "ten-minute conversation",
+      "evidence": "lesson timer in the app; typical lesson length by design, not a guarantee"
+    },
+    {
+      "text": "first three conversations are free, no card",
+      "evidence": "pricing page: free tier with no payment method required, checked on the filming date"
+    }
+  ],
+  "cta": {
+    "text": "The first three conversations are free, no card. Link below.",
+    "on_screen": "first three conversations are free. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "No fluency promises ('fluent in 30 days') and no learner results; the only numbers are counts from the product itself.",
+      "The presenter is fictional; the script never says he learned Spanish with the product.",
+      "45 s: fine for TikTok, Reels and Shorts at the time of writing; re-check limits before upload."
+    ]
+  }
+}

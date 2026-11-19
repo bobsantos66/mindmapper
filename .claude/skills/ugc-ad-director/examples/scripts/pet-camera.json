@@ -1,0 +1,147 @@
+{
+  "title": "Pawcam: what the dog does at 2pm",
+  "vertical": "consumer electronics",
+  "product": {
+    "name": "Pawcam",
+    "one_liner": "pet camera with a treat tosser and two-way audio, works over home wifi"
+  },
+  "platforms": [
+    "tiktok",
+    "reels",
+    "shorts"
+  ],
+  "aspect": "9:16",
+  "duration_s": 30,
+  "audience": "people 25-45 who work outside the home and leave a dog alone during the day",
+  "presenter": {
+    "type": "ai_generated",
+    "description": "fictional woman, early forties, office lanyard, phone in hand; generated, not based on anyone"
+  },
+  "hook": {
+    "type": "curiosity",
+    "text": "What the dog does at 2pm.",
+    "why": "Opens a question the viewer has asked themselves; the footage answers it."
+  },
+  "style": "split between office phone footage and living-room camera feed, daylight, candid",
+  "shots": [
+    {
+      "id": 1,
+      "beat": "hook",
+      "start_s": 0,
+      "end_s": 2,
+      "visual": "Camera-feed view: an empty sofa, then a dog's nose appears over the cushion",
+      "camera": "fixed wide, slightly fisheye, like a pet cam",
+      "caption": "what the dog does at 2pm\nAI-generated ad",
+      "voiceover": "What the dog does at 2pm.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "wide fisheye view of a living room sofa from a low shelf, a brown dog's nose and eyes rising over the cushion",
+        "action": "the dog's head rises slowly over the back of the sofa and stares at the lens",
+        "setting": "living room, daytime, curtains half drawn",
+        "camera": "fixed wide, slight fisheye, low shelf height",
+        "lighting": "flat daylight through curtains",
+        "negative": "timestamp overlay, text, extra dogs"
+      }
+    },
+    {
+      "id": 2,
+      "beat": "problem",
+      "start_s": 2,
+      "end_s": 8,
+      "visual": "Presenter at an office desk checking her phone, worried; she mouths 'is he okay'",
+      "camera": "handheld selfie",
+      "caption": "eight hours of wondering",
+      "voiceover": "You leave at nine and spend the day wondering if he's fine, bored, or eating the sofa.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "fictional woman in her early forties with an office lanyard at a desk, glancing at her phone with a worried look",
+        "action": "she checks the phone, frowns, puts it down, picks it up again",
+        "setting": "open-plan office",
+        "camera": "handheld selfie, eye level",
+        "lighting": "office daylight from a window",
+        "audio": "office hum, a keyboard"
+      }
+    },
+    {
+      "id": 3,
+      "beat": "demo",
+      "start_s": 8,
+      "end_s": 15,
+      "visual": "Screen recording of the app: live feed opens in two taps, presenter talks, the dog's ears go up",
+      "camera": "screen capture with the live feed",
+      "caption": "two taps. he hears you.",
+      "voiceover": "Two taps and you're looking at him. Say his name and the ears go up.",
+      "source": "screen-recording"
+    },
+    {
+      "id": 4,
+      "beat": "demo",
+      "start_s": 15,
+      "end_s": 21,
+      "visual": "Camera-feed view: a treat flies out, the dog catches it off the sofa",
+      "camera": "fixed wide pet cam",
+      "caption": "treat button. he forgives you.",
+      "voiceover": "Hit the treat button. He forgives you for leaving.",
+      "source": "image-to-video",
+      "on_camera_speech": false,
+      "prompt": {
+        "subject": "wide fisheye view of the living room, a small brown treat arcing from the bottom of the frame, the brown dog leaping off the sofa to catch it",
+        "action": "the treat arcs out, the dog jumps and catches it mid-air, tail wagging",
+        "setting": "living room",
+        "camera": "fixed wide, slight fisheye",
+        "lighting": "flat daylight",
+        "negative": "extra treats, extra dogs, text, timestamp"
+      }
+    },
+    {
+      "id": 5,
+      "beat": "proof",
+      "start_s": 21,
+      "end_s": 26,
+      "visual": "Real product on a shelf, hand points at the treat hopper and the microphone grille; the setup screen shows it joined home wifi",
+      "camera": "handheld, close",
+      "caption": "hopper, mic, wifi. no hub.",
+      "voiceover": "Treat hopper, microphone, speaker. Plugs in, joins your wifi, no hub.",
+      "source": "live-footage"
+    },
+    {
+      "id": 6,
+      "beat": "cta",
+      "start_s": 26,
+      "end_s": 30,
+      "visual": "Presenter at her desk, phone turned to show the dog asleep on the sofa",
+      "camera": "handheld selfie",
+      "caption": "see what yours does at 2pm. link below.",
+      "voiceover": "See what yours does at two. Link below.",
+      "source": "image-to-video",
+      "prompt": {
+        "subject": "the fictional woman at her office desk turning her phone to the lens, a dog asleep on a sofa visible on the screen",
+        "action": "she turns the phone, smiles and points down",
+        "setting": "open-plan office",
+        "camera": "handheld selfie",
+        "lighting": "office daylight",
+        "negative": "readable UI text, logos"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "text": "plugs in, joins your wifi, no hub",
+      "evidence": "product spec sheet and quick-start guide; verified on a retail unit before filming"
+    }
+  ],
+  "cta": {
+    "text": "See what yours does at two. Link below.",
+    "on_screen": "see what yours does at 2pm. link below."
+  },
+  "compliance": {
+    "ai_label": "AI-generated ad",
+    "platform_toggle": true,
+    "notes": [
+      "The pet-cam feed shots are generated and labelled; the real device appears in shot 5 so the hardware shown is the hardware shipped.",
+      "No separation-anxiety or veterinary wording; the ad sells reassurance for the owner, not a treatment for the dog.",
+      "Generated feed has no timestamp overlay so it cannot be mistaken for a real recording of a real home."
+    ]
+  }
+}
