@@ -4,9 +4,10 @@
 Usa só a biblioteca padrão do Python. Lê as credenciais de variáveis de ambiente
 e nunca as imprime.
 
-Credenciais (uma das duas formas):
-  HF_API_KEY_ID e HF_API_KEY_SECRET
+Credenciais (qualquer uma destas formas):
+  HF_KEY="<chave única do console>"        (formato do open.higgsfield.ai)
   HF_KEY="<key_id>:<key_secret>"
+  HF_API_KEY_ID e HF_API_KEY_SECRET        (formato da documentação)
 
 Comandos:
   check                                  confere se as credenciais existem
@@ -32,13 +33,19 @@ TERMINAL = {"completed", "failed", "nsfw", "canceled"}
 
 
 def credentials():
-    key_id = os.environ.get("HF_API_KEY_ID")
-    secret = os.environ.get("HF_API_KEY_SECRET")
-    if key_id and secret:
-        return f"{key_id}:{secret}"
-    combined = os.environ.get("HF_KEY")
-    if combined and ":" in combined:
-        return combined
+    """Valor usado em 'Authorization: Key <valor>'.
+
+    Aceita ID e segredo separados (formato da documentação) ou a chave única
+    que o console novo (open.higgsfield.ai) entrega, com ou sem ':'.
+    """
+    for id_var, secret_var in (("HF_API_KEY_ID", "HF_API_KEY_SECRET"), ("HF_API_KEY", "HF_API_SECRET")):
+        key_id, secret = os.environ.get(id_var), os.environ.get(secret_var)
+        if key_id and secret:
+            return f"{key_id.strip()}:{secret.strip()}"
+    for single_var in ("HF_KEY", "HF_API_KEY"):
+        value = os.environ.get(single_var)
+        if value and value.strip():
+            return value.strip()
     return None
 
 
@@ -50,7 +57,7 @@ def fail(msg, code=1):
 def call(method, path, body=None, idempotency_key=None):
     cred = credentials()
     if not cred:
-        fail("Credenciais ausentes: defina HF_API_KEY_ID e HF_API_KEY_SECRET (ou HF_KEY).")
+        fail("Credenciais ausentes: defina HF_KEY (ou HF_API_KEY_ID e HF_API_KEY_SECRET).")
     url = path if path.startswith("http") else f"{BASE}/{path.lstrip('/')}"
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(url, data=data, method=method)
