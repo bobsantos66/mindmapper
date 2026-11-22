@@ -197,6 +197,13 @@
       "skillPath": "skills/migration/SKILL.md",
       "computedHash": "e7c6efc84ff8f85d0242e7f29f51c09fd333c294cc3123ef8ee4b2aca2a93192"
     },
+    "music-studio": {
+      "source": "EtienneLescot/claude-music-skill",
+      "commit": "098e3f392785c711fa56f509f433c18d01887204",
+      "sourceType": "github",
+      "skillPath": "skills/music-studio/SKILL.md",
+      "computedHash": "ff6dbd8953e06dc441583671ff3e1e8693b2ce0fb3511cc5a57ff02e2c302da5"
+    },
     "openfilm": {
       "source": "openfilm/openfilm",
       "commit": "715c3a6e46b11a0b3ee038e8f7b3e3b4e19c5c36",
