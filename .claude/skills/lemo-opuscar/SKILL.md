@@ -4,8 +4,10 @@ description: Direct and produce a short film made entirely in code, in one of th
 ---
 
 > **Neste ambiente (nuvem):** a biblioteca fica em `~/lemo-opuscar` (o `setup-video-tools.sh` baixa).
-> Ela exige **ffmpeg 7+** para mixar o áudio (`core/render/mux.sh` recusa o 6.1 do Ubuntu). Se `ffmpeg -version`
-> mostrar 6.x, avise o usuário antes de renderizar: a parte de imagem funciona, mas o `mux.sh` final falha.
+> Ela exige **ffmpeg 7+** (`core/render/mux.sh` recusa o 6.1 do Ubuntu). Um ffmpeg 9 fica em `/opt/ffmpeg9/bin`,
+> instalado pelo `setup-video-tools.sh` só para esta skill: comece **todo** comando da biblioteca (setup.sh,
+> render, mux, build.sh) com `export PATH=/opt/ffmpeg9/bin:$PATH`. As outras skills continuam no ffmpeg 6.1 do
+> sistema. Se `/opt/ffmpeg9/bin/ffmpeg` não existir, rode o setup antes de renderizar.
 > Licença: os textos/guias são CC BY-NC 4.0 com permissão extra para fazer filmes próprios, inclusive comerciais e
 > de clientes; os filmes são do usuário. Não redistribuir nem vender os guias. Clawd (mascote da Anthropic) não
 > está licenciado: não usar em trabalho comercial.

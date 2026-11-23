@@ -5,7 +5,8 @@
 #     music library when mixkit.co and assets.mixkit.co are in the environment's allowed domains
 #   - ffmpeg-skill: linked to ~/.claude/skills/ffmpeg-skill (stdlib only, nothing to install)
 #   - explainroo (npx, pinned): voice runtime and models for English and Brazilian Portuguese
-#   - lemo-opuscar: its style library in ~/lemo-opuscar and the core packages (needs ffmpeg 7+ to mux audio)
+#   - lemo-opuscar: its style library in ~/lemo-opuscar, the core packages, and ffmpeg 9 in /opt/ffmpeg9/bin
+#     (from the imageio-ffmpeg wheel on PyPI; only lemo-opuscar puts it on PATH, the system ffmpeg stays 6.1)
 #   - claude-3d-animated-shorts: engine node_modules, three.js rigs and fonts (Poly Haven props when reachable)
 #   - shorts (claude-shorts): Python venv at ~/.shorts-skill (faster-whisper, mediapipe) and the Remotion
 #     project's node_modules (npm ci from its package-lock.json)
@@ -30,6 +31,10 @@ GENAI_VER="3.6.1"
 NUMPY_VER="2.5.3"
 PILLOW_VER="12.3.0"
 EXPLAINROO_VER="0.6.2"
+# ffmpeg 9 for lemo-opuscar (its mux.sh needs ffmpeg 7+; Ubuntu ships 6.1)
+FFMPEG9_DIR="/opt/ffmpeg9/bin"
+IIO_FFMPEG_VER="0.8.1"
+IIO_FFMPEG_SHA256="050d6850601c3b3890bd2b28306f3b842b3daea390a561101174375a1c460bda"
 # shorts venv: Python 3.12, because its scripts use mediapipe's legacy mp.solutions API (gone in
 # mediapipe >= 0.10.30, and 0.10.21 has no Python 3.13 wheel), and PyAV < 17 (faster-whisper 1.2.1
 # passes metadata_errors=, which PyAV 19 removed).
@@ -121,8 +126,22 @@ fi
 
 # --- lemo-opuscar: style library + core packages --------------------------------------------------
 log "lemo-opuscar: library in ~/lemo-opuscar"
-sh "$SKILLS/lemo-opuscar/scripts/setup.sh" | tail -2
-sh "$SKILLS/lemo-opuscar/scripts/setup.sh" deps | tail -3
+if [ -x "$FFMPEG9_DIR/ffmpeg" ]; then
+  echo "ffmpeg 9: already installed ($("$FFMPEG9_DIR/ffmpeg" -version | head -1 | cut -d' ' -f3))"
+else
+  W="$(mktemp -d)"
+  python3 -m pip download --quiet --no-deps --disable-pip-version-check -d "$W" "imageio-ffmpeg==$IIO_FFMPEG_VER"
+  WHL="$(ls "$W"/imageio_ffmpeg-*manylinux*x86_64.whl)"
+  echo "$IIO_FFMPEG_SHA256  $WHL" | sha256sum -c --quiet
+  python3 -m zipfile -e "$WHL" "$W/x"
+  mkdir -p "$FFMPEG9_DIR"
+  cp "$W"/x/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v* "$FFMPEG9_DIR/ffmpeg"
+  chmod +x "$FFMPEG9_DIR/ffmpeg"
+  rm -rf "$W"
+  echo "ffmpeg 9: $("$FFMPEG9_DIR/ffmpeg" -version | head -1 | cut -d' ' -f3)"
+fi
+PATH="$FFMPEG9_DIR:$PATH" sh "$SKILLS/lemo-opuscar/scripts/setup.sh" | tail -2
+PATH="$FFMPEG9_DIR:$PATH" sh "$SKILLS/lemo-opuscar/scripts/setup.sh" deps | tail -3
 
 # --- claude-3d-animated-shorts: engine packages + third-party assets ------------------------------
 log "claude-3d-animated-shorts: engine"
