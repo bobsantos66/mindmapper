@@ -4,6 +4,7 @@
 #   - ghost-editor: linked to ~/.claude/skills/ghost-editor (the path its scripts use); its Mixkit SFX and
 #     music library when mixkit.co and assets.mixkit.co are in the environment's allowed domains
 #   - ffmpeg-skill: linked to ~/.claude/skills/ffmpeg-skill (stdlib only, nothing to install)
+#   - explainroo (npx, pinned): voice runtime and models for English and Brazilian Portuguese
 #   - shorts (claude-shorts): Python venv at ~/.shorts-skill (faster-whisper, mediapipe) and the Remotion
 #     project's node_modules (npm ci from its package-lock.json)
 # Safe to run more than once: finished steps are skipped. Takes about 5 minutes the first time.
@@ -26,6 +27,7 @@ OPENCV_VER="5.1.0.95"
 GENAI_VER="3.6.1"
 NUMPY_VER="2.5.3"
 PILLOW_VER="12.3.0"
+EXPLAINROO_VER="0.6.2"
 # shorts venv: Python 3.12, because its scripts use mediapipe's legacy mp.solutions API (gone in
 # mediapipe >= 0.10.30, and 0.10.21 has no Python 3.13 wheel), and PyAV < 17 (faster-whisper 1.2.1
 # passes metadata_errors=, which PyAV 19 removed).
@@ -114,6 +116,14 @@ if [ -d "$SKILLS/shorts/remotion/node_modules/remotion" ]; then
 else
   (cd "$SKILLS/shorts/remotion" && npm ci --silent --no-audit --no-fund)
 fi
+
+# --- explainroo: npm package + voice runtime and models (English + Brazilian Portuguese) ----------
+log "explainroo $EXPLAINROO_VER"
+# espeak-ng: the Kokoro voice needs it for Brazilian Portuguese (and es, fr, it, hi)
+command -v espeak-ng >/dev/null || { apt-get install -y -q espeak-ng >/dev/null 2>&1 \
+  || { apt-get update -q >/dev/null && apt-get install -y -q espeak-ng >/dev/null; }; }
+npx --yes "explainroo@$EXPLAINROO_VER" doctor --fetch >/dev/null
+npx --yes "explainroo@$EXPLAINROO_VER" doctor --fetch --language pt-br | grep -E '^(ready|missing)' || true
 
 # --- ghost-editor: SFX and music library (Mixkit) -------------------------------------------------
 log "ghost-editor: SFX and music library"
