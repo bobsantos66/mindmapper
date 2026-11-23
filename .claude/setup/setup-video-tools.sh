@@ -5,6 +5,8 @@
 #     music library when mixkit.co and assets.mixkit.co are in the environment's allowed domains
 #   - ffmpeg-skill: linked to ~/.claude/skills/ffmpeg-skill (stdlib only, nothing to install)
 #   - explainroo (npx, pinned): voice runtime and models for English and Brazilian Portuguese
+#   - lemo-opuscar: its style library in ~/lemo-opuscar and the core packages (needs ffmpeg 7+ to mux audio)
+#   - claude-3d-animated-shorts: engine node_modules, three.js rigs and fonts (Poly Haven props when reachable)
 #   - shorts (claude-shorts): Python venv at ~/.shorts-skill (faster-whisper, mediapipe) and the Remotion
 #     project's node_modules (npm ci from its package-lock.json)
 # Safe to run more than once: finished steps are skipped. Takes about 5 minutes the first time.
@@ -115,6 +117,25 @@ if [ -d "$SKILLS/shorts/remotion/node_modules/remotion" ]; then
   echo "already installed"
 else
   (cd "$SKILLS/shorts/remotion" && npm ci --silent --no-audit --no-fund)
+fi
+
+# --- lemo-opuscar: style library + core packages --------------------------------------------------
+log "lemo-opuscar: library in ~/lemo-opuscar"
+sh "$SKILLS/lemo-opuscar/scripts/setup.sh" | tail -2
+sh "$SKILLS/lemo-opuscar/scripts/setup.sh" deps | tail -3
+
+# --- claude-3d-animated-shorts: engine packages + third-party assets ------------------------------
+log "claude-3d-animated-shorts: engine"
+E3D="$SKILLS/claude-3d-animated-shorts/engine"
+[ -d "$E3D/node_modules/three" ] && echo "node_modules: already installed" \
+  || (cd "$E3D" && npm ci --silent --no-audit --no-fund)
+if [ -s "$E3D/assets/rigs/Xbot.glb" ] && [ -s "$E3D/film/Anton.ttf" ] && [ -d "$E3D/assets/props/polyhaven" ]; then
+  echo "assets: already downloaded"
+else
+  # The Poly Haven office props need api.polyhaven.com and dl.polyhaven.org in the allowed domains;
+  # without them the rigs and fonts still download and the office set has no props.
+  bash "$SKILLS/claude-3d-animated-shorts/scripts/fetch-assets.sh" \
+    || echo "SKIPPED: Poly Haven office props (allow api.polyhaven.com and dl.polyhaven.org, then rerun)"
 fi
 
 # --- explainroo: npm package + voice runtime and models (English + Brazilian Portuguese) ----------
