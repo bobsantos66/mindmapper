@@ -233,7 +233,12 @@ Report to user: clips extracted, content type per clip, reframe strategy.
 
 ### Step 9: RENDER via Remotion
 
-Render all snapped segments with the selected caption style:
+Render all snapped segments with the selected caption style. Where remotion.media is not
+reachable, point Remotion at an installed Chrome Headless Shell first (setup-video-tools.sh
+prints the path), e.g.
+`export REMOTION_BROWSER_EXECUTABLE=/opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell`.
+Chrome on Linux may not decode HEVC: if the source is HEVC, extract the clips as H.264
+(`-c:v libx264 -crf 12 -c:a aac`) instead of stream copy.
 ```bash
 node "$SHORTS_ROOT/remotion/render.mjs" \
     --segments $SHORTS_TMP/snapped_segments.json \

@@ -26,8 +26,17 @@ OPENCV_VER="5.1.0.95"
 GENAI_VER="3.6.1"
 NUMPY_VER="2.5.3"
 PILLOW_VER="12.3.0"
+# shorts venv: Python 3.12, because its scripts use mediapipe's legacy mp.solutions API (gone in
+# mediapipe >= 0.10.30, and 0.10.21 has no Python 3.13 wheel), and PyAV < 17 (faster-whisper 1.2.1
+# passes metadata_errors=, which PyAV 19 removed).
+SHORTS_PY="${SHORTS_PY:-python3.12}"
 FASTER_WHISPER_VER="1.2.1"
-MEDIAPIPE_VER="1.2.3"
+MEDIAPIPE_VER="0.10.21"
+SHORTS_AV_VER="16.1.0"
+SHORTS_OPENCV_VER="4.11.0.86"
+SHORTS_NUMPY_VER="1.26.4"
+# Remotion downloads its own Chrome from remotion.media (blocked here); use the preinstalled one.
+HEADLESS_SHELL="$(ls /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell 2>/dev/null | head -1 || true)"
 
 log() { printf '\n==> %s\n' "$*"; }
 pip_q() { "$@" --quiet --disable-pip-version-check --root-user-action=ignore; }
@@ -72,7 +81,13 @@ done
 
 # --- shorts: venv + Remotion ----------------------------------------------------------------------
 log "shorts: Python venv at $SHORTS_VENV"
-[ -x "$SHORTS_VENV/bin/python3" ] || python3 -m venv "$SHORTS_VENV"
+command -v "$SHORTS_PY" >/dev/null || { echo "$SHORTS_PY is required for the shorts venv"; exit 1; }
+want_minor="$("$SHORTS_PY" -c 'import sys;print(sys.version_info[:2])')"
+if [ -x "$SHORTS_VENV/bin/python3" ] && [ "$("$SHORTS_VENV/bin/python3" -c 'import sys;print(sys.version_info[:2])')" != "$want_minor" ]; then
+  echo "existing venv uses another Python; moving it to $SHORTS_VENV.old"
+  rm -rf "$SHORTS_VENV.old" && mv "$SHORTS_VENV" "$SHORTS_VENV.old"
+fi
+[ -x "$SHORTS_VENV/bin/python3" ] || "$SHORTS_PY" -m venv "$SHORTS_VENV"
 SPY="$SHORTS_VENV/bin/python3"
 if has_ver "$SPY" torch "$TORCH_VER" && has_ver "$SPY" torchvision "$TORCHVISION_VER" \
    && has_ver "$SPY" torchaudio "$TORCHAUDIO_VER"; then
@@ -84,11 +99,13 @@ fi
 NEED=()
 has_ver "$SPY" faster-whisper "$FASTER_WHISPER_VER" || NEED+=("faster-whisper==$FASTER_WHISPER_VER")
 has_ver "$SPY" mediapipe "$MEDIAPIPE_VER" || NEED+=("mediapipe==$MEDIAPIPE_VER")
-has_ver "$SPY" opencv-python "$OPENCV_VER" || NEED+=("opencv-python==$OPENCV_VER")
+has_ver "$SPY" av "$SHORTS_AV_VER" || NEED+=("av==$SHORTS_AV_VER")
+has_ver "$SPY" opencv-python "$SHORTS_OPENCV_VER" || NEED+=("opencv-python==$SHORTS_OPENCV_VER")
+has_ver "$SPY" numpy "$SHORTS_NUMPY_VER" || NEED+=("numpy==$SHORTS_NUMPY_VER")
 if [ ${#NEED[@]} -gt 0 ]; then
   pip_q "$SPY" -m pip install --extra-index-url "$TORCH_INDEX" "${NEED[@]}"
 else
-  echo "faster-whisper, mediapipe, opencv: already installed"
+  echo "faster-whisper, mediapipe, av, opencv, numpy: already installed"
 fi
 
 log "shorts: Remotion node_modules"
@@ -116,7 +133,12 @@ fi
 log "Self-check"
 yt-dlp --version | sed 's/^/yt-dlp /'
 command -v whisper >/dev/null && echo "whisper: $(command -v whisper)"
-"$SPY" -c "import faster_whisper, mediapipe; print('shorts venv: faster-whisper', faster_whisper.__version__)"
+"$SPY" -c "import faster_whisper, mediapipe as mp; mp.solutions.face_detection; print('shorts venv: faster-whisper', faster_whisper.__version__, '+ mediapipe', mp.__version__)"
+if [ -n "$HEADLESS_SHELL" ]; then
+  echo "shorts render: export REMOTION_BROWSER_EXECUTABLE=$HEADLESS_SHELL"
+else
+  echo "shorts render: no preinstalled Chrome Headless Shell found; Remotion will try to download one"
+fi
 python3 "$SKILLS/ffmpeg-skill/scripts/check.py" --help >/dev/null && echo "ffmpeg-skill: scripts run"
 bash "$SKILLS/ghost-editor/scripts/doctor.sh" 2>&1 | grep -E '^\s*MISS|ok, ' || true
 

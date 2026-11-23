@@ -58,9 +58,12 @@ export const VideoFrame: React.FC<VideoFrameProps> = ({
   const translateY = -crop.y * scale;
 
   // Auto-detect framed layout: video doesn't fill full output height.
-  // Position in content zone (below 200px hook text area) for screen recordings.
+  // Center it vertically, but never higher than the 200px hook text area.
   const hookZone = 200;
-  const topOffset = scaledHeight < outputHeight ? hookZone : 0;
+  const topOffset =
+    scaledHeight < outputHeight
+      ? Math.max(hookZone, Math.round((outputHeight - scaledHeight) / 2))
+      : 0;
 
   return (
     <div

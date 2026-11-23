@@ -11,3 +11,6 @@ supabase/.temp/
 supabase/.branches/
 .DS_Store
 *.log
+
+# rendered shorts (claude-shorts output)
+/shorts/

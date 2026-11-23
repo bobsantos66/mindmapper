@@ -25,11 +25,22 @@ export const useCaptionPages = (
       confidence: null as number | null,
     }));
 
-    const { pages } = createTikTokStyleCaptions({
-      captions: remotionCaptions,
-      combineTokensWithinMilliseconds: combineMs,
-    });
+    // A page never spans a sentence end (. ? !), so lines from different
+    // speakers or sentences are not shown together.
+    const sentences: (typeof remotionCaptions)[] = [[]];
+    for (const c of remotionCaptions) {
+      sentences[sentences.length - 1].push(c);
+      if (/[.?!…]["')\]]*\s*$/.test(c.text)) sentences.push([]);
+    }
 
-    return pages;
+    return sentences
+      .filter((s) => s.length > 0)
+      .flatMap(
+        (s) =>
+          createTikTokStyleCaptions({
+            captions: s,
+            combineTokensWithinMilliseconds: combineMs,
+          }).pages
+      );
   }, [captions, combineMs]);
 };

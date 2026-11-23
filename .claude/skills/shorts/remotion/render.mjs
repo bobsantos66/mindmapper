@@ -95,7 +95,11 @@ async function main() {
   console.log(JSON.stringify({ action: "bundle", status: "complete", time_sec: bundleTime }));
 
   // Open shared browser instance
-  const browser = await openBrowser("chrome");
+  // REMOTION_BROWSER_EXECUTABLE: use an installed Chrome Headless Shell instead of downloading one
+  // (remotion.media is not reachable from every environment).
+  const browser = await openBrowser("chrome", {
+    browserExecutable: process.env.REMOTION_BROWSER_EXECUTABLE || null,
+  });
 
   const results = [];
 
