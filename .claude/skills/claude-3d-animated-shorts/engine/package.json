@@ -1,0 +1,17 @@
+{
+  "name": "claude-3d-animated-shorts-engine",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "assets": "bash ../scripts/fetch-assets.sh",
+    "serve": "npx http-server -p 5310 -c-1 .",
+    "still": "node render.cjs out/still.mp4 540 960 30 1 4 7",
+    "render": "node render.cjs out/video.mp4 1080 1920 30"
+  },
+  "dependencies": {
+    "three": "0.170.0",
+    "postprocessing": "6.39.6",
+    "n8ao": "2.0.1",
+    "puppeteer-core": "23.11.1"
+  }
+}

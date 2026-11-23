@@ -11,3 +11,9 @@ supabase/.temp/
 supabase/.branches/
 .DS_Store
 *.log
+
+# rendered shorts (claude-shorts output)
+/shorts/
+
+# OpenMontage deliveries (copied from ~/OpenMontage/projects)
+/videos/

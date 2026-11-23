@@ -1,0 +1,10 @@
+node_modules/
+engine/out/
+engine/assets/rigs/*.glb
+engine/assets/horse/*.glb
+engine/film/*.ttf
+engine/film/*.otf
+*.mp3
+*.wav
+.DS_Store
+engine/assets/props/polyhaven/
