@@ -14,3 +14,6 @@ supabase/.branches/
 
 # rendered shorts (claude-shorts output)
 /shorts/
+
+# OpenMontage deliveries (copied from ~/OpenMontage/projects)
+/videos/

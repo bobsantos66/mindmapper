@@ -7,6 +7,7 @@
 #   - explainroo (npx, pinned): voice runtime and models for English and Brazilian Portuguese
 #   - lemo-opuscar: its style library in ~/lemo-opuscar, the core packages, and ffmpeg 9 in /opt/ffmpeg9/bin
 #     (from the imageio-ffmpeg wheel on PyPI; only lemo-opuscar puts it on PATH, the system ffmpeg stays 6.1)
+#   - openmontage: the OpenMontage project cloned to ~/OpenMontage (pinned) and its `make setup`
 #   - claude-3d-animated-shorts: engine node_modules, three.js rigs and fonts (Poly Haven props when reachable)
 #   - shorts (claude-shorts): Python venv at ~/.shorts-skill (faster-whisper, mediapipe) and the Remotion
 #     project's node_modules (npm ci from its package-lock.json)
@@ -31,6 +32,9 @@ GENAI_VER="3.6.1"
 NUMPY_VER="2.5.3"
 PILLOW_VER="12.3.0"
 EXPLAINROO_VER="0.6.2"
+OPENMONTAGE_REPO="https://github.com/OpenMontageInc/OpenMontage.git"
+OPENMONTAGE_REF="2e003e65fa99a0f329478a2c1cdcf26bc481933a"
+OPENMONTAGE_DIR="$HOME/OpenMontage"
 # ffmpeg 9 for lemo-opuscar (its mux.sh needs ffmpeg 7+; Ubuntu ships 6.1)
 FFMPEG9_DIR="/opt/ffmpeg9/bin"
 IIO_FFMPEG_VER="0.8.1"
@@ -155,6 +159,31 @@ else
   # without them the rigs and fonts still download and the office set has no props.
   bash "$SKILLS/claude-3d-animated-shorts/scripts/fetch-assets.sh" \
     || echo "SKIPPED: Poly Haven office props (allow api.polyhaven.com and dl.polyhaven.org, then rerun)"
+fi
+
+# --- openmontage: project in ~/OpenMontage -------------------------------------------------------
+log "openmontage: $OPENMONTAGE_DIR"
+[ -d "$OPENMONTAGE_DIR/.git" ] || git clone -q "$OPENMONTAGE_REPO" "$OPENMONTAGE_DIR"
+if [ "$(git -C "$OPENMONTAGE_DIR" rev-parse HEAD)" != "$OPENMONTAGE_REF" ]; then
+  git -C "$OPENMONTAGE_DIR" fetch -q origin "$OPENMONTAGE_REF" 2>/dev/null || git -C "$OPENMONTAGE_DIR" fetch -q origin
+  git -C "$OPENMONTAGE_DIR" checkout -q "$OPENMONTAGE_REF"
+fi
+if [ -x "$OPENMONTAGE_DIR/.venv/bin/python" ] && [ -d "$OPENMONTAGE_DIR/remotion-composer/node_modules" ]; then
+  echo "already set up"
+else
+  make -C "$OPENMONTAGE_DIR" setup | tail -4
+fi
+# Remotion would download its own Chrome from remotion.media (blocked here): a local, untracked
+# remotion.config.ts points its CLI at the preinstalled Chrome Headless Shell.
+if [ -n "$HEADLESS_SHELL" ] && ! git -C "$OPENMONTAGE_DIR" ls-files --error-unmatch remotion-composer/remotion.config.ts >/dev/null 2>&1; then
+  printf '%s\n' \
+    '// Local, untracked: use the preinstalled Chrome Headless Shell (remotion.media is not reachable here).' \
+    '// Written by setup-video-tools.sh.' \
+    'import { Config } from "@remotion/cli/config";' \
+    '' \
+    "Config.setBrowserExecutable(process.env.REMOTION_BROWSER_EXECUTABLE || \"$HEADLESS_SHELL\");" \
+    > "$OPENMONTAGE_DIR/remotion-composer/remotion.config.ts"
+  echo "remotion.config.ts -> $HEADLESS_SHELL"
 fi
 
 # --- explainroo: npm package + voice runtime and models (English + Brazilian Portuguese) ----------
