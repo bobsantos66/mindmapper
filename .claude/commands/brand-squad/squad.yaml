@@ -1,0 +1,117 @@
+name: brand-squad
+version: "1.0.0"
+short-title: "Brand Squad"
+description: "O squad definitivo de estratégia de marca — 10 pensadores lendários de branding clonados como agentes de IA, mais 4 especialistas funcionais e 1 orquestrador. Cobre brand equity, posicionamento, identidade, arquitetura e crescimento."
+author: "Synkra AIOS"
+license: MIT
+slashPrefix: "brand-squad"
+
+aios:
+  minVersion: "4.0.0"
+  type: squad
+
+tags:
+  - branding
+  - brand-strategy
+  - positioning
+  - identity
+  - naming
+  - archetype
+  - storybrand
+  - brand-equity
+  - brand-architecture
+  - luxury
+
+components:
+  agents:
+    # Tier 0 — Orchestrator
+    - skilld09.md
+    # Tier 1 — Brand Strategy & Equity
+    - skilld14.md
+    - skilld20.md
+    - skilld19.md
+    # Tier 1 — Positioning & Differentiation
+    - skilld10.md
+    - skilld13.md
+    - skilld21.md
+    # Tier 1 — Brand Building & Communication
+    - skilld17.md
+    - skilld15.md
+    - skilld18.md
+    # Tier 1 — Brand Identity & Expression
+    - skilld11.md
+    - skilld12.md
+    - skilld23.md
+    # Tier 2 — Specialized Support
+    - skilld16.md
+    - skilld22.md
+  tasks:
+    # Brand Analysis
+    - audit-brand.md
+    - diagnose.md
+    - review.md
+    # Brand Creation
+    - create-positioning.md
+    - generate-names.md
+    - build-identity.md
+    - create-brand-story.md
+    - design-architecture.md
+    - map-archetype.md
+  workflows:
+    - wf-brand-creation.yaml
+    - wf-rebrand.yaml
+  checklists:
+    - output-quality.md
+
+config:
+  extends: extend
+
+routing_matrix:
+  brand_equity:
+    primary: skilld14
+    secondary: skilld20
+    triggers: ["brand equity", "brand value", "brand loyalty", "brand awareness", "brand associations"]
+  brand_identity:
+    primary: skilld19
+    secondary: skilld11
+    triggers: ["brand identity", "identity prism", "brand DNA", "brand personality", "brand culture"]
+  positioning:
+    primary: skilld10
+    secondary: skilld21
+    triggers: ["positioning", "category", "focus", "differentiation", "own a word"]
+  evidence_based:
+    primary: skilld13
+    secondary: skilld20
+    triggers: ["how brands grow", "mental availability", "physical availability", "distinctive assets"]
+  messaging:
+    primary: skilld17
+    secondary: skilld22
+    triggers: ["StoryBrand", "messaging", "one-liner", "brand script", "website copy"]
+  visual_identity:
+    primary: skilld11
+    secondary: skilld12
+    triggers: ["logo", "visual identity", "brand guidelines", "design system", "touchpoints"]
+  brand_culture:
+    primary: skilld15
+    secondary: skilld17
+    triggers: ["brand culture", "employer brand", "internal brand", "fusion"]
+  startup_brand:
+    primary: skilld18
+    secondary: skilld21
+    triggers: ["startup brand", "DTC brand", "launch brand", "new brand"]
+  luxury_brand:
+    primary: skilld19
+    secondary: skilld14
+    triggers: ["luxury", "premium", "prestige", "luxury strategy"]
+  naming:
+    primary: skilld23
+    secondary: skilld16
+    triggers: ["naming", "brand name", "rename", "name generation", "domain"]
+  archetype:
+    primary: skilld12
+    secondary: skilld19
+    triggers: ["archetype", "brand personality", "brand character", "Jung"]
+  brand_architecture:
+    primary: skilld14
+    secondary: skilld20
+    triggers: ["brand architecture", "sub-brands", "branded house", "house of brands", "portfolio"]

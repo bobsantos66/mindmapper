@@ -1,0 +1,100 @@
+# Routing Catalog: Traffic Masters
+# Maps keywords to specialist agents for fast routing
+# Referenced by: tasks/diagnose.md
+
+domains:
+  facebook_meta_strategy:
+    keywords: [Facebook ads, Meta ads, Facebook strategy, Instagram ads, Meta Business Suite, Facebook campaign]
+    primary_agent: skillt09
+    secondary_agent: skillt05
+    description: "Facebook/Meta ads strategy — Pittman for Customer Value Journey, Mandalia for BPM scaling"
+
+  facebook_scaling:
+    keywords: [scale Facebook, increase spend, Facebook budget, BPM method, scaling ads, horizontal scaling, vertical scaling]
+    primary_agent: skillt05
+    secondary_agent: skillt14
+    description: "Scale Facebook ad spend profitably using BPM and advanced scaling methods"
+
+  youtube_ads:
+    keywords: [YouTube ads, YouTube advertising, video ads, pre-roll, TrueView, YouTube campaign, viewability]
+    primary_agent: skillt16
+    secondary_agent: skillt02
+    description: "YouTube advertising — Breeze's Viewability method for video ad performance"
+
+  google_ads:
+    keywords: [Google Ads, PPC, search ads, Performance Max, Google Shopping, display network, SEM, Google campaign]
+    primary_agent: skillt07
+    secondary_agent: skillt12
+    description: "Google Ads and Performance Max — Aslam's Solutions 8 methodology"
+
+  high_roi_facebook:
+    keywords: [high ROI, Facebook ROI, Give-Give-Give-Ask, relationship ads, high-ticket Facebook]
+    primary_agent: skillt10
+    secondary_agent: skillt09
+    description: "High-ROI Facebook campaigns using Kusmich's Give-Give-Give-Ask method"
+
+  brazil_latam_traffic:
+    keywords: [Brazil, LATAM, Brazilian traffic, Sobral method, Portuguese ads, mercado brasileiro]
+    primary_agent: skillt11
+    secondary_agent: skillt05
+    description: "Traffic management for Brazil and LATAM markets — Sobral Method"
+
+  ad_creative:
+    keywords: [creative, ad creative, video creative, image ad, UGC, static ad, creative strategy, ad production]
+    primary_agent: skillt02
+    secondary_agent: skillt04
+    description: "Ad creative strategy, production, and optimization"
+
+  media_buying:
+    keywords: [media buying, campaign setup, ad account, campaign structure, bidding, budget allocation, placement]
+    primary_agent: skillt08
+    secondary_agent: skillt14
+    description: "Cross-platform media buying execution and campaign management"
+
+  performance_analysis:
+    keywords: [analytics, performance, reporting, dashboard, metrics, ROAS, CPA, CPL, data analysis]
+    primary_agent: skillt12
+    secondary_agent: skillt03
+    description: "Campaign performance analysis, reporting, and data interpretation"
+
+  creative_testing:
+    keywords: [creative testing, A/B test, split test, creative analysis, ad fatigue, winning creative, iteration]
+    primary_agent: skillt04
+    secondary_agent: skillt02
+    description: "Creative testing, analysis, and iteration for ad performance"
+
+  campaign_scaling:
+    keywords: [scale campaigns, scaling, increase budget, profitable scaling, lookalike, expand, growth]
+    primary_agent: skillt15
+    secondary_agent: skillt05
+    description: "Scale campaigns profitably across platforms"
+
+  tracking_attribution:
+    keywords: [tracking, pixel, attribution, CAPI, conversion API, UTM, server-side tracking, iOS 14, cookies]
+    primary_agent: skillt13
+    secondary_agent: skillt12
+    description: "Tracking setup, pixel implementation, and attribution management"
+
+  ad_account_audit:
+    keywords: [audit, ad account audit, account health, optimization, waste, inefficiency, account structure]
+    primary_agent: skillt03
+    secondary_agent: skillt12
+    description: "Ad account audit, health check, and optimization recommendations"
+
+  budget_management:
+    keywords: [budget, ad budget, spend, financial, cost control, allocation, ROAS target, profitability]
+    primary_agent$1skillt06$2
+    secondary_agent: skillt15
+    description: "Ad budget planning, allocation, and financial management"
+
+  full_funnel_strategy:
+    keywords: [full funnel, funnel strategy, top of funnel, bottom of funnel, TOFU, MOFU, BOFU, customer journey]
+    primary_agent: skillt14
+    secondary_agent: skillt09
+    description: "Full-funnel paid traffic strategy — Burns' Tier 11 methodology"
+
+  perpetual_traffic:
+    keywords: [perpetual traffic, evergreen, always-on, sustainable traffic, long-term ads, perpetual system]
+    primary_agent: skillt14
+    secondary_agent: skillt09
+    description: "Perpetual Traffic system for sustainable, always-on ad performance"

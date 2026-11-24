@@ -1,0 +1,205 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Squad: Claude Code Mastery
+# Domain: Claude Code — Full Spectrum Expertise
+# Created: 2026-03-01
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+squad:
+  name: claude-code-mastery
+  display_name: "Claude Code Mastery Squad"
+  version: "1.0.0"
+  domain: "Claude Code — Full Spectrum Expertise"
+  description: |
+    Squad especialista em todas as dimensões do Claude Code: hooks, skills,
+    subagents, MCP, plugins, agent teams, customização, integração com projetos,
+    roadmap tracking, e AIOS-core architecture awareness.
+
+  philosophy: |
+    "Master the tool to master the craft."
+    Cada agent é baseado em elite minds reais com frameworks documentados
+    no ecossistema Claude Code. O squad cobre desde automação com hooks
+    até orquestração multi-agente e engenharia de contexto.
+
+  keywords:
+    - claude-code
+    - hooks
+    - skills
+    - subagents
+    - mcp
+    - plugins
+    - agent-teams
+    - customization
+    - integration
+    - context-engineering
+    - roadmap
+    - aios
+
+  entry_agent: skille13
+  created_by: "squad-creator-pro"
+  created_at: "2026-03-01"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER ARCHITECTURE
+# ─────────────────────────────────────────────────────────────────────────────
+
+tiers:
+  tier_0:
+    name: "Diagnosis & Routing"
+    agents:
+      - skille13
+    purpose: "Triage requests, route to specialist, maintain squad coherence"
+
+  tier_1:
+    name: "Core Mastery"
+    agents:
+      - skille15
+      - skille16
+      - skille20
+      - skille14
+    purpose: "Deep expertise in Claude Code feature domains"
+
+  tier_2:
+    name: "Strategic & Context"
+    agents:
+      - skille19
+      - skille17
+      - skille18
+    purpose: "Cross-cutting expertise: skills, project integration, roadmap awareness"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENT REGISTRY
+# ─────────────────────────────────────────────────────────────────────────────
+
+agents:
+  skille13:
+    file: agents/skille13.md
+    tier: 0
+    based_on: "Original (Orchestrator)"
+    icon: "🧠"
+    focus: "Triage, routing, AIOS-core awareness"
+
+  skille15:
+    file: agents/skille15.md
+    tier: 1
+    based_on: "disler (Hooks Mastery)"
+    icon: "🪝"
+    focus: "17 hook events, automation pipelines, meta-agent patterns"
+
+  skille16:
+    file: agents/skille16.md
+    tier: 1
+    based_on: "Peter Steinberger (@steipete)"
+    icon: "🔌"
+    focus: "MCP servers, tool discovery, agent-as-MCP, integration patterns"
+
+  skille20:
+    file: agents/skille20.md
+    tier: 1
+    based_on: "Kieran Klaassen + Reuven Cohen"
+    icon: "🐝"
+    focus: "Agent Teams, subagents, multi-session coordination, worktrees"
+
+  skille14:
+    file: agents/skille14.md
+    tier: 1
+    based_on: "SuperClaude-Org"
+    icon: "⚙️"
+    focus: "Settings, permissions, CLAUDE.md, rules, managed policies, personas"
+
+  skille19:
+    file: agents/skille19.md
+    tier: 2
+    based_on: "BMAD-CODE-ORG + community"
+    icon: "🛠️"
+    focus: "Skills, commands, plugins, context engineering, spec-driven dev"
+
+  skille17:
+    file: agents/skille17.md
+    tier: 2
+    based_on: "Daniel Miessler (PAI)"
+    icon: "📦"
+    focus: "Project integration, repository setup, AIOS-core awareness, Unix philosophy"
+
+  skille18:
+    file: agents/skille18.md
+    tier: 2
+    based_on: "Boris Cherny (philosophy) + Official sources"
+    icon: "🔭"
+    focus: "Roadmap tracking, changelog monitoring, feature adoption, plan-first"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HANDOFF MATRIX
+# ─────────────────────────────────────────────────────────────────────────────
+
+handoffs:
+  skille13:
+    routes_to: [skille15, skille16, skille20, skille14, skille19, skille17, skille18]
+
+  skille15:
+    collaborates_with: [skille14, skille19]
+    escalates_to: [skille13]
+
+  skille16:
+    collaborates_with: [skille15, skille17]
+    escalates_to: [skille13]
+
+  skille20:
+    collaborates_with: [skille15, skille14]
+    escalates_to: [skille13]
+
+  skille14:
+    collaborates_with: [skille15, skille19, skille17]
+    escalates_to: [skille13]
+
+  skille19:
+    collaborates_with: [skille15, skille14]
+    escalates_to: [skille13]
+
+  skille17:
+    collaborates_with: [skille14, skille16, skille18]
+    escalates_to: [skille13]
+
+  skille18:
+    collaborates_with: [skille17, skille13]
+    escalates_to: [skille13]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CROSS-CUTTING CONCERNS
+# ─────────────────────────────────────────────────────────────────────────────
+
+cross_cutting:
+  aios_awareness:
+    description: "ALL agents understand AIOS-core architecture"
+    context_files:
+      - ".claude/CLAUDE.md"
+      - ".aios-core/core-config.yaml"
+      - ".aios-core/data/entity-registry.yaml"
+
+  update_knowledge:
+    description: "Command to refresh from Claude Code changelog and roadmap"
+    command: "*update-knowledge"
+    sources:
+      - "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+      - "https://code.claude.com/docs/en/overview"
+      - "https://github.com/anthropics/claude-code/releases"
+
+  quality_standards:
+    min_score: 7.0
+    smoke_tests: 3
+    voice_dna_required: true
+    thinking_dna_required: true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+settings:
+  greeting:
+    level: archetypal
+    show_project_status: true
+    show_aios_context: true
+
+  activation:
+    prefix: "claude-code-mastery"
+    example: "@claude-code-mastery:skille15"

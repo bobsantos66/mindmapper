@@ -1,0 +1,50 @@
+name: advisory-board
+version: "1.0.0"
+short-title: "Advisory Board"
+description: "Board de 11 conselheiros estrategicos — Ray Dalio, Charlie Munger, Naval Ravikant, Peter Thiel, Reid Hoffman, Simon Sinek, Brene Brown, e mais."
+author: "Synkra AIOS"
+license: MIT
+slashPrefix: "advisory-board"
+
+aios:
+  minVersion: "4.0.0"
+  type: squad
+
+tags:
+  - strategy
+  - investment
+  - leadership
+  - mental-models
+  - scaling
+  - purpose
+  - entrepreneurship
+
+components:
+  agents:
+    - skilln23.md
+    - skilln30.md
+    - skilln25.md
+    - skilln27.md
+    - skilln29.md
+    - skilln31.md
+    - skilln32.md
+    - skilln24.md
+    - skilln28.md
+    - skilln26.md
+    - skilln33.md
+  tasks:
+    - convene-board.md
+    - diagnose.md
+    - evaluate-scaling.md
+    - get-founder-counsel.md
+    - resolve-culture-crisis.md
+    - review.md
+    - seek-investment-counsel.md
+  workflows:
+    - wf-board-meeting.yaml
+    - wf-decision-framework.yaml
+  checklists:
+    - output-quality.md
+
+config:
+  extends: extend

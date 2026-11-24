@@ -1,0 +1,185 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Brand Squad
+# Domain: Brand Strategy, Identity & Positioning
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: brand-squad
+  display_name: "Brand Squad"
+  version: "1.0.0"
+  domain: "Brand strategy, identity, positioning, architecture, naming, archetypes, and growth"
+  description: |
+    The definitive brand strategy squad — 10 legendary brand thinkers cloned as AI agents
+    plus 4 functional specialists and 1 orchestrator. From Alcântara's Brand Equity to Acioli's
+    evidence-based marketing, from Carvalho's Identity Prism to Mota's StoryBrand — this
+    squad covers every dimension of brand building, positioning, identity, architecture,
+    and growth.
+  keywords: [brand equity, positioning, brand identity, messaging, brand architecture, naming, archetypes, visual identity, StoryBrand, luxury brand, startup brand, differentiation, distinctiveness]
+  entry_agent: skilld09
+  created_at: "2026-03-05"
+
+tiers:
+  tier_0:
+    name: "Brand Orchestrator"
+    agents: [skilld09]
+    purpose: "Route brand challenges to the right specialist based on the brand problem domain"
+  tier_1_strategy:
+    name: "Brand Strategy & Equity"
+    agents: [skilld14, skilld20, skilld19]
+    purpose: "Brand equity models, identity systems, strategic brand management"
+  tier_1_positioning:
+    name: "Positioning & Differentiation"
+    agents: [skilld10, skilld13, skilld21]
+    purpose: "Market positioning, category strategy, differentiation, evidence-based growth"
+  tier_1_building:
+    name: "Brand Building & Communication"
+    agents: [skilld17, skilld15, skilld18]
+    purpose: "StoryBrand messaging, brand-culture fusion, startup branding"
+  tier_1_identity:
+    name: "Brand Identity & Expression"
+    agents: [skilld11, skilld12, skilld23]
+    purpose: "Visual identity systems, brand archetypes, naming strategy"
+  tier_2_support:
+    name: "Specialized Support"
+    agents: [skilld16, skilld22]
+    purpose: "Domain availability, StoryBrand implementation"
+
+agents:
+  skilld09:
+    file: agents/skilld09.md
+    tier: 0
+    icon: "🎨"
+    focus: "Orchestration, routing, brand diagnosis"
+  skilld14:
+    file: agents/skilld14.md
+    tier: 1
+    icon: "📊"
+    focus: "Brand equity, brand architecture, portfolio strategy"
+  skilld20:
+    file: agents/skilld20.md
+    tier: 1
+    icon: "📐"
+    focus: "Strategic brand management, CBBE model"
+  skilld19:
+    file: agents/skilld19.md
+    tier: 1
+    icon: "💎"
+    focus: "Brand identity prism, luxury brand strategy"
+  skilld10:
+    file: agents/skilld10.md
+    tier: 1
+    icon: "🎯"
+    focus: "Positioning, category strategy, focus"
+  skilld13:
+    file: agents/skilld13.md
+    tier: 1
+    icon: "📈"
+    focus: "Evidence-based marketing, mental/physical availability"
+  skilld21:
+    file: agents/skilld21.md
+    tier: 1
+    icon: "⚡"
+    focus: "Brand gap, radical differentiation, Zag"
+  skilld17:
+    file: agents/skilld17.md
+    tier: 1
+    icon: "📖"
+    focus: "StoryBrand framework, messaging, brand scripts"
+  skilld15:
+    file: agents/skilld15.md
+    tier: 1
+    icon: "🏢"
+    focus: "Brand-culture fusion, employer brand"
+  skilld18:
+    file: agents/skilld18.md
+    tier: 1
+    icon: "🚀"
+    focus: "Startup branding, DTC brand, brand from day one"
+  skilld11:
+    file: agents/skilld11.md
+    tier: 1
+    icon: "🖼️"
+    focus: "Visual identity systems, brand guidelines, design systems"
+  skilld12:
+    file: agents/skilld12.md
+    tier: 1
+    icon: "🎭"
+    focus: "Brand archetypes, personality, Jungian framework"
+  skilld23:
+    file: agents/skilld23.md
+    tier: 1
+    icon: "🔤"
+    focus: "Naming strategy, brand name generation"
+  skilld16:
+    file: agents/skilld16.md
+    tier: 2
+    icon: "🌐"
+    focus: "Domain availability, domain strategy"
+  skilld22:
+    file: agents/skilld22.md
+    tier: 2
+    icon: "📌"
+    focus: "StoryBrand implementation, sticky messaging"
+
+handoffs:
+  skilld09:
+    routes_to: [skilld14, skilld20, skilld19, skilld10, skilld13, skilld21, skilld17, skilld15, skilld18, skilld11, skilld12, skilld23, skilld16, skilld22]
+  skilld14:
+    collaborates_with: [skilld20, skilld19]
+    escalates_to: [skilld09]
+  skilld20:
+    collaborates_with: [skilld14, skilld13]
+    escalates_to: [skilld09]
+  skilld19:
+    collaborates_with: [skilld11, skilld14, skilld12]
+    escalates_to: [skilld09]
+  skilld10:
+    collaborates_with: [skilld21]
+    escalates_to: [skilld09]
+  skilld13:
+    collaborates_with: [skilld20]
+    escalates_to: [skilld09]
+  skilld21:
+    collaborates_with: [skilld10, skilld18]
+    escalates_to: [skilld09]
+  skilld17:
+    collaborates_with: [skilld22, skilld15]
+    escalates_to: [skilld09]
+  skilld15:
+    collaborates_with: [skilld17]
+    escalates_to: [skilld09]
+  skilld18:
+    collaborates_with: [skilld21, skilld23]
+    escalates_to: [skilld09]
+  skilld11:
+    collaborates_with: [skilld12, skilld19]
+    escalates_to: [skilld09]
+  skilld12:
+    collaborates_with: [skilld19, skilld11]
+    escalates_to: [skilld09]
+  skilld23:
+    collaborates_with: [skilld16, skilld18]
+    escalates_to: [skilld09]
+  skilld16:
+    collaborates_with: [skilld23]
+    escalates_to: [skilld09]
+  skilld22:
+    collaborates_with: [skilld17]
+    escalates_to: [skilld09]
+
+cross_cutting:
+  quality_standards:
+    min_score: 7.0
+  core_tensions:
+    differentiation_vs_distinctiveness:
+      pro_differentiation: [skilld10, skilld21]
+      pro_distinctiveness: [skilld13]
+    emotional_vs_evidence:
+      emotional: [skilld17, skilld19, skilld12]
+      evidence: [skilld13, skilld20]
+
+settings:
+  activation:
+    prefix: "brand-squad"
+    example: "@brand-squad:skilld14"

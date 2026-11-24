@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa do Negócio — {{NOME}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Karla:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────
+   PALETA — trocar aqui se precisar
+   ───────────────────────────────────────────── */
+:root{
+  --paper:   #F4F1E8;   /* a folha */
+  --desk:    #E9E7E0;   /* mesa atrás da folha */
+  --dot:     #C8C5BA;   /* pontinhos do fundo */
+  --ink:     #2B2A28;   /* tinta */
+  --ink-2:   #5A5852;   /* tinta clara */
+  --stroke:  #3A3835;   /* traço desenhado */
+  --peach:   #F2AE72;   /* marca-texto */
+  --peach-2: #F7CDA6;   /* hachura */
+
+  --display: 'Oswald', 'Arial Narrow', sans-serif;
+  --hand:    'Caveat', 'Comic Sans MS', cursive;
+  --body:    'Karla', system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; padding:34px 18px 70px;
+  background-color:var(--desk);
+  background-image:radial-gradient(var(--dot) 1.1px, transparent 1.1px);
+  background-size:17px 17px;
+  font-family:var(--body); color:var(--ink); font-size:16.5px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── a folha ── */
+.sheet{
+  max-width:880px; margin:0 auto; background:var(--paper);
+  border:1.5px solid #BDBAB1; border-radius:14px;
+  box-shadow:0 3px 0 rgba(0,0,0,.05), 0 16px 44px rgba(0,0,0,.09);
+  padding:56px clamp(24px,5vw,64px) 60px;
+  background-image:radial-gradient(#DFDBD0 1px, transparent 1px);
+  background-size:19px 19px;
+}
+
+/* ── tipografia ── */
+.kicker{font-family:var(--hand); font-size:22px; color:var(--ink-2); margin:0 0 14px}
+h1{
+  font-family:var(--display); font-weight:700; font-size:clamp(30px,5.4vw,46px);
+  line-height:1.06; text-transform:uppercase; letter-spacing:.005em; margin:0 0 6px;
+}
+h2{
+  font-family:var(--display); font-weight:700; font-size:clamp(21px,3.4vw,29px);
+  line-height:1.1; text-transform:uppercase; margin:0 0 4px;
+}
+h3{font-family:var(--display); font-weight:500; font-size:16px; letter-spacing:.04em;
+   text-transform:uppercase; margin:0 0 8px}
+p{margin:0 0 15px}
+.dim{color:var(--ink-2)}
+.lede{max-width:64ch; margin-bottom:26px}
+
+/* rabisco embaixo do título */
+.squig{display:block; width:min(100%,340px); height:11px; margin:2px 0 22px; overflow:visible}
+.squig path{fill:none; stroke:var(--stroke); stroke-width:2.4; stroke-linecap:round}
+h1 + .squig{width:min(100%,440px)}
+
+/* marca-texto */
+mark{
+  background:linear-gradient(var(--peach),var(--peach)) center/100% 78% no-repeat;
+  color:var(--ink); padding:0 6px; border-radius:9px 4px 11px 5px;
+}
+
+/* ── caixa desenhada à mão ── */
+.box{
+  border:2px solid var(--stroke); background:transparent;
+  border-radius:225px 14px 245px 12px / 14px 235px 12px 225px;
+  padding:18px 22px;
+}
+.box.tight{padding:14px 18px}
+
+header{margin-bottom:52px}
+.meta{font-family:var(--hand); font-size:19px; color:var(--ink-2);
+  display:flex; flex-wrap:wrap; gap:2px 26px; margin-top:16px}
+.meta b{font-weight:700; color:var(--ink)}
+section{margin-bottom:60px}
+
+/* ── figuras ── */
+figure{margin:0 0 6px}
+svg.diagram{width:100%; height:auto; display:block}
+figcaption{font-family:var(--hand); font-size:19px; color:var(--ink-2); text-align:center; margin-top:4px}
+
+
+/* ── achados do diagnóstico ── */
+.achado{border:2px solid var(--stroke); padding:20px 24px; margin-bottom:16px;
+        border-radius:225px 14px 245px 12px/14px 235px 12px 225px}
+.achado-n{font-family:var(--hand); font-size:21px; color:var(--ink-2); margin:0 0 2px}
+.achado h3{font-family:var(--display); font-weight:700; font-size:21px; text-transform:uppercase;
+           letter-spacing:.02em; margin:0 0 10px}
+.achado p{margin:0 0 12px}
+.achado p:last-child{margin-bottom:0}
+.ev{font-family:var(--hand); font-size:20px; line-height:1.42;
+    border-left:3px solid var(--peach); padding-left:14px; color:var(--ink)}
+.nomes{font-family:var(--body); font-size:15px; color:var(--ink-2); margin-top:12px}
+
+/* ── cartões do mapeamento ── */
+.grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.grid .box p:last-child, .grid .box ul:last-child{margin-bottom:0}
+.grid .box ul{margin:0; padding-left:19px}
+.grid .box li{margin-bottom:7px}
+.grid .box li:last-child{margin-bottom:0}
+.said{font-family:var(--hand); font-size:20px; line-height:1.42; color:var(--ink);
+  border-left:3px solid var(--peach); padding-left:13px; margin:0 0 12px}
+.said:last-child{margin-bottom:0}
+
+/* ── checklist ── */
+.check{list-style:none; margin:0; padding:0}
+.check li{display:grid; grid-template-columns:26px 1fr; gap:12px; margin-bottom:13px; align-items:start}
+.check li:last-child{margin-bottom:0}
+.tick{width:17px; height:17px; margin-top:4px; border:2px solid var(--stroke);
+  border-radius:52px 6px 58px 5px / 6px 55px 5px 52px; background:var(--peach)}
+.tick.empty{background:transparent}
+
+/* ── antes / depois ── */
+.ab{display:grid; gap:16px; grid-template-columns:1fr 1fr}
+@media(max-width:660px){.ab{grid-template-columns:1fr}}
+.ab-tag{font-family:var(--display); font-weight:700; font-size:15px; letter-spacing:.05em;
+  text-transform:uppercase; margin-bottom:10px}
+.after .ab-tag{
+  background:linear-gradient(var(--peach),var(--peach)) center/100% 74% no-repeat;
+  display:inline-block; padding:0 7px; border-radius:9px 4px 11px 5px;
+}
+.ab-body{font-size:14.5px; line-height:1.6; white-space:pre-wrap; color:var(--ink)}
+.ask{font-family:var(--hand); font-size:21px; color:var(--ink); margin-bottom:16px}
+
+/* ── passos ── */
+.step{display:grid; grid-template-columns:52px 1fr; gap:18px; padding:20px 0; border-bottom:1.5px dashed #C9C5B9}
+.step:first-of-type{border-top:1.5px dashed #C9C5B9}
+.step-n{font-family:var(--display); font-weight:700; font-size:38px; line-height:1; color:var(--ink)}
+.step h4{font-family:var(--body); font-weight:700; font-size:17px; margin:0 0 5px}
+.step p{margin:0; font-size:15.5px; color:var(--ink-2)}
+
+/* ── rodapé ── */
+footer{margin-top:56px; padding-top:26px; border-top:2px solid var(--stroke)}
+footer p{margin:0; font-size:15px; color:var(--ink-2)}
+.hatch{
+  display:inline-block; font-family:var(--hand); font-weight:700; font-size:26px;
+  padding:3px 22px; color:var(--ink); margin-bottom:14px;
+  background:repeating-linear-gradient(45deg,var(--peach-2) 0 2px,transparent 2px 7px);
+}
+@media print{
+  body{background:#fff; padding:0}
+  .sheet{box-shadow:none; border:none; background:#fff}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header>
+  <p class="kicker">(O Gêmeo · mapa da sessão)</p>
+  <h1>▲ {{NOME_DO_NEGOCIO}}</h1>
+  <svg class="squig" viewBox="0 0 440 11" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C 60 2, 118 9, 176 5 S 292 2, 350 7 S 420 5, 438 4"/></svg>
+  <p class="lede" style="margin-bottom:0">{{FRASE_DO_ESPELHO}}</p>
+  <div class="meta">
+    <span>Sessão: <b>{{DATA}}</b></span>
+    <span>Operador: <b>{{NOME}}</b></span>
+    <span>Instalado: <b>2 arquivos no teu Projeto</b></span>
+  </div>
+</header>
+
+<!-- ══ 1 ══ -->
+<section>
+  <h2>O que foi feito</h2>
+  <svg class="squig" viewBox="0 0 340 11" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 52 2, 104 9, 156 5 S 254 3, 300 7 S 330 5, 338 4"/></svg>
+  <p class="lede">Seis etapas, uma sessão. Tu entrou com o negócio na cabeça e saiu com ele <mark>instalado na máquina</mark>.</p>
+
+  <figure>
+    <svg class="diagram" viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="As seis etapas da sessão">
+      <g fill="none" stroke="#3A3835" stroke-width="2.2" stroke-linecap="round">
+        <path d="M8 46 Q 145 42, 282 45 Q 285 82, 282 118 Q 145 122, 10 119 Q 6 82, 8 46"/>
+        <path d="M300 46 Q 437 43, 574 45 Q 577 82, 574 118 Q 437 123, 302 119 Q 298 82, 300 46"/>
+        <path d="M592 46 Q 729 42, 866 45 Q 869 82, 866 118 Q 729 122, 594 119 Q 590 82, 592 46"/>
+        <path d="M8 156 Q 145 152, 282 155 Q 285 192, 282 228 Q 145 232, 10 229 Q 6 192, 8 156"/>
+        <path d="M300 156 Q 437 153, 574 155 Q 577 192, 574 228 Q 437 233, 302 229 Q 298 192, 300 156"/>
+        <path d="M592 156 Q 729 152, 866 155 Q 869 192, 866 228 Q 729 232, 594 229 Q 590 192, 592 156"/>
+      </g>
+      <g fill="none" stroke="#3A3835" stroke-width="2" stroke-linecap="round">
+        <path d="M285 82 L 294 82"/><path d="M288 78 L 295 82 L 288 86"/>
+        <path d="M577 82 L 586 82"/><path d="M580 78 L 587 82 L 580 86"/>
+        <path d="M866 82 C 890 96, 890 140, 300 138 C 120 137, 60 142, 40 152"/>
+        <path d="M44 145 L 39 153 L 48 154"/>
+        <path d="M285 192 L 294 192"/><path d="M288 188 L 295 192 L 288 196"/>
+        <path d="M577 192 L 586 192"/><path d="M580 188 L 587 192 L 580 196"/>
+      </g>
+      <g font-family="Caveat, cursive" text-anchor="middle" fill="#2B2A28">
+        <text x="145" y="80" font-size="27" font-weight="700">01 · RETRATO</text>
+        <text x="145" y="104" font-size="19" fill="#5A5852">o "antes" guardado</text>
+        <text x="437" y="80" font-size="27" font-weight="700">02 · EXTRAÇÃO</text>
+        <text x="437" y="104" font-size="19" fill="#5A5852">seis frentes puxadas</text>
+        <text x="729" y="80" font-size="27" font-weight="700">03 · ESPELHO</text>
+        <text x="729" y="104" font-size="19" fill="#5A5852">tu leu e validou</text>
+        <text x="145" y="190" font-size="27" font-weight="700">04 · DOCUMENTO</text>
+        <text x="145" y="214" font-size="19" fill="#5A5852">o arquivo na tua mão</text>
+        <text x="437" y="190" font-size="27" font-weight="700">05 · INSTALAÇÃO</text>
+        <text x="437" y="214" font-size="19" fill="#5A5852">plugado no teu Claude</text>
+        <text x="729" y="190" font-size="27" font-weight="700">06 · A PROVA</text>
+        <text x="729" y="214" font-size="19" fill="#5A5852">antes contra depois</text>
+      </g>
+      <g font-family="Caveat, cursive" fill="#2B2A28">
+        <rect x="640" y="12" width="180" height="26" fill="#F7CDA6" opacity=".85" rx="4"/>
+        <text x="730" y="32" font-size="21" font-weight="700" text-anchor="middle">primeira vitória aqui ↓</text>
+      </g>
+    </svg>
+    <figcaption>a sessão inteira, do genérico até a prova</figcaption>
+  </figure>
+</section>
+
+
+<!-- ══ DIAGNÓSTICO ══ -->
+<section>
+  <h2>O que apareceu</h2>
+  <svg class="squig" viewBox="0 0 260 11" preserveAspectRatio="none"><path d="M2 6 C 46 2, 90 9, 134 5 S 214 3, 258 6"/></svg>
+  <p class="lede">Cinco coisas que sairam de cruzar o que tu contou. Nenhuma delas tu escreveu em lugar nenhum, e as cinco ja estao instaladas na maquina.</p>
+
+  <div class="achado">
+    <p class="achado-n">01</p>
+    <h3>A tensao</h3>
+    <p>{{ACHADO_1}}</p>
+    <p class="ev">{{EVIDENCIA_1}}</p>
+  </div>
+
+  <div class="achado">
+    <p class="achado-n">02</p>
+    <h3>O teu mecanismo, com nome</h3>
+    <p>{{ACHADO_2}}</p>
+    <p class="ev">{{EVIDENCIA_2}}</p>
+    <p class="nomes">{{NOME_MECANISMO}}</p>
+  </div>
+
+  <div class="achado">
+    <p class="achado-n">03</p>
+    <h3>A prova enterrada</h3>
+    <p>{{ACHADO_3}}</p>
+    <p class="ev">{{EVIDENCIA_3}}</p>
+  </div>
+
+  <div class="achado">
+    <p class="achado-n">04</p>
+    <h3>O padrao que tu nao viu</h3>
+    <p>{{ACHADO_4}}</p>
+    <p class="ev">{{EVIDENCIA_4}}</p>
+  </div>
+
+  <div class="achado">
+    <p class="achado-n">05</p>
+    <h3>O diferencial que tu pede desculpa</h3>
+    <p>{{ACHADO_5}}</p>
+    <p class="ev">{{EVIDENCIA_5}}</p>
+  </div>
+</section>
+
+<!-- ══ 2 ══ -->
+<section>
+  <h2>O teu negócio, mapeado</h2>
+  <svg class="squig" viewBox="0 0 340 11" preserveAspectRatio="none" aria-hidden="true"><path d="M2 5 C 56 9, 110 2, 164 6 S 258 9, 304 4 S 332 7, 338 6"/></svg>
+  <p class="lede">É isto que a máquina passou a saber sobre ti. Cada bloco virou uma seção do arquivo instalado.</p>
+
+  <div class="grid">
+    <div class="box"><h3>O que tu vende</h3><p>{{OFERTA}}</p></div>
+    <div class="box"><h3>Quem paga</h3><p>{{CLIENTE}}</p></div>
+    <div class="box"><h3>A dor que tu resolve</h3><p>{{DOR}}</p></div>
+    <div class="box"><h3>O que te diferencia</h3><p>{{DIFERENCIAL}}</p></div>
+  </div>
+
+  <div class="grid" style="margin-top:16px">
+    <div class="box"><h3>Como o teu cliente fala</h3>{{FALAS_LITERAIS}}</div>
+    <div class="box"><h3>Objeções que sempre aparecem</h3><ul>{{OBJECOES}}</ul></div>
+    <div class="box"><h3>Provas que tu tem</h3><ul>{{PROVAS}}</ul></div>
+    <div class="box"><h3>Como tu fala</h3><p>{{TOM_DE_VOZ}}</p></div>
+  </div>
+
+  <div class="box" style="margin-top:16px">
+    <h3>O que a máquina nunca vai fazer</h3>
+    <ul class="check">{{NUNCA_FAZER}}</ul>
+  </div>
+</section>
+
+<!-- ══ 3 ══ -->
+<section>
+  <h2>A prova</h2>
+  <svg class="squig" viewBox="0 0 220 11" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 40 2, 78 9, 116 5 S 180 3, 218 6"/></svg>
+  <p class="lede">Mesmo pedido, feito duas vezes. A diferença não é o modelo — é <mark>o que ele sabe sobre ti</mark>.</p>
+
+  <p class="ask">tu pediu: “{{PEDIDO_ORIGINAL}}”</p>
+
+  <div class="ab">
+    <div class="box"><div class="ab-tag">Antes — sem contexto</div><div class="ab-body">{{RESPOSTA_ANTES}}</div></div>
+    <div class="box after"><div class="ab-tag">Depois — com o Gêmeo</div><div class="ab-body">{{RESPOSTA_DEPOIS}}</div></div>
+  </div>
+</section>
+
+<!-- ══ 4 ══ -->
+<section>
+  <h2>O que vem agora</h2>
+  <svg class="squig" viewBox="0 0 300 11" preserveAspectRatio="none" aria-hidden="true"><path d="M2 5 C 48 9, 96 2, 144 6 S 232 9, 268 4 S 292 7, 298 6"/></svg>
+  <p class="lede">O Gêmeo é a fundação, não o prédio. Tudo que se constrói em cima herda o que a máquina já sabe do teu negócio.</p>
+
+  <figure>
+    <svg class="diagram" viewBox="0 0 880 268" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="O que se constrói sobre a fundação">
+      <g fill="none" stroke="#3A3835" stroke-width="2.2" stroke-linecap="round">
+        <path d="M6 12 Q 108 8, 210 11 Q 213 44, 210 76 Q 108 80, 8 77 Q 4 44, 6 12"/>
+        <path d="M232 12 Q 334 9, 436 11 Q 439 44, 436 76 Q 334 81, 234 77 Q 230 44, 232 12"/>
+        <path d="M458 12 Q 560 8, 662 11 Q 665 44, 662 76 Q 560 80, 460 77 Q 456 44, 458 12"/>
+        <path d="M684 12 Q 782 9, 874 11 Q 877 44, 874 76 Q 782 81, 686 77 Q 682 44, 684 12"/>
+      </g>
+      <g font-family="Caveat, cursive" text-anchor="middle" fill="#2B2A28">
+        <text x="108" y="42" font-size="25" font-weight="700">AGENTE DE ROTEIRO</text>
+        <text x="108" y="64" font-size="18" fill="#5A5852">escreve no teu tom</text>
+        <text x="334" y="42" font-size="25" font-weight="700">ROTINA DE DORES</text>
+        <text x="334" y="64" font-size="18" fill="#5A5852">o que postar, todo dia</text>
+        <text x="560" y="42" font-size="25" font-weight="700">CRM PRÓPRIO</text>
+        <text x="560" y="64" font-size="18" fill="#5A5852">sem mensalidade</text>
+        <text x="779" y="42" font-size="25" font-weight="700">QUALIFICAÇÃO</text>
+        <text x="779" y="64" font-size="18" fill="#5A5852">lead filtrado na bio</text>
+      </g>
+      <g fill="none" stroke="#3A3835" stroke-width="2" stroke-linecap="round">
+        <path d="M108 80 C 112 118, 240 130, 400 158"/><path d="M392 152 L 404 160 L 391 163"/>
+        <path d="M334 80 C 336 112, 380 134, 420 158"/><path d="M413 152 L 423 161 L 410 163"/>
+        <path d="M560 80 C 556 112, 512 134, 466 158"/><path d="M474 152 L 463 161 L 476 164"/>
+        <path d="M779 80 C 770 120, 640 132, 490 158"/><path d="M498 152 L 486 160 L 499 164"/>
+      </g>
+      <g fill="none" stroke="#3A3835" stroke-width="2.6" stroke-linecap="round">
+        <path d="M6 176 Q 220 171, 440 174 Q 660 171, 874 176 Q 878 218, 874 258 Q 660 263, 440 259 Q 220 263, 8 258 Q 3 218, 6 176"/>
+      </g>
+      <rect x="330" y="188" width="222" height="30" fill="#F7CDA6" opacity=".8" rx="5"/>
+      <g font-family="Caveat, cursive" text-anchor="middle" fill="#2B2A28">
+        <text x="440" y="212" font-size="30" font-weight="700">▲ O GÊMEO</text>
+        <text x="440" y="242" font-size="19" fill="#5A5852">o contexto do teu negócio — tudo em cima herda isto</text>
+      </g>
+    </svg>
+    <figcaption>a fundação embaixo, o que se constrói em cima</figcaption>
+  </figure>
+
+  <div style="margin-top:32px">
+    <div class="step"><div class="step-n">1</div><div><h4>{{PASSO_1_TITULO}}</h4><p>{{PASSO_1_TEXTO}}</p></div></div>
+    <div class="step"><div class="step-n">2</div><div><h4>{{PASSO_2_TITULO}}</h4><p>{{PASSO_2_TEXTO}}</p></div></div>
+    <div class="step"><div class="step-n">3</div><div><h4>{{PASSO_3_TITULO}}</h4><p>{{PASSO_3_TEXTO}}</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <p class="hatch">o Gêmeo é teu agora</p>
+  <p>Os arquivos <b>instrucoes-projeto.md</b> e <b>contexto-negocio.md</b> ficam contigo. Toda vez que o negócio mudar — oferta nova, cliente novo, preço novo — abre e atualiza. Gêmeo que não é alimentado envelhece.</p>
+</footer>
+
+</div>
+</body>
+</html>

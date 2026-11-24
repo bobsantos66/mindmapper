@@ -1,0 +1,100 @@
+name: copy-master
+version: "2.0.0"
+short-title: "Copy Master"
+description: "Squad de elite 2.0 com 33 agentes de copywriting — 32 mestres lendários + 1 orquestrador. Versão turbinada do Copy Squad com referências reais, exemplos campeões, frameworks aprofundados, e 10 novos especialistas em persuasão, ofertas, SaaS, pitch e negociação."
+author: "Synkra AIOS"
+license: MIT
+slashPrefix: "copy-master"
+
+aios:
+  minVersion: "4.0.0"
+  type: squad
+
+tags:
+  - copywriting
+  - direct-response
+  - sales-letter
+  - email
+  - vsl
+  - funnel
+  - headline
+  - offer
+  - ad-copy
+  - launch
+  - brand-copy
+  - persuasion
+  - negotiation
+  - pitch
+  - saas
+  - conversion
+  - psychology
+
+components:
+  agents:
+    # Tier 0 — Orchestrator
+    - skillcp01.md
+    # Tier 1A — Direct Response Legends
+    - skillcp17.md
+    - skillcp13.md
+    - skillcp07.md
+    - skillcp16.md
+    - skillcp27.md
+    - skillcp22.md
+    - skillcp18.md
+    - skillcp21.md
+    - skillcp28.md
+    # Tier 1B — Modern Copy & Funnels
+    - skillcp09.md
+    - skillcp15.md
+    - skillcp29.md
+    - skillcp33.md
+    - skillcp32.md
+    - skillcp23.md
+    - skillcp30.md
+    - skillcp31.md
+    - skillcp14.md
+    # Tier 1C — Email & Relationship Copy
+    - skillcp04.md
+    - skillcp03.md
+    - skillcp10.md
+    # Tier 1D — Offers & Sales Pages
+    - skillcp20.md
+    - skillcp12.md
+    - skillcp08.md
+    - skillcp25.md
+    - skillcp11.md
+    - skillcp02.md
+    - skillcp19.md
+    # Tier 1E — Persuasion & Psychology
+    - skillcp26.md
+    - skillcp05.md
+    - skillcp06.md
+    - skillcp24.md
+  tasks:
+    # Writing Tasks
+    - write-headline.md
+    - write-sales-letter.md
+    - write-vsl-script.md
+    - write-email-sequence.md
+    - write-ad-copy.md
+    - write-landing-page.md
+    - write-bullets.md
+    - create-funnel-copy.md
+    - create-offer.md
+    - write-webinar-script.md
+    - write-pitch-deck.md
+    # Analysis & Review Tasks
+    - analyze-copy.md
+    - critique-copy.md
+    - diagnose.md
+    - review.md
+  workflows:
+    - wf-full-copy-project.yaml
+    - wf-copy-review-cycle.yaml
+    - wf-vsl-production.yaml
+    - wf-launch-sequence.yaml
+  checklists:
+    - output-quality.md
+
+config:
+  extends: extend

@@ -1,0 +1,82 @@
+# Routing Catalog: Brand Squad
+# Maps keywords to specialist agents for fast routing
+# Referenced by: tasks/diagnose.md
+
+domains:
+  brand_equity:
+    keywords: [brand equity, brand value, brand loyalty, brand awareness, brand associations, equity model, CBBE]
+    primary_agent: skilld14
+    secondary_agent: skilld20
+    description: "Brand equity measurement, building, and management"
+
+  brand_identity:
+    keywords: [brand identity, identity prism, brand DNA, brand personality, brand culture, brand essence]
+    primary_agent: skilld19
+    secondary_agent: skilld11
+    description: "Brand identity systems — Carvalho's Identity Prism and brand DNA definition"
+
+  positioning:
+    keywords: [positioning, category, focus, differentiation, own a word, category creation, competitive position]
+    primary_agent: skilld10
+    secondary_agent: skilld21
+    description: "Market positioning and category strategy — Reis' positioning principles"
+
+  evidence_based:
+    keywords: [how brands grow, mental availability, physical availability, distinctive assets, reach, penetration, mass marketing]
+    primary_agent: skilld13
+    secondary_agent: skilld20
+    description: "Evidence-based marketing — Acioli's How Brands Grow methodology"
+
+  messaging:
+    keywords: [StoryBrand, messaging, one-liner, brand script, website copy, marketing funnel, clarify your message]
+    primary_agent: skilld17
+    secondary_agent: skilld22
+    description: "StoryBrand messaging framework — clear messaging that sells"
+
+  visual_identity:
+    keywords: [logo, visual identity, brand guidelines, design system, brand elements, touchpoints, brand manual]
+    primary_agent: skilld11
+    secondary_agent: skilld12
+    description: "Visual identity systems, brand guidelines, and design systems"
+
+  brand_culture:
+    keywords: [brand culture, employer brand, internal brand, fusion, employee experience, culture alignment]
+    primary_agent: skilld15
+    secondary_agent: skilld17
+    description: "Brand-culture fusion — aligning internal culture with external brand promise"
+
+  startup_brand:
+    keywords: [startup brand, DTC brand, launch brand, brand from day one, new brand, brand creation]
+    primary_agent: skilld18
+    secondary_agent: skilld21
+    description: "Startup and DTC branding — building brand from day one"
+
+  luxury_brand:
+    keywords: [luxury, premium, prestige, luxury strategy, anti-laws, high-end, exclusive]
+    primary_agent: skilld19
+    secondary_agent: skilld14
+    description: "Luxury and premium brand strategy — Carvalho's luxury anti-laws"
+
+  naming:
+    keywords: [naming, brand name, rename, name generation, domain, name strategy, nomenclature]
+    primary_agent: skilld23
+    secondary_agent: skilld16
+    description: "Brand naming strategy, name generation, and domain availability"
+
+  archetype:
+    keywords: [archetype, brand personality, brand character, Jung, hero, rebel, sage, magician, everyman]
+    primary_agent: skilld12
+    secondary_agent: skilld19
+    description: "Brand archetypes and personality — Jungian framework for brand character"
+
+  brand_architecture:
+    keywords: [brand architecture, sub-brands, branded house, house of brands, portfolio, brand hierarchy, extensions]
+    primary_agent: skilld14
+    secondary_agent: skilld20
+    description: "Brand architecture and portfolio strategy — sub-brands, extensions, portfolio management"
+
+  differentiation_debate:
+    keywords: [differentiation vs distinctiveness, should we differentiate, zag, brand gap, radical differentiation]
+    primary_agent: skilld21
+    secondary_agent: skilld13
+    description: "Differentiation vs distinctiveness debate — Novaes's Zag vs Acioli's distinctiveness. Route both for balanced view."

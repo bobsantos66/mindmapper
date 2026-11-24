@@ -1,0 +1,77 @@
+# ═══════════════════════════════════════════════════════════════════
+# Routing Catalog: Storytelling Squad
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+domains:
+  hero_journey:
+    keywords: [hero's journey, monomyth, mythic structure, archetypes, mythology, collective unconscious, call to adventure]
+    primary_agent: skillct06
+    secondary_agent: skillct05
+    description: "Universal mythic patterns, monomyth structure, archetypes, and cross-cultural narrative patterns"
+
+  story_structure:
+    keywords: [beat sheet, story structure, screenplay, plot points, three acts, save the cat, plot architecture]
+    primary_agent: skillct04
+    secondary_agent: skillct14
+    description: "Plot architecture, beat sheets, act structure, turning points, and screenplay formatting"
+
+  story_editing:
+    keywords: [story grid, editing, genre, obligatory scenes, value shift, scene analysis, conventions]
+    primary_agent: skillct14
+    secondary_agent: skillct04
+    description: "Story Grid methodology, genre conventions, scene-level analysis, editorial diagnostics"
+
+  tv_episodic:
+    keywords: [TV writing, episode structure, story circle, series, sitcom, pilot, writers room, episodic]
+    primary_agent: skillct05
+    secondary_agent: skillct04
+    description: "Television and episodic writing, Story Circle, series structure, and writers room dynamics"
+
+  presentations:
+    keywords: [presentation, slides, keynote, pitch deck, data storytelling, TED talk, sparkline, visual narrative]
+    primary_agent: skillct11
+    secondary_agent: skillct13
+    description: "Presentation design, data storytelling, visual narrative, keynote crafting"
+
+  brand_storytelling:
+    keywords: [brand story, business narrative, ABT, marketing story, content marketing, brand identity, and but therefore]
+    primary_agent: skillct13
+    secondary_agent: skillct08
+    description: "Brand narrative strategy, ABT framework, business storytelling, content marketing"
+
+  personal_stories:
+    keywords: [personal narrative, memoir, vulnerability, Moth, true stories, 5-second moment, homework for life]
+    primary_agent: skillct10
+    secondary_agent: skillct08
+    description: "Personal storytelling, true narrative from lived experience, vulnerability, transformation moments"
+
+  sales_stories:
+    keywords: [sales story, customer story, founder story, value story, stories that stick, persuasion narrative]
+    primary_agent: skillct08
+    secondary_agent: skillct12
+    description: "Sales and business stories, the four essential stories, customer and founder narratives"
+
+  improvisation:
+    keywords: [improv, spontaneity, status, yes and, Theatresports, creative blocks, unblocking, free association]
+    primary_agent: skillct07
+    secondary_agent: skillct10
+    description: "Improvisation techniques, spontaneity, status dynamics, creative unblocking"
+
+  pitching:
+    keywords: [pitch, frame control, investor pitch, deal, neurofinance, persuasion, STRONG method, crocodile brain]
+    primary_agent: skillct12
+    secondary_agent: skillct11
+    description: "Pitch methodology, frame control, investor presentations, neurofinance-based persuasion"
+
+  social_movements:
+    keywords: [public narrative, organizing, movement, Story of Self, activism, collective action, Story of Us, Story of Now]
+    primary_agent: skillct09
+    secondary_agent: skillct06
+    description: "Public narrative for social change, community organizing, movement building"
+
+  general_storytelling:
+    keywords: [storytelling, narrative, story, how to tell a story, narrative craft, writing]
+    primary_agent: skillct03
+    secondary_agent: skillct06
+    description: "General storytelling guidance, cross-domain narrative questions, framework selection"

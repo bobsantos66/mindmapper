@@ -1,0 +1,180 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Traffic Masters
+# Domain: Paid Traffic Acquisition & Media Buying
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: traffic-masters
+  display_name: "Traffic Masters"
+  version: "1.0.0"
+  domain: "Paid traffic acquisition across all major platforms — media buying, creative, analytics, and scaling"
+  description: |
+    16 specialized agents mastering paid traffic acquisition across all major platforms.
+    Combines real-person expert agents (world-class media buyers and ad strategists) with
+    functional specialist agents for creative analysis, performance optimization, scaling,
+    and fiscal management. Covers Facebook/Meta, YouTube, Google, TikTok, and LinkedIn.
+  keywords: [paid traffic, Facebook ads, Google ads, YouTube ads, TikTok ads, media buying, creative, scaling, ROAS, CPA, tracking, pixels, attribution, ad budget]
+  entry_agent: skillt01
+  created_at: "2026-03-05"
+
+tiers:
+  tier_0:
+    name: "Orchestration"
+    agents: [skillt01]
+    purpose: "Diagnose traffic challenges, route to the right specialist by platform or function"
+  tier_1_experts:
+    name: "Platform Expert Agents"
+    agents: [skillt09, skillt14, skillt05, skillt10, skillt16, skillt07, skillt11]
+    purpose: "World-class traffic experts cloned from real practitioners with proven track records"
+  tier_1_functional:
+    name: "Functional Specialists"
+    agents: [skillt02, skillt08, skillt12, skillt04, skillt15, skillt13, skillt03, skillt06]
+    purpose: "Specialized agents for specific traffic management functions"
+
+agents:
+  skillt01:
+    file: agents/skillt01.md
+    tier: 0
+    icon: "🎯"
+    focus: "Orchestration, routing, traffic diagnosis"
+  skillt09:
+    file: agents/skillt09.md
+    tier: 1
+    icon: "📘"
+    focus: "Facebook/Meta ads, Customer Value Journey"
+  skillt14:
+    file: agents/skillt14.md
+    tier: 1
+    icon: "🔥"
+    focus: "Facebook/Meta, Tier 11 methodology, full-funnel, Perpetual Traffic"
+  skillt05:
+    file: agents/skillt05.md
+    tier: 1
+    icon: "📊"
+    focus: "Facebook/Meta, BPM scaling method"
+  skillt10:
+    file: agents/skillt10.md
+    tier: 1
+    icon: "🎁"
+    focus: "Facebook, Give-Give-Give-Ask method"
+  skillt16:
+    file: agents/skillt16.md
+    tier: 1
+    icon: "▶️"
+    focus: "YouTube ads, Viewability method"
+  skillt07:
+    file: agents/skillt07.md
+    tier: 1
+    icon: "🔍"
+    focus: "Google Ads, Solutions 8 methodology"
+  skillt11:
+    file: agents/skillt11.md
+    tier: 1
+    icon: "🇧🇷"
+    focus: "Facebook/Instagram, Sobral Method (Brazil/LATAM)"
+  skillt02:
+    file: agents/skillt02.md
+    tier: 1
+    icon: "🎨"
+    focus: "Ad creative strategy and production"
+  skillt08:
+    file: agents/skillt08.md
+    tier: 1
+    icon: "💳"
+    focus: "Cross-platform media buying execution"
+  skillt12:
+    file: agents/skillt12.md
+    tier: 1
+    icon: "📈"
+    focus: "Data analysis and performance reporting"
+  skillt04:
+    file: agents/skillt04.md
+    tier: 1
+    icon: "🔬"
+    focus: "Creative performance analysis and testing"
+  skillt15:
+    file: agents/skillt15.md
+    tier: 1
+    icon: "⚡"
+    focus: "Campaign scaling specialist"
+  skillt13:
+    file: agents/skillt13.md
+    tier: 1
+    icon: "🏷️"
+    focus: "Tracking, pixels, attribution"
+  skillt03:
+    file: agents/skillt03.md
+    tier: 1
+    icon: "🧾"
+    focus: "Ad account audit and optimization"
+$1skillt06:$2
+    file: agents/skillt06.md
+    tier: 1
+    icon: "💰"
+    focus: "Ad budget and financial management"
+
+handoffs:
+  skillt01:
+    routes_to: [skillt09, skillt14, skillt05, skillt10, skillt16, skillt07, skillt11, skillt02, skillt08, skillt12, skillt04, skillt15, skillt13, skillt03, skillt06]
+  skillt09:
+    collaborates_with: [skillt05, skillt14, skillt10]
+    escalates_to: [skillt01]
+  skillt14:
+    collaborates_with: [skillt09, skillt08, skillt05]
+    escalates_to: [skillt01]
+  skillt05:
+    collaborates_with: [skillt14, skillt15]
+    escalates_to: [skillt01]
+  skillt10:
+    collaborates_with: [skillt09]
+    escalates_to: [skillt01]
+  skillt16:
+    collaborates_with: [skillt02]
+    escalates_to: [skillt01]
+  skillt07:
+    collaborates_with: [skillt12]
+    escalates_to: [skillt01]
+  skillt11:
+    collaborates_with: [skillt05]
+    escalates_to: [skillt01]
+  skillt02:
+    collaborates_with: [skillt04, skillt09, skillt16]
+    escalates_to: [skillt01]
+  skillt08:
+    collaborates_with: [skillt14, skillt15]
+    escalates_to: [skillt01]
+  skillt12:
+    collaborates_with: [skillt03, skillt07]
+    escalates_to: [skillt01]
+  skillt04:
+    collaborates_with: [skillt02]
+    escalates_to: [skillt01]
+  skillt15:
+    collaborates_with: [skillt05, skillt06]
+    escalates_to: [skillt01]
+  skillt13:
+    collaborates_with: [skillt12]
+    escalates_to: [skillt01]
+  skillt03:
+    collaborates_with: [skillt12]
+    escalates_to: [skillt01]
+$1skillt06:$2
+    collaborates_with: [skillt15]
+    escalates_to: [skillt01]
+
+cross_cutting:
+  quality_standards:
+    min_score: 7.0
+  platform_routing:
+    facebook_meta: [skillt09, skillt05, skillt14, skillt10, skillt11]
+    youtube: [skillt16, skillt02]
+    google: [skillt07, skillt12]
+    tiktok: [skillt08, skillt02, skillt04]
+    linkedin: [skillt08, skillt10]
+    cross_platform: [skillt01, skillt08, skillt12]
+
+settings:
+  activation:
+    prefix: "traffic-masters"
+    example: "@traffic-masters:skillt09"

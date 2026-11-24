@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carrossel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--preto:#0C0C0C;--creme:#F2EDE4;--laranja:#FF5A1F;--tinta:#111111}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#fff}
+body{font-family:'Inter Tight',sans-serif}
+.slide{width:1080px;height:1350px;position:relative;overflow:hidden;background:#fff;color:var(--tinta)}
+.slide.creme{background:var(--creme)}
+.slide.escuro{background:var(--preto);color:#fff}
+
+/* cantos */
+.canto{position:absolute;z-index:5;font-size:25px;font-weight:400;letter-spacing:-.02em;white-space:nowrap}
+.canto b{font-weight:600}
+.tl{top:68px;left:86px}.tr{top:68px;right:86px}.bl{bottom:68px;left:86px}.br{bottom:68px;right:86px}
+
+/* miolo */
+.meio{position:absolute;z-index:3;left:0;right:0;top:150px;bottom:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 86px}
+.num{font-size:26px;font-weight:600;letter-spacing:-.01em;color:var(--laranja);margin-bottom:18px}
+.tit{font-size:100px;font-weight:800;line-height:.94;letter-spacing:-.058em;word-spacing:.1em;max-width:920px;text-wrap:balance}
+.sem-caixa .tit{font-size:112px}
+.escuro .tit{color:var(--creme)}
+.txt{font-size:41px;font-weight:300;line-height:1.14;letter-spacing:-.045em;word-spacing:.06em;margin-top:22px;max-width:880px;text-wrap:balance}
+.claro .txt span{background:#F0F0F2;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:1px 10px}
+.creme .txt span{background:#E6DED0;-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:1px 10px}
+.escuro .txt{color:rgba(255,255,255,.88)}
+
+/* caixa do Claude */
+.caixa{margin-top:48px;width:908px;background:#fff;border:2.5px solid #111;border-radius:34px;padding:40px 44px 26px;text-align:left;color:#141413}
+.escuro .caixa{background:#262624;border-color:#3d3d3a;color:#ECECEA}
+.prompt{font-size:33px;font-weight:400;line-height:1.2;letter-spacing:-.03em}
+.barra{display:flex;justify-content:space-between;align-items:center;margin-top:30px}
+.mais{font-size:46px;font-weight:300;line-height:1;color:#6b6b6b}
+.dir{display:flex;align-items:center;gap:22px}
+.modelo{display:flex;align-items:center;gap:6px;font-size:23px;color:#6b6b6b}
+.escuro .mais,.escuro .modelo{color:#9a9a95}
+.env{width:54px;height:54px;border-radius:14px;background:var(--laranja);display:flex;align-items:center;justify-content:center}
+.chips{display:flex;gap:12px;margin-top:18px;justify-content:center}
+.chip{display:flex;align-items:center;gap:10px;height:54px;padding:0 20px;border:1.5px solid #E2E2E2;border-radius:14px;font-size:23px;color:#7a7a7a;background:#fff;white-space:nowrap}
+.creme .chip{border-color:#E2DACB}
+.escuro .chip{background:#1a1a19;border-color:#33332f;color:#8f8f8a}
+
+/* lista (quando o slide não tem pedido pro Claude) */
+.lista{margin-top:44px;width:880px;text-align:left;list-style:none;border-bottom:1.5px solid rgba(17,17,17,.12)}
+.lista li{display:flex;gap:26px;align-items:baseline;padding:22px 4px;border-top:1.5px solid rgba(17,17,17,.12);font-size:36px;font-weight:400;line-height:1.2;letter-spacing:-.035em}
+.lista li i{font-style:normal;font-weight:600;font-size:26px;color:var(--laranja);min-width:40px}
+.escuro .lista,.escuro .lista li{border-color:rgba(255,255,255,.14)}
+
+/* selos */
+.tag{display:inline-block;background:var(--laranja);color:var(--preto);font-size:34px;font-weight:700;letter-spacing:-.035em;word-spacing:.05em;padding:12px 24px;border-radius:12px;transform:rotate(-3deg)}
+.adesivo{position:absolute;z-index:4;filter:drop-shadow(0 10px 22px rgba(0,0,0,.3))}
+.ancora{display:inline-block;position:relative;width:0;height:0;vertical-align:top}
+.ancora>span{position:absolute;filter:drop-shadow(0 10px 22px rgba(0,0,0,.35))}
+
+/* capa */
+.capa{background:var(--preto);color:#fff}
+.capa>.meio{bottom:600px;top:140px}
+.capa.sem-leque>.meio{bottom:150px}
+.capa h1{font-size:118px;font-weight:800;line-height:.93;letter-spacing:-.06em;word-spacing:.1em;color:#fff;white-space:nowrap}
+.capa>.meio>.tag{margin-top:40px;font-size:40px}
+.leque{position:absolute;left:0;right:0;top:800px;height:420px;z-index:2}
+.carta{position:absolute;top:30px;left:50%;width:270px;height:337.5px;margin-left:-135px;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.55);border:2px solid rgba(242,237,228,.22)}
+.carta .mini{width:1080px;height:1350px;transform:scale(.25);transform-origin:top left}
+.c1{transform:translateX(-230px) translateY(26px) rotate(-10deg)}
+.c3{transform:translateX(230px) translateY(26px) rotate(10deg)}
+.c2{transform:scale(1.12);z-index:2}
+.pilula{position:absolute;z-index:5;right:72px;bottom:52px;display:flex;align-items:center;gap:18px;padding:16px 28px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;font-size:25px;letter-spacing:-.02em}
+
+/* fim */
+.fim-tit{font-size:86px;font-weight:800;line-height:.98;letter-spacing:-.05em;word-spacing:.08em;text-transform:uppercase;max-width:920px;text-wrap:balance}
+.fim-tit em{font-style:normal;color:var(--laranja)}
+.fim-txt{font-size:54px;font-weight:300;line-height:1.08;letter-spacing:-.045em;margin-top:56px;max-width:760px;text-wrap:balance}
+</style>
+</head>
+<body>
+<div id="palco"></div>
+<script src="dados.js"></script>
+<script>
+const D = window.DADOS;
+const C = Object.assign({tl:'@ofellipesales', tr:'<b>IA</b> na prática', bl:'Conteúdo', br:'automação'}, D.cantos || {});
+const itens = D.itens;
+const dd = n => String(n).padStart(2,'0');
+
+// tema de cada slide: o que vier nos dados, senão alterna claro, escuro, creme sem repetir o vizinho
+const ciclo = ['claro','escuro','creme'];
+let anterior = null;
+itens.forEach((c,i) => {
+  let t = c.tema || (c.destaque ? 'escuro' : ciclo[i % 3]);
+  if (!c.tema && t === anterior) t = ciclo[(ciclo.indexOf(t) + 1) % 3];
+  c._tema = t; anterior = t;
+});
+
+// selo no formato da marca do Claude (aproximação: raios num quadrado arredondado)
+function claude(tam, giro){
+  const ang = [0,33,63,95,128,160,192,223,256,290,322];
+  const len = [31,24,29,22,31,25,28,23,30,24,27];
+  const raios = ang.map((a,i)=>{const r=a*Math.PI/180;const x1=50+5*Math.cos(r),y1=50+5*Math.sin(r),x2=50+len[i]*Math.cos(r),y2=50+len[i]*Math.sin(r);return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"/>`}).join('');
+  return `<svg width="${tam}" height="${tam}" viewBox="0 0 100 100" style="transform:rotate(${giro}deg)"><rect x="2" y="2" width="96" height="96" rx="24" fill="#FF5A1F" stroke="#F2EDE4" stroke-width="3"/><g stroke="#F2EDE4" stroke-width="7" stroke-linecap="round">${raios}</g></svg>`;
+}
+
+const ic = {
+  aprender:'<path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11.5v4.5c3.5 2.5 8.5 2.5 12 0v-4.5"/>',
+  criar:'<path d="M14 4l6 6-9 9H5v-6z"/><path d="M4 21h7"/>',
+  estrategias:'<path d="M3 17l6-6 4 4 8-8"/><path d="M3 21h18"/>',
+  escrever:'<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/>',
+  codigo:'<path d="M9 7l-5 5 5 5"/><path d="M15 7l5 5-5 5"/>'
+};
+const svg = p => `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const chips = `<div class="chips">${[['aprender','Aprender'],['criar','Criar'],['estrategias','Estratégias'],['escrever','Escrever'],['codigo','Código']].map(([k,t])=>`<div class="chip">${svg(ic[k])}${t}</div>`).join('')}</div>`;
+const seta = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>`;
+const chevron = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>`;
+const caixa = t => `<div class="caixa"><p class="prompt">${t}</p><div class="barra"><span class="mais">+</span><span class="dir"><span class="modelo">${D.modelo || 'Opus 5.5'} ${chevron}</span><span class="env">${seta}</span></span></div></div>`;
+const lista = l => `<ol class="lista">${l.map((x,i)=>`<li><i>${dd(i+1)}</i><span>${x}</span></li>`).join('')}</ol>`;
+
+const cantos = () => `
+  <div class="canto tl">${C.tl}</div>
+  <div class="canto tr">${C.tr}</div>
+  <div class="canto bl">${C.bl}</div>
+  <div class="canto br">${C.br}</div>`;
+
+function item(c, i){
+  const extra = c.pede ? caixa(c.pede) + chips : (c.lista ? lista(c.lista) : '');
+  const destaque = c.destaque === true ? 'a que quase ninguém usa' : c.destaque;
+  return `<section class="slide ${c._tema} ${c.pede ? '' : 'sem-caixa'}">
+    ${cantos()}
+    <div class="meio">
+      ${destaque ? `<div class="tag" style="margin-bottom:34px">${destaque}</div>` : ''}
+      <div class="num">${dd(i+1)} / ${dd(itens.length)}</div>
+      <h2 class="tit">${c.tit}</h2>
+      ${c.txt ? `<p class="txt"><span>${c.txt}</span></p>` : ''}
+      ${extra}
+    </div>
+    ${destaque && D.selo !== false ? `<div class="adesivo" style="top:180px;right:110px">${claude(118,14)}</div>` : ''}
+  </section>`;
+}
+
+function capa(){
+  const k = D.capa;
+  const selo = (k.selo ?? D.selo) !== false;
+  const linhas = k.linhas.map((l,i) => i === 0 && selo ? `${l}<span class="ancora"><span style="left:-4px;top:-108px">${claude(132,12)}</span></span>` : l).join('<br>');
+  // leque: esquerda, meio, direita. O meio é o slide em destaque (ou o 2º);
+  // nas pontas entram slides claros, que aparecem melhor no fundo preto da capa
+  let leque = k.leque;
+  if (!leque && itens.length >= 3) {
+    const d = itens.findIndex(c => c.destaque);
+    const m = d >= 0 ? d : 1;
+    const pontas = itens.map((c,x) => x).filter(x => x !== m && x < 6)
+      .sort((a,b) => (itens[a]._tema === 'escuro') - (itens[b]._tema === 'escuro') || a - b);
+    leque = [pontas[0], m, pontas[1]];
+  }
+  const carta = (x, cls) => `<div class="carta ${cls}"><div class="mini">${item(itens[x], x)}</div></div>`;
+  return `<section class="slide capa ${leque ? '' : 'sem-leque'}">
+    <div class="canto tl">${C.tr}</div>
+    <div class="canto tr">${C.tl}</div>
+    <div class="canto bl">${C.bl}</div>
+    <div class="meio">
+      <h1>${linhas}</h1>
+      ${k.tag ? `<div class="tag">${k.tag}</div>` : ''}
+    </div>
+    ${leque ? `<div class="leque">${carta(leque[0],'c1')}${carta(leque[2],'c3')}${carta(leque[1],'c2')}</div>` : ''}
+    <div class="pilula">arrasta pro lado <svg width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h29M23 2l8 8-8 8"/></svg></div>
+  </section>`;
+}
+
+function fim(){
+  const f = D.fim;
+  return `<section class="slide ${f.tema || 'creme'}">
+    ${cantos()}
+    <div class="meio">
+      <h2 class="fim-tit">${f.titulo}${f.laranja ? ` <em>${f.laranja}</em>` : ''}</h2>
+      ${f.texto ? `<p class="fim-txt">${f.texto}</p>` : ''}
+    </div>
+  </section>`;
+}
+
+const slides = [capa(), ...itens.map(item), fim()];
+const n = Math.min(Math.max(parseInt(location.hash.slice(1)) || 1, 1), slides.length);
+document.getElementById('palco').innerHTML = slides[n-1];
+
+// encaixe: se o texto não couber, diminui o título até caber
+function encaixar(){
+  const h1 = document.querySelector('.capa h1');
+  if (h1) { let t = 118; while (h1.scrollWidth > 960 && t > 70) { t -= 4; h1.style.fontSize = t + 'px'; } }
+  const meio = document.querySelector('#palco > .slide:not(.capa) > .meio');
+  const tit = meio && meio.querySelector('.tit, .fim-tit');
+  if (meio && tit) { let t = parseFloat(getComputedStyle(tit).fontSize); while (meio.scrollHeight > meio.clientHeight + 2 && t > 60) { t -= 4; tit.style.fontSize = t + 'px'; } }
+}
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(encaixar);
+</script>
+</body>
+</html>

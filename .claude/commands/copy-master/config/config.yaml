@@ -1,0 +1,334 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Copy Master
+# Domain: Elite Copywriting, Persuasion & Direct Response 2.0
+# Version: 2.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: copy-master
+  display_name: "Copy Master"
+  version: "2.0.0"
+  domain: "Elite copywriting 2.0 — direct response, email, funnels, VSLs, sales letters, offers, brand copy, persuasion psychology, negotiation, pitch, SaaS conversion"
+  description: |
+    Squad of 33 copywriting agents — 32 legendary masters + 1 orchestrator.
+    Enhanced version of Copy Squad with deeper frameworks, real champion examples,
+    swipe files, and 10 new specialists covering persuasion psychology, offer
+    architecture, SaaS copy, pitch dynamics, and negotiation-based selling.
+  keywords: [copywriting, direct response, sales letter, email, VSL, funnel, headline, offer, ad copy, launch, bullets, brand copy, persuasion, psychology, negotiation, pitch, SaaS, conversion]
+  entry_agent: skillcp01
+  created_at: "2026-04-04"
+
+tiers:
+  tier_0:
+    name: "Orchestration"
+    agents: [skillcp01]
+    purpose: "Triage copywriting requests, route to the right specialist, quality control, multi-agent coordination"
+  tier_1a:
+    name: "Direct Response Legends"
+    agents: [skillcp17, skillcp13, skillcp07, skillcp16, skillcp27, skillcp22, skillcp18, skillcp21, skillcp28]
+    purpose: "Classic direct response masters — long-form, print, mail, scientific testing, USP"
+  tier_1b:
+    name: "Modern Copy & Funnels"
+    agents: [skillcp09, skillcp15, skillcp29, skillcp33, skillcp32, skillcp23, skillcp30, skillcp31, skillcp14]
+    purpose: "Digital-era copy — VSLs, funnels, webinars, launches, cold traffic, belief-based selling"
+  tier_1c:
+    name: "Email & Relationship"
+    agents: [skillcp04, skillcp03, skillcp10]
+    purpose: "Email sequences, daily emails, nurture copy, personal brand content"
+  tier_1d:
+    name: "Offers & Sales Pages"
+    agents: [skillcp20, skillcp12, skillcp08, skillcp25, skillcp11, skillcp02, skillcp19]
+    purpose: "Offer architecture, print ads, financial/health copy, value equation, SaaS conversion, data-driven copy"
+  tier_1e:
+    name: "Persuasion & Psychology"
+    agents: [skillcp26, skillcp05, skillcp06, skillcp24]
+    purpose: "Persuasion science, emotional triggers, negotiation psychology, frame control, pitch dynamics"
+
+agents:
+  skillcp01:
+    file: agents/skillcp01.md
+    tier: 0
+    icon: "👑"
+    focus: "Orchestration, routing, copy review, multi-agent projects"
+  # Tier 1A — Direct Response Legends
+  skillcp17:
+    file: agents/skillcp17.md
+    tier: 1a
+    icon: "✍️"
+    focus: "Sales letters, emotional storytelling, direct mail, A-pile technique"
+  skillcp13:
+    file: agents/skillcp13.md
+    tier: 1a
+    icon: "🧠"
+    focus: "Headlines, awareness levels, market sophistication, breakthrough advertising"
+  skillcp07:
+    file: agents/skillcp07.md
+    tier: 1a
+    icon: "📊"
+    focus: "Scientific advertising, testing, reason-why copy, preemptive claims"
+  skillcp16:
+    file: agents/skillcp16.md
+    tier: 1a
+    icon: "🎯"
+    focus: "Proof-based selling, fascinations, control-beating, Persuasion Equation"
+  skillcp27:
+    file: agents/skillcp27.md
+    tier: 1a
+    icon: "💌"
+    focus: "Empathy letters, mental movies, reader psychology, conversation principle"
+  skillcp22:
+    file: agents/skillcp22.md
+    tier: 1a
+    icon: "🔥"
+    focus: "Sales Detective process, raw selling power, Simple Writing System"
+  skillcp18:
+    file: agents/skillcp18.md
+    tier: 1a
+    icon: "📰"
+    focus: "Magalog format, format innovation, anti-boring philosophy"
+  skillcp21:
+    file: agents/skillcp21.md
+    tier: 1a
+    icon: "🎹"
+    focus: "Scientific headline testing, split testing, Tested Advertising Methods"
+  skillcp28:
+    file: agents/skillcp28.md
+    tier: 1a
+    icon: "💎"
+    focus: "USP creation, message simplification, repetition strategy"
+  # Tier 1B — Modern Copy & Funnels
+  skillcp09:
+    file: agents/skillcp09.md
+    tier: 1b
+    icon: "💰"
+    focus: "No-BS marketing, offer structure, Magnetic Marketing, fear of loss"
+  skillcp15:
+    file: agents/skillcp15.md
+    tier: 1b
+    icon: "🌊"
+    focus: "Launch copy, intent-based branding, behavioral sequences, Results In Advance"
+  skillcp29:
+    file: agents/skillcp29.md
+    tier: 1b
+    icon: "📈"
+    focus: "Funnel copy, Perfect Webinar, Hook-Story-Offer, Value Ladder"
+  skillcp33:
+    file: agents/skillcp33.md
+    tier: 1b
+    icon: "💡"
+    focus: "Big Marketing Idea, E5 Method, Unique Mechanism, campaign architecture"
+  skillcp32:
+    file: agents/skillcp32.md
+    tier: 1b
+    icon: "🎬"
+    focus: "VSL scripts, RMBC method, cold traffic copy, systematic production"
+  skillcp23:
+    file: agents/skillcp23.md
+    tier: 1b
+    icon: "📹"
+    focus: "VSL inventor, NLP techniques, EPIC email, ugly VSL format"
+  skillcp30:
+    file: agents/skillcp30.md
+    tier: 1b
+    icon: "📧"
+    focus: "Launch email sequences, belief transformation, Coaching The Conversion"
+  skillcp31:
+    file: agents/skillcp31.md
+    tier: 1b
+    icon: "🦈"
+    focus: "Full-funnel cold traffic copy, Sell Like Crazy, Godfather Strategy, HVCO"
+  skillcp14:
+    file: agents/skillcp14.md
+    tier: 1b
+    icon: "🇧🇷"
+    focus: "16-Word Sales Letter, belief-centric copy, financial publishing, one belief"
+  # Tier 1C — Email & Relationship
+  skillcp04:
+    file: agents/skillcp04.md
+    tier: 1c
+    icon: "📬"
+    focus: "Daily emails, personality-first selling, infotainment, anti-guru"
+  skillcp03:
+    file: agents/skillcp03.md
+    tier: 1c
+    icon: "🎭"
+    focus: "Soap Opera Sequences, email storytelling, open loops, Sphere of Influence"
+  skillcp10:
+    file: agents/skillcp10.md
+    tier: 1c
+    icon: "🧩"
+    focus: "Personal brand copy, one-person business, short-form content, Deep Generalism"
+  # Tier 1D — Offers & Sales Pages
+  skillcp20:
+    file: agents/skillcp20.md
+    tier: 1d
+    icon: "🛒"
+    focus: "Slippery Slide, 30 psychological triggers, print ads, seeds of curiosity"
+  skillcp12:
+    file: agents/skillcp12.md
+    tier: 1d
+    icon: "👔"
+    focus: "Brand positioning, Big Idea, research-driven, premium/luxury copy"
+  skillcp08:
+    file: agents/skillcp08.md
+    tier: 1d
+    icon: "💊"
+    focus: "Dominant Resident Emotions, Four-Legged Stool, financial/health power copy"
+  skillcp25:
+    file: agents/skillcp25.md
+    tier: 1d
+    icon: "🏆"
+    focus: "Fascination bullets, 700-to-100 method, format innovation, Stanislavsky"
+  skillcp11:
+    file: agents/skillcp11.md
+    tier: 1d
+    icon: "🎩"
+    focus: "CopyTHINKING, Big Idea generation, method actor technique, fiction for non-fiction"
+  skillcp02:
+    file: agents/skillcp02.md
+    tier: 1d
+    icon: "⚡"
+    focus: "Value Equation, Grand Slam Offer, offer math, $100M frameworks"
+  skillcp19:
+    file: agents/skillcp19.md
+    tier: 1d
+    icon: "🔬"
+    focus: "Message Mining, voice-of-customer, SaaS conversion copy, data-driven copy"
+  # Tier 1E — Persuasion & Psychology
+  skillcp26:
+    file: agents/skillcp26.md
+    tier: 1e
+    icon: "🧪"
+    focus: "7 Principles of Influence, Pre-Suasion, science-backed persuasion"
+  skillcp05:
+    file: agents/skillcp05.md
+    tier: 1e
+    icon: "🗝️"
+    focus: "One Sentence Persuasion, 5 emotional triggers, primal connection"
+  skillcp06:
+    file: agents/skillcp06.md
+    tier: 1e
+    icon: "🎙️"
+    focus: "Tactical empathy, labeling, mirroring, accusation audit, objection handling"
+  skillcp24:
+    file: agents/skillcp24.md
+    tier: 1e
+    icon: "🧲"
+    focus: "STRONG method, frame control, crocodile brain, status dynamics, pitch copy"
+
+handoffs:
+  skillcp01:
+    routes_to: [skillcp17, skillcp13, skillcp07, skillcp16, skillcp27, skillcp22, skillcp18, skillcp21, skillcp28, skillcp09, skillcp15, skillcp29, skillcp33, skillcp32, skillcp23, skillcp30, skillcp31, skillcp14, skillcp04, skillcp03, skillcp10, skillcp20, skillcp12, skillcp08, skillcp25, skillcp11, skillcp02, skillcp19, skillcp26, skillcp05, skillcp06, skillcp24]
+  # Tier 1A collaborations
+  skillcp17:
+    collaborates_with: [skillcp22, skillcp13, skillcp21]
+    escalates_to: [skillcp01]
+  skillcp13:
+    collaborates_with: [skillcp17, skillcp33, skillcp21]
+    escalates_to: [skillcp01]
+  skillcp07:
+    collaborates_with: [skillcp16, skillcp21, skillcp28]
+    escalates_to: [skillcp01]
+  skillcp16:
+    collaborates_with: [skillcp08, skillcp07, skillcp25]
+    escalates_to: [skillcp01]
+  skillcp27:
+    collaborates_with: [skillcp18, skillcp03]
+    escalates_to: [skillcp01]
+  skillcp22:
+    collaborates_with: [skillcp17, skillcp09]
+    escalates_to: [skillcp01]
+  skillcp18:
+    collaborates_with: [skillcp27, skillcp25]
+    escalates_to: [skillcp01]
+  skillcp21:
+    collaborates_with: [skillcp07, skillcp13, skillcp28]
+    escalates_to: [skillcp01]
+  skillcp28:
+    collaborates_with: [skillcp21, skillcp12, skillcp07]
+    escalates_to: [skillcp01]
+  # Tier 1B collaborations
+  skillcp09:
+    collaborates_with: [skillcp20, skillcp15, skillcp02]
+    escalates_to: [skillcp01]
+  skillcp15:
+    collaborates_with: [skillcp29, skillcp09, skillcp31]
+    escalates_to: [skillcp01]
+  skillcp29:
+    collaborates_with: [skillcp15, skillcp33, skillcp31]
+    escalates_to: [skillcp01]
+  skillcp33:
+    collaborates_with: [skillcp13, skillcp29, skillcp14]
+    escalates_to: [skillcp01]
+  skillcp32:
+    collaborates_with: [skillcp23, skillcp14]
+    escalates_to: [skillcp01]
+  skillcp23:
+    collaborates_with: [skillcp32, skillcp06]
+    escalates_to: [skillcp01]
+  skillcp30:
+    collaborates_with: [skillcp10, skillcp03]
+    escalates_to: [skillcp01]
+  skillcp31:
+    collaborates_with: [skillcp15, skillcp29, skillcp02]
+    escalates_to: [skillcp01]
+  skillcp14:
+    collaborates_with: [skillcp32, skillcp33, skillcp05]
+    escalates_to: [skillcp01]
+  # Tier 1C collaborations
+  skillcp04:
+    collaborates_with: [skillcp10, skillcp03]
+    escalates_to: [skillcp01]
+  skillcp03:
+    collaborates_with: [skillcp04, skillcp27, skillcp30]
+    escalates_to: [skillcp01]
+  skillcp10:
+    collaborates_with: [skillcp30, skillcp04]
+    escalates_to: [skillcp01]
+  # Tier 1D collaborations
+  skillcp20:
+    collaborates_with: [skillcp09, skillcp26]
+    escalates_to: [skillcp01]
+  skillcp12:
+    collaborates_with: [skillcp11, skillcp28]
+    escalates_to: [skillcp01]
+  skillcp08:
+    collaborates_with: [skillcp25, skillcp16]
+    escalates_to: [skillcp01]
+  skillcp25:
+    collaborates_with: [skillcp08, skillcp11]
+    escalates_to: [skillcp01]
+  skillcp11:
+    collaborates_with: [skillcp12, skillcp25]
+    escalates_to: [skillcp01]
+  skillcp02:
+    collaborates_with: [skillcp09, skillcp31, skillcp19]
+    escalates_to: [skillcp01]
+  skillcp19:
+    collaborates_with: [skillcp02, skillcp26, skillcp07]
+    escalates_to: [skillcp01]
+  # Tier 1E collaborations
+  skillcp26:
+    collaborates_with: [skillcp05, skillcp20, skillcp19]
+    escalates_to: [skillcp01]
+  skillcp05:
+    collaborates_with: [skillcp26, skillcp14, skillcp06]
+    escalates_to: [skillcp01]
+  skillcp06:
+    collaborates_with: [skillcp24, skillcp05, skillcp23]
+    escalates_to: [skillcp01]
+  skillcp24:
+    collaborates_with: [skillcp06, skillcp02, skillcp15]
+    escalates_to: [skillcp01]
+
+cross_cutting:
+  quality_standards:
+    min_score: 7.5
+  conflict_resolution: "When agents disagree, Copy Master Chief mediates using awareness level + market context + persuasion psychology"
+  collaboration: "Copy Master Chief can assign primary + secondary + psychology advisor for complex projects"
+  reference_data: "All agents have access to data/ directory with champion examples, frameworks, and swipe files"
+
+settings:
+  activation:
+    prefix: "copy-master"
+    example: "@copy-master:skillcp17"

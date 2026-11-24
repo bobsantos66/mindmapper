@@ -1,0 +1,67 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Advisory Board
+# Domain: Strategic Advisory
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: advisory-board
+  display_name: "Advisory Board Squad"
+  version: "1.0.0"
+  domain: "Strategic Advisory"
+  description: |
+    A virtual board of the world's most influential strategic thinkers, investors, and
+    leadership philosophers. Each advisor brings decades of real-world experience distilled
+    into actionable frameworks. From Ray Dalio's principles-based decision making to
+    Brene Brown's courage-based leadership.
+
+    This board covers investment strategy, mental models, network intelligence, scaling,
+    purpose-driven leadership, team dynamics, minimalist entrepreneurship, and mission-driven
+    business. Four advisory domains: financial, entrepreneurial, organizational, and philosophical.
+  keywords: [strategy, investment, leadership, mental-models, scaling, purpose, teams, entrepreneurship, culture, decision-frameworks]
+  entry_agent: skilln23
+  created_at: "2026-03-05"
+
+tiers:
+  tier_0:
+    name: "Orchestration"
+    agents: [skilln23]
+    purpose: "Triage, routing, quality control, advisory session facilitation"
+  tier_1:
+    name: "Strategic Advisors"
+    agents: [skilln30, skilln25, skilln27, skilln29, skilln31, skilln32, skilln24, skilln28, skilln26, skilln33]
+    purpose: "Domain expertise across investment, venture, leadership, culture, and founder philosophy"
+
+agents:
+  skilln23:       { file: agents/skilln23.md, tier: 0, icon: "🏛️", focus: "Triage, routing, advisory facilitation" }
+  skilln30:         { file: agents/skilln30.md, tier: 1, icon: "📈", focus: "Principles-based decisions, risk management" }
+  skilln25:    { file: agents/skilln25.md, tier: 1, icon: "🧠", focus: "Mental models, capital allocation" }
+  skilln27:    { file: agents/skilln27.md, tier: 1, icon: "⚡", focus: "Wealth creation, leverage, first principles" }
+  skilln29:       { file: agents/skilln29.md, tier: 1, icon: "🚀", focus: "Contrarian thinking, monopoly, zero to one" }
+  skilln31:      { file: agents/skilln31.md, tier: 1, icon: "🌐", focus: "Network effects, blitzscaling" }
+  skilln32:       { file: agents/skilln32.md, tier: 1, icon: "🎯", focus: "Purpose-driven leadership, infinite game" }
+  skilln24:       { file: agents/skilln24.md, tier: 1, icon: "💛", focus: "Vulnerability, courage, trust" }
+  skilln28:  { file: agents/skilln28.md, tier: 1, icon: "👥", focus: "Team health, organizational dysfunction" }
+  skilln26:      { file: agents/skilln26.md, tier: 1, icon: "🎵", focus: "Minimalist entrepreneurship, contrarian simplicity" }
+  skilln33:    { file: agents/skilln33.md, tier: 1, icon: "🏔️", focus: "Mission-driven business, environmental activism" }
+
+handoffs:
+  skilln23: { routes_to: [skilln30, skilln25, skilln27, skilln29, skilln31, skilln32, skilln24, skilln28, skilln26, skilln33] }
+  skilln30: { escalates_to: [skilln23] }
+  skilln25: { escalates_to: [skilln23] }
+  skilln27: { escalates_to: [skilln23] }
+  skilln29: { escalates_to: [skilln23] }
+  skilln31: { escalates_to: [skilln23] }
+  skilln32: { escalates_to: [skilln23] }
+  skilln24: { escalates_to: [skilln23] }
+  skilln28: { escalates_to: [skilln23] }
+  skilln26: { escalates_to: [skilln23] }
+  skilln33: { escalates_to: [skilln23] }
+
+cross_cutting:
+  quality_standards: { min_score: 7.0 }
+
+settings:
+  activation:
+    prefix: "advisory-board"
+    example: "@advisory-board:skilln30"

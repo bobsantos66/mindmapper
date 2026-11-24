@@ -1,0 +1,183 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Hormozi Squad
+# Domain: Business Scaling & Growth (Hormozi Frameworks)
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: hormozi-squad
+  display_name: "Hormozi Squad"
+  version: "1.0.0"
+  domain: "Business scaling using Alex Hormozi's frameworks — offers, leads, pricing, sales, retention, and growth"
+  description: |
+    16 specialized agents implementing Alex Hormozi's business scaling frameworks.
+    Each agent masters a specific domain from Hormozi's methodology — offers, leads,
+    pricing, content, ads, sales, retention, scaling, and more. Source material includes
+    $100M Offers, $100M Leads, Gym Launch Secrets, and Acquisition.com methodology.
+  keywords: [offers, leads, pricing, sales, scaling, retention, business model, launch, content, hooks, ads, workshop, audit, grand slam offer, value equation]
+  entry_agent: skilln01
+  created_at: "2026-03-05"
+
+tiers:
+  tier_0:
+    name: "Orchestration"
+    agents: [skilln01]
+    purpose: "Triage business challenges, route to the right Hormozi specialist, quality control"
+  tier_1_core:
+    name: "Core Business Engines"
+    agents: [skilln12, skilln10, skilln13, skilln05]
+    purpose: "The foundational agents — offers, leads, pricing, and sales"
+  tier_1_growth:
+    name: "Growth & Acquisition"
+    agents: [skilln02, skilln06, skilln08, skilln09]
+    purpose: "Agents focused on scaling, launching, and expanding"
+  tier_1_optimization:
+    name: "Optimization & Retention"
+    agents: [skilln14, skilln15, skilln11, skilln04]
+    purpose: "Agents focused on keeping and maximizing customers"
+  tier_1_support:
+    name: "Support Specialists"
+    agents: [skilln07, skilln16, skilln03]
+    purpose: "Specific execution needs — copywriting, workshops, strategic advice"
+
+agents:
+  skilln01:
+    file: agents/skilln01.md
+    tier: 0
+    icon: "🐝"
+    focus: "Orchestration, routing, business diagnosis"
+  skilln12:
+    file: agents/skilln12.md
+    tier: 1
+    icon: "💎"
+    focus: "Grand Slam Offer creation, value equation"
+  skilln10:
+    file: agents/skilln10.md
+    tier: 1
+    icon: "🧲"
+    focus: "$100M Leads framework, lead generation"
+  skilln13:
+    file: agents/skilln13.md
+    tier: 1
+    icon: "💲"
+    focus: "Value-based pricing strategy"
+  skilln05:
+    file: agents/skilln05.md
+    tier: 1
+    icon: "🤝"
+    focus: "CLOSER framework, sales closing"
+  skilln02:
+    file: agents/skilln02.md
+    tier: 1
+    icon: "📢"
+    focus: "Paid advertising strategy, Hormozi style"
+  skilln06:
+    file: agents/skilln06.md
+    tier: 1
+    icon: "📱"
+    focus: "Content machine methodology"
+  skilln08:
+    file: agents/skilln08.md
+    tier: 1
+    icon: "🪝"
+    focus: "Hook creation, attention capture"
+  skilln09:
+    file: agents/skilln09.md
+    tier: 1
+    icon: "🚀"
+    focus: "Product/business launch strategy"
+  skilln14:
+    file: agents/skilln14.md
+    tier: 1
+    icon: "🔁"
+    focus: "Churn reduction, LTV maximization"
+  skilln15:
+    file: agents/skilln15.md
+    tier: 1
+    icon: "📈"
+    focus: "Scaling from $1M to $100M+"
+  skilln11:
+    file: agents/skilln11.md
+    tier: 1
+    icon: "🏗️"
+    focus: "Business model selection and design"
+  skilln04:
+    file: agents/skilln04.md
+    tier: 1
+    icon: "🔍"
+    focus: "Business evaluation and improvement"
+  skilln07:
+    file: agents/skilln07.md
+    tier: 1
+    icon: "✍️"
+    focus: "Hormozi-style copywriting"
+  skilln16:
+    file: agents/skilln16.md
+    tier: 1
+    icon: "🎓"
+    focus: "Workshop design and delivery"
+  skilln03:
+    file: agents/skilln03.md
+    tier: 1
+    icon: "🧭"
+    focus: "Strategic business advice, Hormozi voice"
+
+handoffs:
+  skilln01:
+    routes_to: [skilln12, skilln10, skilln13, skilln05, skilln02, skilln06, skilln08, skilln09, skilln14, skilln15, skilln11, skilln04, skilln07, skilln16, skilln03]
+  skilln12:
+    collaborates_with: [skilln13, skilln05]
+    escalates_to: [skilln01]
+  skilln10:
+    collaborates_with: [skilln02, skilln06]
+    escalates_to: [skilln01]
+  skilln13:
+    collaborates_with: [skilln12, skilln11]
+    escalates_to: [skilln01]
+  skilln05:
+    collaborates_with: [skilln12]
+    escalates_to: [skilln01]
+  skilln02:
+    collaborates_with: [skilln08, skilln06]
+    escalates_to: [skilln01]
+  skilln06:
+    collaborates_with: [skilln08, skilln02]
+    escalates_to: [skilln01]
+  skilln08:
+    collaborates_with: [skilln07, skilln06]
+    escalates_to: [skilln01]
+  skilln09:
+    collaborates_with: [skilln12, skilln10]
+    escalates_to: [skilln01]
+  skilln14:
+    collaborates_with: [skilln15]
+    escalates_to: [skilln01]
+  skilln15:
+    collaborates_with: [skilln11, skilln04]
+    escalates_to: [skilln01]
+  skilln11:
+    collaborates_with: [skilln15, skilln13]
+    escalates_to: [skilln01]
+  skilln04:
+    collaborates_with: [skilln11, skilln15]
+    escalates_to: [skilln01]
+  skilln07:
+    collaborates_with: [skilln08]
+    escalates_to: [skilln01]
+  skilln16:
+    collaborates_with: [skilln05, skilln12]
+    escalates_to: [skilln01]
+  skilln03:
+    collaborates_with: [skilln01]
+    escalates_to: [skilln01]
+
+cross_cutting:
+  quality_standards:
+    min_score: 7.0
+  core_formula:
+    value_equation: "Value = (Dream Outcome x Perceived Likelihood) / (Time Delay x Effort & Sacrifice)"
+
+settings:
+  activation:
+    prefix: "hormozi-squad"
+    example: "@hormozi-squad:skilln12"

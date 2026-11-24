@@ -1,0 +1,84 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Cybersecurity
+# Domain: Offensive & Defensive Security Operations
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: cybersecurity
+  display_name: "Cybersecurity Squad"
+  version: "1.0.0"
+  domain: "Offensive & Defensive Security Operations"
+  description: |
+    A complete offensive and defensive cybersecurity squad combining real-world experts
+    with specialized operational agents. From penetration testing and red teaming (Peter Kim,
+    Georgia Weidman) to application security (Jim Manico), network monitoring (Chris Sanders),
+    vulnerability management (Omar Santos), and security leadership (Marcus Carey).
+
+    Operational agents handle reconnaissance, enumeration, fuzzing, exploitation, command
+    generation, and OSINT — all within ethical, authorized contexts. Every offensive operation
+    requires explicit written authorization. Hack to protect, never to harm.
+  keywords: [pentesting, red-team, blue-team, appsec, network-security, vulnerability, exploit, recon, osint, incident-response]
+  entry_agent: skille21
+  created_at: "2026-03-05"
+
+tiers:
+  tier_0:
+    name: "Orchestration"
+    agents: [skille21]
+    purpose: "Triage, routing, quality control, ethical authorization gating"
+  tier_1:
+    name: "Security Experts"
+    agents: [skille32, skille28, skille29, skille24, skille31, skille30]
+    purpose: "Domain expertise in offensive security, defensive security, and security operations"
+  tier_2:
+    name: "Operational Tool Agents"
+    agents: [skille25, skille23, skille22, skille26, skille27, skille33, skille34, skille35]
+    purpose: "Specialized tool agents for reconnaissance, enumeration, fuzzing, credential attacks, exploitation, and OSINT"
+
+agents:
+  skille21:       { file: agents/skille21.md, tier: 0, icon: "🛡️", focus: "Triage, routing, ethical gating" }
+  skille32:         { file: agents/skille32.md, tier: 1, icon: "⚔️", focus: "Penetration testing, red teaming" }
+  skille28:   { file: agents/skille28.md, tier: 1, icon: "📱", focus: "Mobile security, exploit development" }
+  skille29:        { file: agents/skille29.md, tier: 1, icon: "🔒", focus: "Application security, secure coding" }
+  skille24:     { file: agents/skille24.md, tier: 1, icon: "📡", focus: "Network monitoring, intrusion detection" }
+  skille31:       { file: agents/skille31.md, tier: 1, icon: "🔍", focus: "Vulnerability management, incident response" }
+  skille30:      { file: agents/skille30.md, tier: 1, icon: "🎖️", focus: "Security leadership, threat intelligence" }
+  skille25: { file: agents/skille25.md, tier: 2, icon: "⌨️", focus: "Security command generation" }
+  skille23:      { file: agents/skille23.md, tier: 2, icon: "🗺️", focus: "Reconnaissance, network mapping" }
+  skille22:          { file: agents/skille22.md, tier: 2, icon: "🔨", focus: "Directory and file enumeration" }
+  skille26:            { file: agents/skille26.md, tier: 2, icon: "📂", focus: "Web directory brute-forcing" }
+  skille27:            { file: agents/skille27.md, tier: 2, icon: "🎯", focus: "Input fuzzing, parameter testing" }
+  skille33:            { file: agents/skille33.md, tier: 2, icon: "🔑", focus: "Credential attacks, hash cracking" }
+  skille34:             { file: agents/skille34.md, tier: 2, icon: "💀", focus: "Exploitation, payload delivery" }
+  skille35:    { file: agents/skille35.md, tier: 2, icon: "🕵️", focus: "OSINT, open source intelligence" }
+
+handoffs:
+  skille21: { routes_to: [skille32, skille28, skille29, skille24, skille31, skille30, skille25, skille23, skille22, skille26, skille27, skille33, skille34, skille35] }
+  skille32: { escalates_to: [skille21] }
+  skille28: { escalates_to: [skille21] }
+  skille29: { escalates_to: [skille21] }
+  skille24: { escalates_to: [skille21] }
+  skille31: { escalates_to: [skille21] }
+  skille30: { escalates_to: [skille21] }
+  skille25: { escalates_to: [skille21] }
+  skille23: { escalates_to: [skille21] }
+  skille22: { escalates_to: [skille21] }
+  skille26: { escalates_to: [skille21] }
+  skille27: { escalates_to: [skille21] }
+  skille33: { escalates_to: [skille21] }
+  skille34: { escalates_to: [skille21] }
+  skille35: { escalates_to: [skille21] }
+
+cross_cutting:
+  quality_standards: { min_score: 7.0 }
+  ethical_framework:
+    authorization: "All offensive operations require explicit written authorization"
+    scope: "CTF challenges, authorized pentests, defensive research, educational contexts"
+    prohibited: "Destructive techniques, DoS attacks, mass targeting, supply chain compromise, detection evasion for malicious purposes"
+    principle: "Hack to protect, never to harm"
+
+settings:
+  activation:
+    prefix: "cybersecurity"
+    example: "@cybersecurity:skille32"

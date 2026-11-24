@@ -1,0 +1,238 @@
+# ═══════════════════════════════════════════════════════════════════
+# Squad: Copy Squad
+# Domain: Copywriting & Direct Response
+# Version: 1.0.0
+# ═══════════════════════════════════════════════════════════════════
+
+squad:
+  name: copy-squad
+  display_name: "Copy Squad"
+  version: "1.0.0"
+  domain: "Elite copywriting — direct response, email, funnels, VSLs, sales letters, offers, and brand copy"
+  description: |
+    Squad of 23 copywriting agents — 22 legendary copywriters + 1 orchestrator.
+    Each agent is a high-fidelity clone of a real-world copywriting master covering
+    direct response, email, funnels, VSLs, sales letters, offers, and brand copywriting.
+  keywords: [copywriting, direct response, sales letter, email, VSL, funnel, headline, offer, ad copy, launch, bullets, brand copy]
+  entry_agent: skillcp34
+  created_at: "2026-03-05"
+
+tiers:
+  tier_0:
+    name: "Orchestration"
+    agents: [skillcp34]
+    purpose: "Triage copywriting requests, route to the right specialist, quality control"
+  tier_1a:
+    name: "Direct Response Legends"
+    agents: [skillcp46, skillcp43, skillcp37, skillcp45, skillcp52, skillcp49, skillcp47]
+    purpose: "Classic direct response masters — long-form, print, mail"
+  tier_1b:
+    name: "Modern Copy & Funnels"
+    agents: [skillcp39, skillcp44, skillcp53, skillcp56, skillcp55, skillcp50, skillcp54]
+    purpose: "Digital-era copy — VSLs, funnels, webinars, launches"
+  tier_1c:
+    name: "Email & Relationship"
+    agents: [skillcp36, skillcp35, skillcp40]
+    purpose: "Email sequences, daily emails, nurture copy"
+  tier_1d:
+    name: "Offers & Sales Pages"
+    agents: [skillcp48, skillcp42, skillcp38, skillcp51, skillcp41]
+    purpose: "Offer architecture, print ads, financial/health copy"
+
+agents:
+  skillcp34:
+    file: agents/skillcp34.md
+    tier: 0
+    icon: "🎖️"
+    focus: "Orchestration, routing, copy review"
+  skillcp46:
+    file: agents/skillcp46.md
+    tier: 1a
+    icon: "✍️"
+    focus: "Sales letters, emotional storytelling, direct mail"
+  skillcp43:
+    file: agents/skillcp43.md
+    tier: 1a
+    icon: "🧠"
+    focus: "Headlines, awareness levels, breakthrough advertising"
+  skillcp37:
+    file: agents/skillcp37.md
+    tier: 1a
+    icon: "📊"
+    focus: "Scientific advertising, testing, reason-why copy"
+  skillcp45:
+    file: agents/skillcp45.md
+    tier: 1a
+    icon: "🎯"
+    focus: "Bullet points, fascinations, persuasion"
+  skillcp52:
+    file: agents/skillcp52.md
+    tier: 1a
+    icon: "💌"
+    focus: "Empathy letters, classic mail, reader psychology"
+  skillcp49:
+    file: agents/skillcp49.md
+    tier: 1a
+    icon: "🔥"
+    focus: "Casual long-form, street-smart copy"
+  skillcp47:
+    file: agents/skillcp47.md
+    tier: 1a
+    icon: "📰"
+    focus: "Magalog openings, long-form direct mail"
+  skillcp39:
+    file: agents/skillcp39.md
+    tier: 1b
+    icon: "💰"
+    focus: "No-BS marketing, offer structure, ad copy"
+  skillcp44:
+    file: agents/skillcp44.md
+    tier: 1b
+    icon: "🌊"
+    focus: "Launch copy, behavioral sequences, digital ads"
+  skillcp53:
+    file: agents/skillcp53.md
+    tier: 1b
+    icon: "📈"
+    focus: "Funnel copy, webinar scripts, Perfect Webinar"
+  skillcp56:
+    file: agents/skillcp56.md
+    tier: 1b
+    icon: "💡"
+    focus: "Big idea, E5 Method, campaign concepts"
+  skillcp55:
+    file: agents/skillcp55.md
+    tier: 1b
+    icon: "🎬"
+    focus: "VSL scripts, RMBC method"
+  skillcp50:
+    file: agents/skillcp50.md
+    tier: 1b
+    icon: "📹"
+    focus: "VSL inventor, video sales letters"
+  skillcp54:
+    file: agents/skillcp54.md
+    tier: 1b
+    icon: "📧"
+    focus: "Awareness-based emails, personal brand copy"
+  skillcp36:
+    file: agents/skillcp36.md
+    tier: 1c
+    icon: "📬"
+    focus: "Daily emails, anti-guru engagement"
+  skillcp35:
+    file: agents/skillcp35.md
+    tier: 1c
+    icon: "🎭"
+    focus: "Soap opera sequences, email storytelling"
+  skillcp40:
+    file: agents/skillcp40.md
+    tier: 1c
+    icon: "🧩"
+    focus: "Personal brand copy, one-person business"
+  skillcp48:
+    file: agents/skillcp48.md
+    tier: 1d
+    icon: "🛒"
+    focus: "Psychological triggers, print ads"
+  skillcp42:
+    file: agents/skillcp42.md
+    tier: 1d
+    icon: "👔"
+    focus: "Brand elegance, premium copy"
+  skillcp38:
+    file: agents/skillcp38.md
+    tier: 1d
+    icon: "💊"
+    focus: "Financial/health copy, power bullets"
+  skillcp51:
+    file: agents/skillcp51.md
+    tier: 1d
+    icon: "🏆"
+    focus: "Financial/health direct response"
+  skillcp41:
+    file: agents/skillcp41.md
+    tier: 1d
+    icon: "🎩"
+    focus: "Sophisticated persuasion, premium sales pages"
+
+handoffs:
+  skillcp34:
+    routes_to: [skillcp46, skillcp43, skillcp37, skillcp45, skillcp52, skillcp49, skillcp47, skillcp39, skillcp44, skillcp53, skillcp56, skillcp55, skillcp50, skillcp54, skillcp36, skillcp35, skillcp40, skillcp48, skillcp42, skillcp38, skillcp51, skillcp41]
+  skillcp46:
+    collaborates_with: [skillcp49, skillcp43]
+    escalates_to: [skillcp34]
+  skillcp43:
+    collaborates_with: [skillcp46, skillcp56]
+    escalates_to: [skillcp34]
+  skillcp37:
+    collaborates_with: [skillcp45]
+    escalates_to: [skillcp34]
+  skillcp45:
+    collaborates_with: [skillcp38, skillcp37]
+    escalates_to: [skillcp34]
+  skillcp52:
+    collaborates_with: [skillcp47]
+    escalates_to: [skillcp34]
+  skillcp49:
+    collaborates_with: [skillcp46]
+    escalates_to: [skillcp34]
+  skillcp47:
+    collaborates_with: [skillcp52]
+    escalates_to: [skillcp34]
+  skillcp39:
+    collaborates_with: [skillcp48, skillcp44]
+    escalates_to: [skillcp34]
+  skillcp44:
+    collaborates_with: [skillcp53, skillcp39]
+    escalates_to: [skillcp34]
+  skillcp53:
+    collaborates_with: [skillcp44, skillcp56]
+    escalates_to: [skillcp34]
+  skillcp56:
+    collaborates_with: [skillcp43, skillcp53]
+    escalates_to: [skillcp34]
+  skillcp55:
+    collaborates_with: [skillcp50]
+    escalates_to: [skillcp34]
+  skillcp50:
+    collaborates_with: [skillcp55]
+    escalates_to: [skillcp34]
+  skillcp54:
+    collaborates_with: [skillcp40]
+    escalates_to: [skillcp34]
+  skillcp36:
+    collaborates_with: [skillcp40, skillcp35]
+    escalates_to: [skillcp34]
+  skillcp35:
+    collaborates_with: [skillcp36]
+    escalates_to: [skillcp34]
+  skillcp40:
+    collaborates_with: [skillcp54, skillcp36]
+    escalates_to: [skillcp34]
+  skillcp48:
+    collaborates_with: [skillcp39]
+    escalates_to: [skillcp34]
+  skillcp42:
+    collaborates_with: [skillcp41]
+    escalates_to: [skillcp34]
+  skillcp38:
+    collaborates_with: [skillcp51, skillcp45]
+    escalates_to: [skillcp34]
+  skillcp51:
+    collaborates_with: [skillcp38]
+    escalates_to: [skillcp34]
+  skillcp41:
+    collaborates_with: [skillcp42]
+    escalates_to: [skillcp34]
+
+cross_cutting:
+  quality_standards:
+    min_score: 7.0
+  conflict_resolution: "When agents disagree, Copy Chief mediates using awareness level + market context"
+  collaboration: "Copy Chief can assign primary + secondary agent for complex projects"
+
+settings:
+  activation:
+    prefix: "copy-squad"
+    example: "@copy-squad:skillcp46"
