@@ -11,7 +11,7 @@ Documentação oficial: https://docs.higgsfield.ai (página de cada modelo traz 
 
 ## Pré-requisitos
 
-1. Credenciais nas variáveis de ambiente `HF_API_KEY_ID` e `HF_API_KEY_SECRET` (ou `HF_KEY="id:segredo"`). A chave é criada em https://console.higgsfield.ai.
+1. Credenciais em variável de ambiente: `HF_KEY` com a chave única que o console (https://open.higgsfield.ai/api-keys) mostra ao criar a chave, ou `HF_API_KEY_ID` e `HF_API_KEY_SECRET` separados. Se a API responder 401, a chave está errada, foi revogada ou está num formato que precisa ser separado em ID e segredo: avise o usuário sem mostrar a chave.
 2. Acesso de rede ao host `api.higgsfield.ai`. Em ambientes na nuvem com rede limitada, o host precisa estar em Allowed domains.
 
 Confira antes de tudo:
