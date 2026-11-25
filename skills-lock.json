@@ -148,6 +148,13 @@
       "skillPath": "SKILL.md",
       "computedHash": "3a9c503277b6e29765655879003748019e10a7da1264963813f5268ac0d1f283"
     },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "commit": "57217cf86ba38148a57af9e90d14a4c049558330",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f"
+    },
     "impeccable": {
       "source": "cafe3310/public-agent-skills",
       "commit": "cfb0d62797d030848cb58e644602b98b09865868",
