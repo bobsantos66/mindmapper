@@ -204,6 +204,13 @@
       "skillPath": "skills/migration/SKILL.md",
       "computedHash": "e7c6efc84ff8f85d0242e7f29f51c09fd333c294cc3123ef8ee4b2aca2a93192"
     },
+    "motionmaxxing": {
+      "source": "Tejashmakwana/motionmaxxing",
+      "commit": "8c8ec0f2a6f6c9a0da15cd24f7b1298ab298368c",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "7b72654564c77dc2c0faee415835589529bc38aa6ae0d9e1100a51fed2c26d3e"
+    },
     "openfilm": {
       "source": "openfilm/openfilm",
       "commit": "715c3a6e46b11a0b3ee038e8f7b3e3b4e19c5c36",
